@@ -15,8 +15,8 @@
   --cream: #F5EDD7;
   --cream2: #E8D9C0;
   --muted: #9A8060;
-  --terra: #C8602A;
-  --terra-light: #D07840;
+  
+  
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -75,34 +75,34 @@ section { max-width:760px; margin:0 auto; padding:90px 32px; }
 .host-names { display:flex; flex-wrap:wrap; justify-content:center; gap:8px 36px; }
 .host-name { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:26px; color:var(--cream2); }
 
-.form-section { background:linear-gradient(155deg,#2E1208 0%,#3D1A0A 45%,#2A1008 100%); border-top:1px solid rgba(210,100,40,0.3); border-bottom:1px solid rgba(210,100,40,0.3); padding:100px 32px; text-align:center; }
+.form-section { background:linear-gradient(155deg,#1A1208 0%,#221608 45%,#1A1005 100%); border-top:1px solid rgba(201,169,110,0.25); border-bottom:1px solid rgba(201,169,110,0.25); padding:100px 32px; text-align:center; }
 .form-inner { max-width:580px; margin:0 auto; }
 .form-section .eyebrow { margin-bottom:16px; }
 .form-section h2 { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300; font-size:clamp(32px,4vw,46px); color:var(--cream); line-height:1.3; margin-bottom:14px; }
 .form-section .sub { font-size:14px; color:var(--muted); line-height:1.75; margin-bottom:52px; }
 .form-group { margin-bottom:26px; text-align:left; }
-.form-group > label { display:block; font-size:10px; letter-spacing:0.28em; color:var(--terra-light); text-transform:uppercase; margin-bottom:10px; }
-.form-group input, .form-group textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid rgba(210,100,40,0.35); border-radius:2px; padding:16px 18px; color:var(--cream); font-family:'Jost',sans-serif; font-weight:300; font-size:15px; outline:none; transition:border-color 0.3s,background 0.3s; }
-.form-group input:focus, .form-group textarea:focus { border-color:var(--terra); background:rgba(210,100,40,0.08); }
+.form-group > label { display:block; font-size:10px; letter-spacing:0.28em; color:var(--gold-light); text-transform:uppercase; margin-bottom:10px; }
+.form-group input, .form-group textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid rgba(201,169,110,0.3); border-radius:2px; padding:16px 18px; color:var(--cream); font-family:'Jost',sans-serif; font-weight:300; font-size:15px; outline:none; transition:border-color 0.3s,background 0.3s; }
+.form-group input:focus, .form-group textarea:focus { border-color:var(--gold); background:rgba(201,169,110,0.07); }
 .form-group input::placeholder, .form-group textarea::placeholder { color:var(--muted); font-weight:200; }
 .form-group textarea { resize:vertical; min-height:96px; line-height:1.65; }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
 
-.multi-select-wrap { background:rgba(255,255,255,0.04); border:1px solid rgba(210,100,40,0.35); border-radius:2px; }
+.multi-select-wrap { background:rgba(255,255,255,0.04); border:1px solid rgba(201,169,110,0.3); border-radius:2px; }
 .ms-option { display:flex; align-items:flex-start; gap:12px; padding:13px 16px; transition:background 0.2s; cursor:pointer; }
 .ms-option:not(:last-child) { border-bottom:1px solid rgba(255,255,255,0.05); }
-.ms-option:hover { background:rgba(210,100,40,0.08); }
-.ms-option input[type="checkbox"] { width:16px; height:16px; min-width:16px; margin-top:2px; accent-color:var(--terra); cursor:pointer; }
+.ms-option:hover { background:rgba(201,169,110,0.07); }
+.ms-option input[type="checkbox"] { width:16px; height:16px; min-width:16px; margin-top:2px; accent-color:var(--gold); cursor:pointer; }
 .ms-label { font-family:'Jost',sans-serif; font-weight:300; font-size:14px; color:var(--cream2); line-height:1.5; cursor:pointer; }
 
-.submit-btn { width:100%; padding:20px; background:transparent; border:1px solid var(--terra); color:var(--terra-light); font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:0.32em; text-transform:uppercase; cursor:pointer; transition:all 0.35s ease; margin-top:10px; border-radius:2px; }
-.submit-btn:hover { background:var(--terra); color:#fff; letter-spacing:0.42em; }
+.submit-btn { width:100%; padding:20px; background:transparent; border:1px solid var(--gold); color:var(--gold-light); font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:0.32em; text-transform:uppercase; cursor:pointer; transition:all 0.35s ease; margin-top:10px; border-radius:2px; }
+.submit-btn:hover { background:var(--gold); color:var(--dark); letter-spacing:0.42em; }
 .submit-btn:disabled { opacity:0.6; cursor:not-allowed; letter-spacing:0.32em; }
 .form-note { font-size:12px; color:var(--muted); margin-top:22px; line-height:1.8; }
-.form-note a { color:var(--terra-light); text-decoration:none; }
+.form-note a { color:var(--gold-light); text-decoration:none; }
 
 .success-msg { display:none; text-align:center; padding:48px 0; }
-.success-msg .ck { font-size:36px; color:var(--terra-light); margin-bottom:22px; }
+.success-msg .ck { font-size:36px; color:var(--gold-light); margin-bottom:22px; }
 .success-msg h3 { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:32px; color:var(--cream); margin-bottom:16px; }
 .success-msg p { font-size:15px; color:var(--cream2); line-height:1.75; }
 
@@ -266,7 +266,7 @@ footer a { color:var(--gold); text-decoration:none; }
       <p class="form-note">
         Submissions are reviewed personally by Heidi Cuppari.<br>
         You will hear back within 24&ndash;48 hours.<br>
-        Questions? <a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> &nbsp;&middot;&nbsp; 917.699.8351
+        Questions? <a href="/cdn-cgi/l/email-protection#036b666a676a436b666a676a6076737362716a2d606c6e"><span class="__cf_email__" data-cfemail="167e737f727f567e737f727f7563666677647f3875797b">[email&#160;protected]</span></a> &nbsp;&middot;&nbsp; 917.699.8351
       </p>
     </form>
 
@@ -275,7 +275,7 @@ footer a { color:var(--gold); text-decoration:none; }
       <h3>Your request has been received.</h3>
       <p>Thank you for your interest in I Am Wealth in Flow.<br>
       Heidi will review your request personally and be in touch within 24&ndash;48 hours.<br><br>
-      <em style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--terra-light);">We look forward to welcoming you to the water.</em></p>
+      <em style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light);">We look forward to welcoming you to the water.</em></p>
     </div>
   </div>
 </div>
@@ -284,11 +284,11 @@ footer a { color:var(--gold); text-decoration:none; }
   <div class="rule" style="margin-bottom:32px;"></div>
   <p><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--cream2);font-weight:300;">I Am Wealth in Flow &nbsp;&middot;&nbsp; Riverside Boulder &nbsp;&middot;&nbsp; April 24, 2026</span></p>
   <p style="margin-top:14px;">Flowing together with purpose in community at the Riverside</p>
-  <p><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> &nbsp;&middot;&nbsp; 917.699.8351 &nbsp;&middot;&nbsp; <a href="https://heidicuppari.com" target="_blank">heidicuppari.com</a></p>
+  <p><a href="/cdn-cgi/l/email-protection#b0d8d5d9d4d9f0d8d5d9d4d9d3c5c0c0d1c2d99ed3dfdd"><span class="__cf_email__" data-cfemail="543c313d303d143c313d303d3721242435263d7a373b39">[email&#160;protected]</span></a> &nbsp;&middot;&nbsp; 917.699.8351 &nbsp;&middot;&nbsp; <a href="https://heidicuppari.com" target="_blank">heidicuppari.com</a></p>
   <p style="margin-top:20px;font-size:11px;">Private event &middot; By invitation only &middot; Not listed on the I Am Health &amp; Wealth Expo registration</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
@@ -310,13 +310,8 @@ document.getElementById('inviteForm').addEventListener('submit', async function(
       setTimeout(() => {
         form.style.display = 'none';
         msg.style.cssText = 'display:block;opacity:0;transition:opacity 0.6s ease;';
-        setTimeout(() => { msg.style.opacity = '1'; }, 50);
-      }, 400);
-    } else {
-      btn.textContent = 'Something went wrong — please email heidi@heidicuppari.com';
-      btn.style.fontSize = '10px';
-      btn.disabled = false;
-    }
+        setTimeout(() => { msg.style.opacity = '1'; 
+    }}, 400);
   } catch(err) {
     btn.textContent = 'Something went wrong — please email heidi@heidicuppari.com';
     btn.style.fontSize = '10px';
