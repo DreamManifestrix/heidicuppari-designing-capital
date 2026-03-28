@@ -985,6 +985,49 @@
     footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2.5rem 2rem; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
   }
+ /* ─── EVENT BANNER ─────────────────────────────────────────── */
+  .event-banner {
+    background: linear-gradient(90deg, #111009 0%, #1a160a 50%, #111009 100%);
+    border-bottom: 1px solid rgba(184,151,90,0.25);
+    padding: 0.7rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: sticky;
+    top: 72px;
+    z-index: 150;
+  }
+  .event-banner-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: rgba(249,246,240,0.55);
+    text-transform: uppercase;
+  }
+  .event-banner-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+  }
+  .event-banner-divider { width: 1px; height: 16px; background: rgba(184,151,90,0.3); }
+  .event-banner-cta {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid rgba(184,151,90,0.45);
+    padding: 0.3rem 0.9rem;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .event-banner-cta:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+  @media (max-width: 960px) {
+    .event-banner { padding: 0.6rem 1rem; gap: 0.7rem; flex-wrap: wrap; top: 65px; }
+    .event-banner-divider { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -1002,6 +1045,16 @@
     <li><a href="/paper" onclick="showPage('paper');return false;" id="nav-paper" class="nav-cta">Download the Paper</a></li>
   </ul>
 </nav>
+ <!-- ─── EVENT BANNER ────────────────────────────────────────── -->
+<div class="event-banner">
+  <span class="event-banner-text">April 24 · Boulder, CO</span>
+  <div class="event-banner-divider"></div>
+  <span class="event-banner-title">I Am Wealth in Flow</span>
+  <div class="event-banner-divider"></div>
+  <span class="event-banner-text">Private Invite Only Event · Riverside</span>
+  <div class="event-banner-divider"></div>
+  <a href="/wealth-in-flow" class="event-banner-cta" target="_blank">Request an Invitation →</a>
+</div>
 
 <!-- ══════════════════════════════════════════════════════════
      PAGE: HOME
