@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect with Heidi · RiverTree, Wealth in Flow &amp; Dream Tank</title>
+<meta name="description" content="Reach out to Heidi Cuppari about RiverTree memberships, the Wealth in Flow advisory practice, or supporting the Dream Tank Systems Change L.A.B.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #1a1814;
+  --ink-soft: #5c5a54;
+  --gold: #b8975a;
+  --gold-deep: #8a6a30;
+  --gold-soft: #d4b87a;
+  --emerald: #0f6a44;
+  --emerald-soft: #2a8a64;
+  --parchment: #f0ead8;
+  --warm-white: #f9f6f0;
+  --cream: #faf5e6;
+  --rule: rgba(184, 151, 90, 0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background: var(--warm-white);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ==== HERO ==== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  background:
+    linear-gradient(135deg, rgba(26, 24, 20, 0.55) 0%, rgba(26, 24, 20, 0.7) 100%),
+    url('wealth-in-flow-riverside.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(184, 151, 90, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(15, 106, 68, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(184, 151, 90, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  color: var(--gold-soft);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background: var(--gold-soft);
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 1.05;
+  color: #f9f6f0;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.005em;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-soft);
+}
+
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: rgba(249, 246, 240, 0.85);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ==== INTRO STRIP ==== */
+.intro-strip {
+  background: var(--cream);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
+}
+
+.intro-strip p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.intro-strip p strong {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ==== THREE OFFERINGS ==== */
+.offerings {
+  background: var(--warm-white);
+  padding: 4rem 2rem 5rem;
+}
+
+.offerings-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offerings-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.offerings-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2.6rem;
+  text-align: center;
+  color: var(--ink);
+  margin-bottom: 3rem;
+  line-height: 1.15;
+}
+
+.offerings-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.offering {
+  padding: 2.5rem 2rem;
+  background: var(--parchment);
+  border-top: 4px solid var(--gold);
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.offering.dream-tank {
+  border-top-color: var(--emerald);
+}
+
+.offering-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.offering.dream-tank .offering-tag {
+  color: var(--emerald);
+}
+
+.offering h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.85rem;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+  line-height: 1.15;
+}
+
+.offering h3 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+.offering.dream-tank h3 em {
+  color: var(--emerald);
+}
+
+.offering-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.offering p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 1rem;
+}
+
+.offering ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.offering li {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  padding-left: 1.2rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  line-height: 1.55;
+}
+
+.offering li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.65rem;
+  top: 0.4rem;
+}
+
+.offering.dream-tank li::before {
+  color: var(--emerald);
+}
+
+/* ==== FORM ==== */
+.form-section {
+  background: var(--ink);
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+.form-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(184, 151, 90, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(15, 106, 68, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.form-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.form-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  color: var(--gold-soft);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.form-eyebrow::before, .form-eyebrow::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--gold-soft);
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 1.1;
+  color: var(--warm-white);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h2 em {
+  font-style: italic;
+  color: var(--gold-soft);
+}
+
+.form-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: rgba(249, 246, 240, 0.7);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+label .optional {
+  text-transform: none;
+  font-style: italic;
+  letter-spacing: 0;
+  color: rgba(249, 246, 240, 0.4);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(249, 246, 240, 0.2);
+  background: rgba(249, 246, 240, 0.05);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--warm-white);
+  border-radius: 2px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(249, 246, 240, 0.35);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--gold-soft);
+  background: rgba(249, 246, 240, 0.08);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23d4b87a' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  cursor: pointer;
+}
+
+select option {
+  background: var(--ink);
+  color: var(--warm-white);
+}
+
+button {
+  background: var(--gold);
+  color: var(--ink);
+  border: none;
+  padding: 1.2rem 2rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.75rem;
+  border-radius: 2px;
+}
+
+button:hover {
+  background: var(--gold-soft);
+}
+
+.privacy {
+  font-size: 0.8rem;
+  color: rgba(249, 246, 240, 0.5);
+  margin-top: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ==== FOOTER ==== */
+.signature-footer {
+  background: var(--cream);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--rule);
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.footer-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.footer-contact {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.footer-contact a {
+  color: var(--gold-deep);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-contact a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 800px) {
+  .hero h1 { font-size: 3rem; }
+  .hero-sub { font-size: 1.15rem; }
+  .offerings-grid { grid-template-columns: 1fr; }
+  .offerings-title { font-size: 2rem; }
+  h2 { font-size: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- =============== HERO =============== -->
+<!-- Hero uses wealth-in-flow-riverside.jpg from same folder. -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">RiverTree · Boulder · Wealth in Flow · Dream Tank</span>
+    <h1>The conversation<br>you've been<br><em>waiting to have.</em></h1>
+    <p class="hero-sub">Wealth, legacy, and what your time is calling for next — explored in a community of people asking the same questions.</p>
+  </div>
+</section>
+
+<!-- =============== INTRO =============== -->
+<section class="intro-strip">
+  <p>Three doorways into the work — <strong>RiverTree Membership</strong>, <strong>Wealth in Flow Advisory</strong>, and the <strong>Dream Tank Systems Change L.A.B.</strong> Each one stands alone. Many move between them.</p>
+</section>
+
+<!-- =============== THREE OFFERINGS =============== -->
+<section class="offerings">
+  <div class="offerings-inner">
+    <div class="offerings-eyebrow">What We Are Building</div>
+    <h2 class="offerings-title">A wealth and wellness ecosystem,<br>and the work that <em>flows through it.</em></h2>
+
+    <div class="offerings-grid">
+
+      <div class="offering">
+        <div class="offering-tag">Doorway 01</div>
+        <h3>RiverTree <em>Membership</em></h3>
+        <div class="offering-tagline">Founding belonging in a wealth and wellness ecosystem.</div>
+        <p>RiverTree is a community in Boulder, Colorado where wealth holders, founders, operators, and aligned families come together — to gather, to deal-flow, to design what their wealth is meant to do, and to build a new kind of family home for their mission.</p>
+        <ul>
+          <li>Riverside as your mission family home</li>
+          <li>Curated convenings and gatherings</li>
+          <li>Mentorship across the twelve branches</li>
+          <li>Deal flow, project incubation, the Origin Circle</li>
+        </ul>
+      </div>
+
+      <div class="offering">
+        <div class="offering-tag">Doorway 02</div>
+        <h3>Wealth in Flow <em>Advisory</em></h3>
+        <div class="offering-tagline">1:1 wealth and legacy architecture.</div>
+        <p>For wealth holders, family offices, and the rising generation navigating aging portfolios, values in transition, and the question of what gets passed forward. The 25-year practice that sits upstream of allocation — naming what your wealth is actually positioned to carry into the next generation.</p>
+        <ul>
+          <li>Wealth Clarity Session</li>
+          <li>Wealth &amp; Legacy Design Intensive</li>
+          <li>Family Legacy &amp; Meaning Intensive</li>
+          <li>Strategic ongoing advisory</li>
+        </ul>
+      </div>
+
+      <div class="offering dream-tank">
+        <div class="offering-tag">Doorway 03</div>
+        <h3>Dream Tank <em>Systems Change L.A.B.</em></h3>
+        <div class="offering-tagline">A decade of work, made replicable.</div>
+        <p>The Local Action Blueprint methodology — integrating a Nobel Peace Prize–credentialed framework with award-winning healing science. For 501(c)(3) sponsors, foundations, and place-based funders ready to fund what comes next in our communities.</p>
+        <ul>
+          <li>Active pilot · Boulder &amp; Golden, CO</li>
+          <li>Providence · Brown University partnership</li>
+          <li>Nairobi · pending funding</li>
+          <li>Sponsor a branch, fund a city</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============== FORM =============== -->
+<section class="form-section">
+  <div class="form-inner">
+    <div class="form-eyebrow">Reach Out</div>
+    <h2>Tell me what's <em>calling you.</em></h2>
+    <p class="form-sub">A few quick questions, then I'll be in touch personally within a few days.</p>
+
+    <form action="https://formspree.io/f/xjgpyvnj" method="POST">
+      <div class="form-row">
+        <div>
+          <label for="first_name">First Name</label>
+          <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div>
+          <label for="last_name">Last Name</label>
+          <input type="text" id="last_name" name="last_name" required>
+        </div>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div>
+        <label for="phone">Phone <span class="optional">(optional)</span></label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div>
+        <label for="interest">What's drawing you?</label>
+        <select id="interest" name="interest" required>
+          <option value="">Select one</option>
+          <option value="rivertree-membership">RiverTree Membership</option>
+          <option value="wealth-in-flow">Wealth in Flow · Advisory</option>
+          <option value="dream-tank">Dream Tank · Systems Change L.A.B.</option>
+          <option value="riverside-visit">Visit Riverside (tour, lunch, gathering)</option>
+          <option value="introduction">Just want to introduce myself</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="story">A few sentences on what's on your mind</label>
+        <textarea id="story" name="story" rows="4" placeholder="Where you are, what you're working on, what you're sensing..."></textarea>
+      </div>
+
+      <input type="hidden" name="_subject" value="Connect Form · heidicuppari.com">
+      <input type="hidden" name="source" value="connect-page">
+
+      <button type="submit">Send →</button>
+      <p class="privacy">Your information stays with me. No lists, no spam.</p>
+    </form>
+  </div>
+</section>
+
+<!-- =============== FOOTER SIGNATURE =============== -->
+<section class="signature-footer">
+  <div class="footer-name">Heidi Cuppari</div>
+  <div class="footer-title">Wealth &amp; Legacy Architect · Founder, RiverTree</div>
+  <div class="footer-contact">
+    <a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> &nbsp;·&nbsp; 917.699.8351
+  </div>
+</section>
+
+</body>
+</html>
