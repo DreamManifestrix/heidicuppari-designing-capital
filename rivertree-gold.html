@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Membership · RiverTree · Heidi Cuppari</title>
+<meta name="description" content="An invitation to become one of 100 Gold Members of RiverTree — a wealth and wellness ecosystem in Boulder, Colorado.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #1a1814;
+  --ink-soft: #5c5a54;
+  --gold: #b8975a;
+  --gold-deep: #8a6a30;
+  --gold-soft: #d4b87a;
+  --gold-pale: #e8d8ad;
+  --forest: #073e17;
+  --forest-deep: #042a0f;
+  --forest-soft: #1a5c2e;
+  --parchment: #f0ead8;
+  --parchment-deep: #e8dfc2;
+  --warm-white: #f9f6f0;
+  --cream: #faf5e6;
+  --rule: rgba(184, 151, 90, 0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background: var(--warm-white);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* === SHARED ORNAMENT === */
+.ornament {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold);
+}
+.ornament::before, .ornament::after {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  background: var(--cream);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(212, 184, 122, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(184, 151, 90, 0.12) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 2rem;
+  border-radius: 8px;
+  box-shadow:
+    0 8px 32px rgba(7, 62, 23, 0.3),
+    0 2px 8px rgba(184, 151, 90, 0.2);
+}
+
+.hero-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.45em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.005em;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+}
+
+.hero-cap {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 500;
+}
+
+/* === GOLDEN TICKET === */
+.ticket-section {
+  background: var(--warm-white);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.ticket-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.ticket-frame {
+  display: inline-block;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--gold-pale) 0%, var(--gold-soft) 100%);
+  border-radius: 6px;
+  box-shadow:
+    0 10px 40px rgba(184, 151, 90, 0.25),
+    0 2px 8px rgba(26, 24, 20, 0.1);
+  margin-bottom: 2.5rem;
+}
+
+.ticket-frame img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.ticket-caption {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* === INVITATION COPY === */
+.invitation {
+  background: var(--cream);
+  padding: 5rem 2rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.invitation-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.invitation-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.invitation h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+
+.invitation h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.invitation p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 1.25rem;
+}
+
+.invitation p:last-child {
+  margin-bottom: 0;
+}
+
+/* === TWO RHYTHMS === */
+.rhythms {
+  background: var(--warm-white);
+  padding: 5rem 2rem;
+}
+
+.rhythms-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.rhythms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.rhythm {
+  background: var(--parchment);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  border-top: 4px solid var(--gold);
+  border-radius: 4px;
+  position: relative;
+}
+
+.rhythm-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.rhythm-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 3.2rem;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.rhythm-price em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.rhythm-detail {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.rhythms-note {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* === MEMBER ACCESS === */
+.access {
+  background: var(--cream);
+  padding: 5rem 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.access-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 3.5rem;
+  margin-top: 3rem;
+}
+
+.access-block {
+  position: relative;
+}
+
+.access-block-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.access-block-label::before {
+  content: '◆';
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+
+.access-block h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.access-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.access-block li {
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  padding-left: 1.3rem;
+  position: relative;
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+}
+
+.access-block li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* === LIMITED === */
+.limited {
+  background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest) 50%, var(--forest-soft) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.limited::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 25% 30%, rgba(212, 184, 122, 0.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 70%, rgba(184, 151, 90, 0.22) 0%, transparent 55%),
+    radial-gradient(circle at 50% 100%, rgba(232, 216, 173, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.limited::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(184, 151, 90, 0.04) 100%);
+  pointer-events: none;
+}
+
+.limited-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.limited-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--gold-soft);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 20px rgba(212, 184, 122, 0.3);
+}
+
+.limited-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  color: var(--gold-pale);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.limited p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: rgba(249, 246, 240, 0.92);
+}
+
+/* === CTA === */
+.cta {
+  background: var(--warm-white);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.cta-inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.cta h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.cta-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  margin-bottom: 2.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 1.2rem 3rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.cta-button:hover {
+  background: var(--gold-soft);
+}
+
+.cta-alt {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.cta-alt a {
+  color: var(--gold-deep);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-alt a:hover {
+  color: var(--gold);
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--cream);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--rule);
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+.footer-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.footer-contact {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.footer-contact a {
+  color: var(--gold-deep);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-tagline {
+  margin-top: 1.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 800px) {
+  .hero h1 { font-size: 3rem; }
+  .hero-sub { font-size: 1.15rem; }
+  .invitation h2 { font-size: 2rem; }
+  .invitation p { font-size: 1.1rem; }
+  .section-title { font-size: 1.85rem; }
+  .rhythms-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .access-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .limited-number { font-size: 3.5rem; }
+  .cta h2 { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- === HERO === -->
+<section class="hero">
+  <div class="hero-content">
+    <img src="rivertree-logo.png" alt="RiverTree Community" class="hero-logo">
+    <div class="hero-eyebrow">RiverTree · Boulder, Colorado · Spring 2026</div>
+    <h1>Gold <em>Membership</em></h1>
+    <p class="hero-sub">A wealth and wellness ecosystem you belong to —<br>not a place you visit.</p>
+    <div class="hero-cap">An Invitation · Limited to 100</div>
+  </div>
+</section>
+
+<!-- === GOLDEN TICKET === -->
+<section class="ticket-section">
+  <div class="ticket-inner">
+    <div class="ticket-frame">
+      <!-- Point this to your Golden Ticket image asset -->
+      <img src="golden-ticket.jpg" alt="The Golden Ticket — RiverTree Gold Membership, Founding Edition 2026">
+    </div>
+    <p class="ticket-caption">One hundred stewards. A living ecosystem in Boulder where generative business, family wellbeing, and conscious capital are being built in real time.</p>
+  </div>
+</section>
+
+<!-- === INVITATION === -->
+<section class="invitation">
+  <div class="invitation-inner">
+    <div class="invitation-eyebrow">The Invitation</div>
+    <h2>You are invited to <em>belong here.</em></h2>
+    <p>RiverTree is a community in Boulder, Colorado where wealth holders, founders, operators, and aligned families come together — to gather, to deal-flow, to design what their wealth is meant to do, and to build a new kind of family home for their mission.</p>
+    <p>Gold Membership is the doorway in — a relational investment model where your contribution seeds the ecosystem and returns to your life, your family, and your network.</p>
+  </div>
+</section>
+
+<!-- === TWO RHYTHMS === -->
+<section class="rhythms">
+  <div class="rhythms-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">Two Rhythms</div>
+      <h2 class="section-title">Choose the cadence <em>that fits your year.</em></h2>
+    </div>
+
+    <div class="rhythms-grid">
+      <div class="rhythm">
+        <div class="rhythm-label">Annual Rhythm</div>
+        <div class="rhythm-price">$5,000 <em>/ year</em></div>
+        <div class="rhythm-detail">One annual commitment, single onboarding cycle.</div>
+      </div>
+      <div class="rhythm">
+        <div class="rhythm-label">Monthly Rhythm</div>
+        <div class="rhythm-price">$500 <em>/ month</em></div>
+        <div class="rhythm-detail">12-month minimum. Spreads stewardship across the year.</div>
+      </div>
+    </div>
+
+    <p class="rhythms-note">Same designation. Same access. Same belonging.</p>
+  </div>
+</section>
+
+<!-- === MEMBER ACCESS === -->
+<section class="access">
+  <div class="access-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">Member Access</div>
+      <h2 class="section-title">What you <em>step into.</em></h2>
+    </div>
+
+    <div class="access-grid">
+
+      <div class="access-block">
+        <div class="access-block-label">One</div>
+        <h3>Access &amp; Belonging</h3>
+        <ul>
+          <li>Riverside as your mission family home</li>
+          <li>Quarterly community updates and seasonal communications</li>
+          <li>Reunions and gatherings throughout the year</li>
+          <li>Building access via member code</li>
+          <li>Gathering space use (4× / month)</li>
+        </ul>
+      </div>
+
+      <div class="access-block">
+        <div class="access-block-label">Two</div>
+        <h3>Nourishment &amp; Lifestyle</h3>
+        <ul>
+          <li>Monthly curated gatherings, lunches, and intimate dinners</li>
+          <li>20% off all in-house offerings — coffee, tea, elixirs, bar, food</li>
+        </ul>
+      </div>
+
+      <div class="access-block">
+        <div class="access-block-label">Three</div>
+        <h3>Health &amp; Renewal</h3>
+        <ul>
+          <li>Renewal Collective Initial Holistic Nursing Assessment</li>
+        </ul>
+      </div>
+
+      <div class="access-block">
+        <div class="access-block-label">Four</div>
+        <h3>Family &amp; Academy</h3>
+        <ul>
+          <li>Family inclusion in curated gatherings, seasonal events, and community life</li>
+          <li>Life Academy access — young people apprenticing at any age, finding their purpose, launching ventures, and building real skills in entrepreneurship, innovation, and systems change alongside adults stewarding capital and land</li>
+        </ul>
+      </div>
+
+      <div class="access-block">
+        <div class="access-block-label">Five</div>
+        <h3>Resilience &amp; Preparedness</h3>
+        <ul>
+          <li>Trading Post access — family resilience kits and emergency supply pathways</li>
+          <li>Local food security network and seasonal provisioning</li>
+          <li>A community that holds each other in uncertainty — practically, not just philosophically</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- === LIMITED === -->
+<section class="limited">
+  <div class="limited-inner">
+    <div class="limited-number">100</div>
+    <div class="limited-label">Gold Members</div>
+    <p>To preserve depth of relationship, quality of experience,<br>and the integrity of the ecosystem.</p>
+  </div>
+</section>
+
+<!-- === CTA === -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2>Begin a <em>conversation.</em></h2>
+    <p class="cta-sub">Tell me what you're sensing. I'll be in touch personally within a few days.</p>
+    <a href="/connect?interest=rivertree-membership" class="cta-button">Reach Out →</a>
+    <p class="cta-alt">Or book a one-on-one: <a href="https://calendly.com/heidi_cuppari/strategy-session">calendly.com/heidi_cuppari/strategy-session</a></p>
+  </div>
+</section>
+
+<!-- === FOOTER === -->
+<section class="footer">
+  <div class="footer-name">Heidi Cuppari</div>
+  <div class="footer-title">Wealth &amp; Legacy Architect · Founder, RiverTree</div>
+  <div class="footer-contact">
+    <a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> &nbsp;·&nbsp; 917.699.8351
+  </div>
+  <div class="footer-tagline">Capital in right relationship with a living ecosystem.</div>
+</section>
+
+</body>
+</html>
