@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Connect with Heidi · RiverTree, Wealth in Flow &amp; Dream Tank</title>
-<meta name="description" content="Reach out to Heidi Cuppari about RiverTree memberships, the Wealth in Flow advisory practice, the RiverTree Academy, or the Dream Tank Systems Change L.A.B.">
+<meta name="description" content="A gathering ground in Boulder for the wealth holders, builders, and families remembering that thriving was always meant to be done together.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
   --gold: #b8975a;
   --gold-deep: #8a6a30;
   --gold-soft: #d4b87a;
+  --gold-pale: #e8d8ad;
   --forest: #073e17;
   --forest-deep: #042a0f;
   --forest-soft: #1a5c2e;
@@ -40,7 +41,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 480px;
+  min-height: 520px;
   background:
     linear-gradient(135deg, rgba(26, 24, 20, 0.55) 0%, rgba(26, 24, 20, 0.7) 100%),
     url('wealth-in-flow-riverside.jpg');
@@ -60,7 +61,7 @@ body {
   inset: 0;
   background-image:
     radial-gradient(circle at 50% 50%, rgba(184, 151, 90, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(7, 62, 23, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(15, 106, 68, 0.1) 0%, transparent 40%),
     radial-gradient(circle at 80% 20%, rgba(184, 151, 90, 0.1) 0%, transparent 40%);
   pointer-events: none;
 }
@@ -112,8 +113,8 @@ body {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.5;
-  color: rgba(249, 246, 240, 0.85);
-  max-width: 700px;
+  color: rgba(249, 246, 240, 0.9);
+  max-width: 760px;
   margin: 0 auto;
 }
 
@@ -180,8 +181,8 @@ body {
 
 .offerings-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .offering {
@@ -194,7 +195,8 @@ body {
   flex-direction: column;
 }
 
-.offering.forest {
+.offering.academy,
+.offering.dream-tank {
   border-top-color: var(--forest);
 }
 
@@ -208,7 +210,8 @@ body {
   margin-bottom: 1rem;
 }
 
-.offering.forest .offering-tag {
+.offering.academy .offering-tag,
+.offering.dream-tank .offering-tag {
   color: var(--forest);
 }
 
@@ -227,7 +230,8 @@ body {
   color: var(--gold);
 }
 
-.offering.forest h3 em {
+.offering.academy h3 em,
+.offering.dream-tank h3 em {
   color: var(--forest);
 }
 
@@ -271,15 +275,205 @@ body {
   top: 0.4rem;
 }
 
-.offering.forest li::before {
+.offering.academy li::before,
+.offering.dream-tank li::before {
   color: var(--forest);
+}
+
+/* ==== TWELVE BRANCHES ==== */
+.branches {
+  background: var(--cream);
+  padding: 5rem 2rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.branches-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branches-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.branches-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  color: var(--forest);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.branches-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2.6rem;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.branches-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.branches-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.branch {
+  background: var(--warm-white);
+  padding: 1.75rem 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  transition: border-color 0.25s, transform 0.25s;
+  position: relative;
+}
+
+.branch:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.branch-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.branch-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--forest);
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+
+.branch-desc {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.branches-footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ==== COMMUNITY BUILT FOR ACTUAL LIFE ==== */
+.community {
+  background: var(--warm-white);
+  padding: 5rem 2rem;
+}
+
+.community-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.community-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+
+.community-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.community-lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 760px;
+  margin: 0 auto 3.5rem;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.pillar {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.pillar-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.pillar h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+.pillar p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
 }
 
 /* ==== FORM ==== */
 .form-section {
-  background: var(--ink);
+  background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest) 55%, var(--forest-soft) 100%);
   padding: 5rem 2rem;
   position: relative;
+  overflow: hidden;
 }
 
 .form-section::before {
@@ -287,8 +481,17 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 30%, rgba(184, 151, 90, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(7, 62, 23, 0.12) 0%, transparent 50%);
+    radial-gradient(ellipse at 25% 25%, rgba(212, 184, 122, 0.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 75%, rgba(184, 151, 90, 0.22) 0%, transparent 55%),
+    radial-gradient(circle at 50% 100%, rgba(232, 216, 173, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.form-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(184, 151, 90, 0.04) 100%);
   pointer-events: none;
 }
 
@@ -330,6 +533,7 @@ h2 {
   color: var(--warm-white);
   margin-bottom: 1rem;
   text-align: center;
+  text-shadow: 0 2px 20px rgba(7, 62, 23, 0.3);
 }
 
 h2 em {
@@ -341,7 +545,7 @@ h2 em {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.15rem;
-  color: rgba(249, 246, 240, 0.7);
+  color: rgba(249, 246, 240, 0.85);
   margin-bottom: 2.5rem;
   text-align: center;
   line-height: 1.5;
@@ -374,7 +578,7 @@ label .optional {
   text-transform: none;
   font-style: italic;
   letter-spacing: 0;
-  color: rgba(249, 246, 240, 0.4);
+  color: rgba(249, 246, 240, 0.5);
 }
 
 input[type="text"],
@@ -384,8 +588,8 @@ textarea,
 select {
   width: 100%;
   padding: 0.95rem 1rem;
-  border: 1px solid rgba(249, 246, 240, 0.2);
-  background: rgba(249, 246, 240, 0.05);
+  border: 1px solid rgba(249, 246, 240, 0.25);
+  background: rgba(249, 246, 240, 0.08);
   font-family: 'DM Sans', sans-serif;
   font-size: 0.95rem;
   color: var(--warm-white);
@@ -394,13 +598,13 @@ select {
 }
 
 input::placeholder, textarea::placeholder {
-  color: rgba(249, 246, 240, 0.35);
+  color: rgba(249, 246, 240, 0.45);
 }
 
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--gold-soft);
-  background: rgba(249, 246, 240, 0.08);
+  background: rgba(249, 246, 240, 0.12);
 }
 
 textarea {
@@ -417,15 +621,8 @@ select {
 }
 
 select option {
-  background: var(--ink);
+  background: var(--forest-deep);
   color: var(--warm-white);
-}
-
-select optgroup {
-  background: var(--ink);
-  color: var(--gold-soft);
-  font-style: italic;
-  font-weight: 500;
 }
 
 button {
@@ -450,7 +647,7 @@ button:hover {
 
 .privacy {
   font-size: 0.8rem;
-  color: rgba(249, 246, 240, 0.5);
+  color: rgba(249, 246, 240, 0.55);
   margin-top: 1rem;
   font-style: italic;
   text-align: center;
@@ -498,11 +695,19 @@ button:hover {
   color: var(--gold);
 }
 
+@media (max-width: 1000px) {
+  .branches-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 800px) {
   .hero h1 { font-size: 3rem; }
   .hero-sub { font-size: 1.15rem; }
   .offerings-grid { grid-template-columns: 1fr; }
   .offerings-title { font-size: 2rem; }
+  .branches-grid { grid-template-columns: 1fr; }
+  .branches-title { font-size: 2rem; }
+  .community-title { font-size: 2rem; }
+  .pillars { grid-template-columns: 1fr; gap: 2.5rem; }
   h2 { font-size: 2rem; }
   .form-row { grid-template-columns: 1fr; }
 }
@@ -514,8 +719,8 @@ button:hover {
 <section class="hero">
   <div class="hero-content">
     <span class="hero-eyebrow">RiverTree · Boulder · Wealth in Flow · Dream Tank</span>
-    <h1>The conversation<br>you've been<br><em>waiting to have.</em></h1>
-    <p class="hero-sub">Wealth, legacy, and what your time is calling for next — explored in a community of people asking the same questions.</p>
+    <h1>Where wealth<br>comes <em>home to life.</em></h1>
+    <p class="hero-sub">A gathering ground in Boulder for the wealth holders, builders, and families remembering that thriving was always meant to be done together.</p>
   </div>
 </section>
 
@@ -535,7 +740,7 @@ button:hover {
       <div class="offering">
         <div class="offering-tag">Doorway 01</div>
         <h3>RiverTree <em>Membership</em></h3>
-        <div class="offering-tagline">Founding belonging in a wealth and wellness ecosystem.</div>
+        <div class="offering-tagline">Belonging in a wealth and wellness ecosystem.</div>
         <p>RiverTree is a community in Boulder, Colorado where wealth holders, founders, operators, and aligned families come together — to gather, to deal-flow, to design what their wealth is meant to do, and to build a new kind of family home for their mission.</p>
         <ul>
           <li>Riverside as your mission family home</li>
@@ -558,24 +763,24 @@ button:hover {
         </ul>
       </div>
 
-      <div class="offering forest">
+      <div class="offering academy">
         <div class="offering-tag">Doorway 03</div>
         <h3>RiverTree <em>Academy</em></h3>
         <div class="offering-tagline">A living academy for systems change.</div>
-        <p>Inside RiverTree, young people and adults apprentice together — finding purpose, launching ventures, and building real skills in entrepreneurship, innovation, and systems change. The living, in-Riverside expression where formation happens daily — in bodies, projects, and the meeting of generations.</p>
+        <p>Inside RiverTree, generations apprentice together — wealth holders, founders, families, and young people finding their purpose, launching ventures, and building real skills in entrepreneurship, innovation, and systems change side by side. The living, in-house expression of the methodology Dream Tank carries to cities.</p>
         <ul>
-          <li>Life Academy · apprenticing at any age</li>
-          <li>Intergenerational mentorship across the twelve branches</li>
+          <li>Intergenerational apprenticeship · at any age</li>
           <li>Project incubation and applied learning</li>
-          <li>Where capital, land, and family stewardship meet purpose</li>
+          <li>Mentorship across the twelve branches</li>
+          <li>Where capital, land, family, and purpose meet</li>
         </ul>
       </div>
 
-      <div class="offering forest">
+      <div class="offering dream-tank">
         <div class="offering-tag">Doorway 04</div>
         <h3>Dream Tank <em>Systems Change L.A.B.</em></h3>
         <div class="offering-tagline">A decade of work, made replicable.</div>
-        <p>The Local Action Blueprint methodology — integrating a Nobel Peace Prize–credentialed framework with award-winning healing science. For 501(c)(3) sponsors, foundations, and place-based funders ready to fund what comes next in our communities.</p>
+        <p>The Local Action Blueprint methodology — integrating a Nobel Peace Prize–credentialed framework with award-winning healing science. For leaders, funders, and stewards across every sector — foundations, family offices, municipalities, healthcare, faith communities, and place-based partners — ready to invest in what comes next where they live.</p>
         <ul>
           <li>Active pilot · Boulder &amp; Golden, CO</li>
           <li>Providence · Brown University partnership</li>
@@ -588,12 +793,115 @@ button:hover {
   </div>
 </section>
 
+<!-- =============== TWELVE BRANCHES =============== -->
+<section class="branches">
+  <div class="branches-inner">
+    <div class="branches-header">
+      <div class="branches-eyebrow">The Twelve Branches</div>
+      <h2 class="branches-title">Twelve interlocking sectors,<br>one <em>living ecosystem.</em></h2>
+      <p class="branches-sub">RiverTree works across twelve interlocking sectors that restore the foundations of thriving human and ecological systems.</p>
+    </div>
+
+    <div class="branches-grid">
+      <div class="branch">
+        <span class="branch-num">01</span>
+        <div class="branch-name">Health &amp; Wellness</div>
+        <div class="branch-desc">Whole-person health, preventative care, nervous system regulation, longevity, and integrative healing services.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">02</span>
+        <div class="branch-name">Food &amp; Nutrition</div>
+        <div class="branch-desc">Local regenerative food systems, community kitchens, nutrient-dense food access, and food education.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">03</span>
+        <div class="branch-name">Soil &amp; Land Regeneration</div>
+        <div class="branch-desc">Regenerative agriculture, soil restoration, biodiversity recovery, and water stewardship.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">04</span>
+        <div class="branch-name">Regenerative Economy</div>
+        <div class="branch-desc">Local enterprises, cooperative ownership models, ethical markets, and regenerative finance.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">05</span>
+        <div class="branch-name">Education &amp; Life Skills</div>
+        <div class="branch-desc">Holistic education, youth development, apprenticeships, and practical life skills for all ages.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">06</span>
+        <div class="branch-name">Housing &amp; Living Environments</div>
+        <div class="branch-desc">Healthy homes, regenerative eco-village development, tiny homes, and community-centered living.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">07</span>
+        <div class="branch-name">Community &amp; Culture</div>
+        <div class="branch-desc">Arts, gatherings, shared rituals, social connection, and strengthening the social fabric.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">08</span>
+        <div class="branch-name">Family &amp; Intergenerational Support</div>
+        <div class="branch-desc">Parenting support, elder care, youth mentorship, and multigenerational resilience.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">09</span>
+        <div class="branch-name">Technology for Good</div>
+        <div class="branch-desc">Ethical AI, regenerative digital platforms, coordination systems, and data for planetary wellbeing.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">10</span>
+        <div class="branch-name">Environmental Stewardship</div>
+        <div class="branch-desc">Climate resilience, water systems, land restoration, and ecological regeneration.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">11</span>
+        <div class="branch-name">Local Governance &amp; Civic Participation</div>
+        <div class="branch-desc">Collaborative decision-making, community leadership development, and participatory governance.</div>
+      </div>
+      <div class="branch">
+        <span class="branch-num">12</span>
+        <div class="branch-name">Bioregional &amp; Global Networks</div>
+        <div class="branch-desc">Connecting regenerative hubs, regional supply chains, and planetary collaboration systems.</div>
+      </div>
+    </div>
+
+    <p class="branches-footer">RiverTree integrates these twelve sectors into one living ecosystem — restoring the conditions for healthy people, thriving communities, and regenerative land systems.</p>
+  </div>
+</section>
+
+<!-- =============== COMMUNITY BUILT FOR ACTUAL LIFE =============== -->
+<section class="community">
+  <div class="community-inner">
+    <div class="community-eyebrow">Why We Gather</div>
+    <h2 class="community-title">A community built for <em>actual life.</em></h2>
+    <p class="community-lead">Not just for wealth and not just for wellness — for what happens when the two are designed together. RiverTree is where we feed each other, hire each other, heal each other, learn from each other, and hold each other when the ground shifts. Abundance is a practice. We practice it here.</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-mark">◆</div>
+        <h3>Thrive Together</h3>
+        <p>Seasonal feasts, monthly dinners, and a regenerative table where food and people are tended.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-mark">◆</div>
+        <h3>Build Together</h3>
+        <p>Deal flow, projects, jobs for each other — a network that hires across the ecosystem.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-mark">◆</div>
+        <h3>Weather Together</h3>
+        <p>Resilience kits, the Trading Post, food security — a community that holds when storms come.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- =============== FORM =============== -->
 <section class="form-section">
   <div class="form-inner">
     <div class="form-eyebrow">Reach Out</div>
-    <h2>Tell me what's <em>calling you.</em></h2>
-    <p class="form-sub">A few quick questions, then I'll be in touch personally within a few days.</p>
+    <h2>Step into the <em>circle.</em></h2>
+    <p class="form-sub">Tell me a bit about what brought you here, and I'll be in touch personally within a few days.</p>
 
     <form action="https://formspree.io/f/xjgpyvnj" method="POST">
       <div class="form-row">
@@ -621,25 +929,13 @@ button:hover {
         <label for="interest">What's drawing you?</label>
         <select id="interest" name="interest" required>
           <option value="">Select one</option>
-          <optgroup label="— The Four Doorways —">
-            <option value="rivertree-membership">RiverTree Membership</option>
-            <option value="wealth-in-flow">Wealth in Flow · Advisory</option>
-            <option value="rivertree-academy">RiverTree Academy · Apprenticeship &amp; Learning</option>
-            <option value="dream-tank">Dream Tank · Systems Change L.A.B.</option>
-          </optgroup>
-          <optgroup label="— RiverTree Domains —">
-            <option value="riverside-event-center">Riverside Event Center (events, weddings, retreats)</option>
-            <option value="the-stand">The Stand (coffee, marketplace)</option>
-            <option value="renewal-collective">Renewal Collective (healing &amp; wellness)</option>
-            <option value="dralas-playground">Drala's Playground / Octopus Mind</option>
-            <option value="life-academy">Life Academy (apprenticeship programs)</option>
-            <option value="food-systems">Food Systems Pilot</option>
-          </optgroup>
-          <optgroup label="— Other —">
-            <option value="riverside-visit">Visit Riverside (tour, lunch, gathering)</option>
-            <option value="introduction">Just want to introduce myself</option>
-            <option value="other">Other</option>
-          </optgroup>
+          <option value="rivertree-membership">RiverTree Membership</option>
+          <option value="wealth-in-flow">Wealth in Flow · Advisory</option>
+          <option value="rivertree-academy">RiverTree Academy</option>
+          <option value="dream-tank">Dream Tank · Systems Change L.A.B.</option>
+          <option value="riverside-visit">Visit Riverside (tour, lunch, gathering)</option>
+          <option value="introduction">Just want to introduce myself</option>
+          <option value="other">Other</option>
         </select>
       </div>
 
@@ -660,7 +956,7 @@ button:hover {
 <!-- =============== FOOTER SIGNATURE =============== -->
 <section class="signature-footer">
   <div class="footer-name">Heidi Cuppari</div>
-  <div class="footer-title">Wealth &amp; Legacy Architect · Founder, RiverTree</div>
+  <div class="footer-title">Wealth &amp; Legacy Architect · Co-Steward, RiverTree</div>
   <div class="footer-contact">
     <a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> &nbsp;·&nbsp; 917.699.8351
   </div>
