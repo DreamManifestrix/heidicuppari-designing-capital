@@ -632,6 +632,13 @@ button:hover {
     <a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> &nbsp;·&nbsp; 917.699.8351
   </div>
 </section>
-
+<script>
+const params = new URLSearchParams(window.location.search);
+const interest = params.get('interest');
+if (interest) {
+  const select = document.getElementById('interest');
+  if (select) select.value = interest;
+}
+</script>
 </body>
 </html>
