@@ -12,6 +12,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Critical SPA page visibility, inlined so navigation cannot break if the external stylesheet is stale, cached, or missing. Single-page sections show one at a time. */
+  .page { display: none; }
+  .page.active { display: block; }
+</style>
 
 </head>
 <body>
@@ -37,7 +42,7 @@
   <div class="event-banner-divider"></div>
   <span class="event-banner-text">Founding Memberships open</span>
   <div class="event-banner-divider"></div>
-  <a href="/connect" class="event-banner-cta">Inquire →</a>
+  <a href="mailto:heidi@heidicuppari.com?subject=RiverTree%20Founding%20Membership%20Inquiry" class="event-banner-cta">Inquire →</a>
 </div>
 
 <!-- HOME -->
@@ -47,7 +52,7 @@
       <span class="eyebrow eyebrow-light fade-up">Wealth & Legacy Architect · Systems Change Advisor</span>
       <h1 class="home-hero-headline fade-up-2">Your legacy <br>holds more<br><em>than money.</em></h1>
       <p class="home-hero-sub fade-up-3">I work with people whose money is asking more of them — and who are ready to listen.</p>
-      <button class="btn-outline-gold fade-up-4" onclick="showPage('paper')">Download the 2026 Capital Paper</button>
+      <button class="btn-outline-gold fade-up-4" onclick="showPage('paper')">Download the Designing Capital Paper</button>
     </div>
     <div class="home-hero-right">
       <div class="stat-grid fade-up-2">
@@ -75,7 +80,7 @@
   <section class="home-intro">
     <span class="eyebrow" style="display:block;text-align:center;">What This Work Is</span>
     <h2 class="section-title" style="text-align:center;">Wealth & Legacy architecture for people who take<br><em>both performance and purpose seriously.</em></h2>
-    <p>Most wealth holders I work with aren't looking for another fund. They're navigating real questions: aging portfolios, a rising generation with different values, and a world shifting faster than their advisors are acknowledging. I offer the diagnostic and design work that sits upstream of allocation — helping you see what your capital is actually positioned for, and architect it toward what comes next.</p>
+    <p>Most wealth holders I work with aren't looking for another fund. They're navigating real questions: aging portfolios, a rising generation with different values, and a world shifting faster than their advisors are acknowledging. I offer the diagnostic and design work that sits upstream of allocation — helping you see what your wealth is actually positioned for, and architect it toward what comes next.</p>
   </section>
 
   <div class="home-doors">
@@ -88,14 +93,14 @@
       <div class="door-card" onclick="showPage('work')">
         <span class="door-label">Door 01 · Wealth Holders &amp; Family Offices</span>
         <h3>Your wealth and legacy holds more <em>than money.</em></h3>
-        <p>For wealth holders navigating aging portfolios, a rising generation with different values, and a world shifting faster than their advisors are acknowledging. Capital architecture that sits upstream of allocation.</p>
-        <span class="door-link">Capital Clarity · Design Intensive · Strategic Advisory →</span>
+        <p>For wealth holders navigating aging portfolios, a rising generation with different values, and a world shifting faster than their advisors are acknowledging. Wealth architecture that sits upstream of allocation.</p>
+        <span class="door-link">Wealth Clarity · Design Intensive · Strategic Advisory →</span>
       </div>
       <div class="door-card" onclick="showPage('orgs')">
         <span class="door-label">Door 02 · Organizations, Ventures &amp; Cities</span>
         <h3>Apply the methodology. <em>Build what comes next.</em></h3>
         <p>For organizations, companies, foundations, and cities ready to apply a proven systems change framework — and for impact ventures and nonprofits navigating capital readiness and investor relations.</p>
-        <span class="door-link">L.A.B. Methodology · IR Advisory · Capital Readiness →</span>
+        <span class="door-link">L.A.B. Methodology · IR Advisory · Investor Readiness →</span>
       </div>
       <div class="door-card" onclick="showPage('proof')">
         <span class="door-label">Door 03 · The Proof</span>
@@ -130,7 +135,7 @@
     <div class="scl-bar"></div>
     <div class="scl-text">
       <h3>The Systems Change L.A.B.</h3>
-      <p>Twenty-five years of capital markets work, institution-building, and high-level convening — now crystallized into a replicable methodology through Dream Tank and the PEAC Institute. The Systems Change L.A.B. is how that proven body of work becomes available to organizations, companies, communities, and cities. It integrates a Nobel Peace Prize-credentialed transformational systems change framework and award-winning healing science addressing the needs of all generations coming together to build what comes next. Active pilot in Golden and Boulder, CO. Multi-city design includes Providence (Brown University partnership anchor) and Nairobi — fully funded launch pending. <a href="https://wearedreamtank.org" target="_blank">Learn more →</a></p>
+      <p>Twenty-five years of capital markets work, institution-building, and high-level convening — now crystallized into a replicable methodology through Dream Tank and the PEAC Institute. The Systems Change L.A.B. is how that proven body of work becomes available to organizations, companies, communities, and cities. It integrates a Nobel Peace Prize-credentialed transformational systems change framework and award-winning healing science addressing the needs of all generations coming together to build what comes next. Active pilot in Golden and Boulder, CO. Providence, anchored at Brown University where much of the methodology was born, is the designed expansion, alongside a social enterprise pathway in Nairobi. <a href="https://wearedreamtank.org" target="_blank">Learn more →</a></p>
     </div>
   </div>
 
@@ -235,7 +240,8 @@
   <section class="work-hero">
     <span class="eyebrow eyebrow-light fade-up">How We Work Together</span>
     <h1 class="fade-up-2">The right conversation<br>at the <em>right moment.</em></h1>
-    <p class="fade-up-3">Each engagement is designed to meet you where you are — from a first diagnostic conversation to ongoing capital architecture partnership. No generic ESG products. No pressure. Just the thinking that sits upstream of every allocation decision that matters.</p>
+    <p class="fade-up-3">Each engagement is designed to meet you where you are — from a first diagnostic conversation to ongoing wealth architecture partnership. No generic ESG products. No pressure. Just the thinking that sits upstream of every allocation decision that matters.</p>
+    <div style="margin-top:1.8rem;"><button class="btn-outline-gold" onclick="document.getElementById('wealth-assessment-anchor').scrollIntoView({behavior:'smooth'})">Take the Wealth Readiness Assessment →</button></div>
   </section>
 
   <section class="work-offers">
@@ -245,12 +251,12 @@
         <div class="offer-tag">Entry Point</div>
       </div>
       <div class="offer-mid">
-        <h2>Capital Clarity Session</h2>
-        <p>A focused 90-minute working session to map your capital stack, run it through four transition themes, and identify where your money is — and isn't — doing what you want it to. You leave with specific observations and a clear picture of where deeper work would matter most.</p>
+        <h2>Wealth Clarity Session</h2>
+        <p>A focused 90-minute working session to map your wealth, run it through four transition themes, and identify where your money is — and isn't — doing what you want it to. You leave with specific observations and a clear picture of where deeper work would matter most.</p>
         <p>Many people find the session itself changes how they think about their next conversations with their advisors.</p>
         <ul class="offer-includes">
           <li>90-minute 1:1 working session</li>
-          <li>Capital stack mapping across four transition themes</li>
+          <li>Wealth mapping across four transition themes</li>
           <li>Identification of 2–3 specific misalignments and opportunities</li>
           <li>Short follow-up note with key observations and suggested next step</li>
         </ul>
@@ -267,8 +273,8 @@
         <div class="offer-tag">Deeper Work</div>
       </div>
       <div class="offer-mid">
-        <h2>Capital Design Intensive</h2>
-        <p>For wealth holders ready to go beyond a single working session — and for families who want to build something together that will actually last. We go deeper: full capital stack review, values and legacy alignment, and a personalized capital design framework you can bring to your advisors and hand to the next generation.</p>
+        <h2>Wealth Design Intensive</h2>
+        <p>For wealth holders ready to go beyond a single working session — and for families who want to build something together that will actually last. We go deeper: full wealth review, values and legacy alignment, and a personalized wealth design framework you can bring to your advisors and hand to the next generation.</p>
 
         <h3 class="offer-format-title">Choose your format:</h3>
 
@@ -276,11 +282,11 @@
           <h4>Virtual — Five touchpoints over 30 days</h4>
           <ul class="offer-includes">
             <li><strong>Intake call:</strong> Orientation and preparation — so we arrive at Session 1 ready to go deep</li>
-            <li><strong>Session 1:</strong> Transition readiness review — full capital stack review and assessment</li>
+            <li><strong>Session 1:</strong> Transition readiness review — full wealth review and assessment</li>
             <li><strong>Session 2:</strong> Individual values and money mindset work</li>
             <li><strong>Session 3:</strong> Collective vision session — weaving individual clarity into a shared legacy framework</li>
             <li><strong>Integration call:</strong> Reflections, next steps, and how to bring this into your advisor conversations</li>
-            <li>Personalized Capital Design Framework + Money Manifesto</li>
+            <li>Personalized Wealth Design Framework + Money Manifesto</li>
           </ul>
         </div>
 
@@ -289,9 +295,9 @@
           <p>An immersive arc designed for the depth this work deserves. Timing and structure are calibrated to your family.</p>
           <ul class="offer-includes">
             <li><strong>Pre-work:</strong> One or two preparation calls to orient each participant</li>
-            <li><strong>Day 1:</strong> Transition readiness review, full capital stack work, individual 1:1 sessions</li>
+            <li><strong>Day 1:</strong> Transition readiness review, full wealth-mapping work, individual 1:1 sessions</li>
             <li><strong>Day 2:</strong> Collective vision session — closing with your Money Manifesto and prioritized path forward</li>
-            <li>Personalized Capital Design Framework + Money Manifesto</li>
+            <li>Personalized Wealth Design Framework + Money Manifesto</li>
           </ul>
         </div>
 
@@ -315,12 +321,12 @@
       </div>
       <div class="offer-mid">
         <h2>Strategic Advisory</h2>
-        <p>Ongoing capital architecture support for wealth holders in active transition — navigating liquidity, next-gen engagement, a meaningful portfolio reorientation, or the architecture of a family office that doesn't yet exist but should.</p>
+        <p>Ongoing wealth architecture support for wealth holders in active transition — navigating liquidity, next-gen engagement, a meaningful portfolio reorientation, or the architecture of a family office that doesn't yet exist but should.</p>
         <p>Two calls per month, async access, and the kind of thinking that doesn't show up in a standard advisor relationship. By application.</p>
         <ul class="offer-includes">
           <li>Two 60-minute calls per month</li>
           <li>Async access for questions, reviews, and decision support</li>
-          <li>Ongoing capital stack monitoring and reorientation</li>
+          <li>Ongoing wealth monitoring and reorientation</li>
           <li>Introductions to vetted fund managers and impact ventures where appropriate</li>
           <li>Next-gen engagement design and facilitation</li>
         </ul>
@@ -328,6 +334,153 @@
       <div class="offer-right">
         <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-outline-gold">Let's Talk</a>
         <span class="offer-for">By application. Monthly retainer. For wealth holders in active, meaningful transition.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEALTH READINESS ASSESSMENT -->
+  <section class="assessment-section" id="wealth-assessment-anchor">
+    <div class="assessment-inner">
+      <span class="eyebrow">Wealth Readiness Assessment</span>
+      <h2>Where is your wealth positioned<br><em>for what's coming?</em></h2>
+      <p>A short read on how your wealth sits relative to the transition underway: in markets, in your family, and across generations. Most of what follows you won't have been asked by an advisor. About seven minutes. I read every submission personally and respond with specific observations within 48 hours. Your answers stay with me. No lists, no sequence.</p>
+
+      <div class="assessment-form" id="wform-wrap">
+        <div class="aform-row">
+          <div class="aform-field">
+            <label>First Name</label>
+            <input type="text" id="wf-fname" placeholder="First name">
+          </div>
+          <div class="aform-field">
+            <label>Last Name</label>
+            <input type="text" id="wf-lname" placeholder="Last name">
+          </div>
+        </div>
+        <div class="aform-field">
+          <label>Email Address</label>
+          <input type="email" id="wf-email" placeholder="Your email address">
+        </div>
+        <div class="aform-field">
+          <label>Firm or Family Office <span style="text-transform:none;letter-spacing:0;font-style:italic;color:rgba(92,90,84,0.5);">(optional)</span></label>
+          <input type="text" id="wf-firm" placeholder="If applicable">
+        </div>
+        <div class="aform-field">
+          <label>Which best describes the current shape of your wealth?</label>
+          <select id="wf-shape">
+            <option value="">Select one...</option>
+            <option>Mostly public markets (equities, fixed income)</option>
+            <option>Mostly private (PE, VC, private credit, real assets)</option>
+            <option>Concentrated in one or two positions</option>
+            <option>Spread across holdings I don't fully track</option>
+            <option>A recent liquidity event changed everything</option>
+          </select>
+        </div>
+        <div class="aform-field">
+          <label>How much of your public-markets exposure is effectively a bet on continued AI and big-tech dominance?</label>
+          <select id="wf-ai">
+            <option value="">Select one...</option>
+            <option>A large, conscious position</option>
+            <option>Large, though I hadn't framed it that way</option>
+            <option>Modest</option>
+            <option>Minimal</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+        <div class="aform-field">
+          <label>Is your philanthropy or giving connected to your investment thinking?</label>
+          <select id="wf-philanthropy">
+            <option value="">Select one...</option>
+            <option>Fully integrated</option>
+            <option>Somewhat</option>
+            <option>They operate entirely separately</option>
+            <option>I don't have a giving strategy yet</option>
+          </select>
+        </div>
+        <div class="aform-field">
+          <label>When you look at your portfolio, how much does it reflect what you actually care about?</label>
+          <select id="wf-reflect">
+            <option value="">Select one...</option>
+            <option>Not at all</option>
+            <option>A little</option>
+            <option>Somewhat</option>
+            <option>Mostly</option>
+            <option>Almost entirely</option>
+          </select>
+        </div>
+        <div class="aform-field">
+          <label>Which of these forces feels most alive for you right now?</label>
+          <select id="wf-themes">
+            <option value="">Select one...</option>
+            <option>Climate &amp; Natural Capital</option>
+            <option>Inclusive Economies &amp; Human Capital</option>
+            <option>Responsible AI &amp; Digital Public Goods</option>
+            <option>Regenerative Communities &amp; Place-Based Systems</option>
+            <option>More than one / still exploring</option>
+          </select>
+        </div>
+        <div class="aform-field">
+          <label>On that theme, where are you?</label>
+          <select id="wf-engagement">
+            <option value="">Select one...</option>
+            <option>Curious, no exposure yet</option>
+            <option>Some exposure, but not intentional</option>
+            <option>Actively allocating</option>
+            <option>Want to, but don't know where to start</option>
+          </select>
+        </div>
+        <div class="aform-field">
+          <label>Is there a rising generation in your family with a point of view on your wealth?</label>
+          <select id="wf-nextgen">
+            <option value="">Select one...</option>
+            <option>Yes, and they're engaged</option>
+            <option>Yes, but we haven't had the conversation</option>
+            <option>Not yet, but it's coming</option>
+            <option>Not applicable</option>
+          </select>
+        </div>
+        <div class="aform-field">
+          <label>How prepared do you feel for the wealth transition ahead: next generation, legacy, and structure?</label>
+          <select id="wf-prepared">
+            <option value="">Select one...</option>
+            <option>Not at all</option>
+            <option>A little</option>
+            <option>Somewhat</option>
+            <option>Mostly</option>
+            <option>Very prepared</option>
+          </select>
+        </div>
+        <div class="aform-field">
+          <label>What would make the biggest difference for you right now?</label>
+          <select id="wf-priority">
+            <option value="">Select one...</option>
+            <option>A clear read on where I'm misaligned</option>
+            <option>Access to vetted, values-aligned deals</option>
+            <option>A plan I can bring to my advisors and family</option>
+            <option>An ongoing thinking partner</option>
+          </select>
+        </div>
+        <div class="aform-field">
+          <label>Approximate investable range <span style="text-transform:none;letter-spacing:0;font-style:italic;color:rgba(92,90,84,0.5);">(optional)</span></label>
+          <select id="wf-range">
+            <option value="">Prefer not to say</option>
+            <option>Under $1M</option>
+            <option>$1M – $10M</option>
+            <option>$10M – $50M</option>
+            <option>$50M+</option>
+          </select>
+        </div>
+        <button class="aform-submit" onclick="handleWealthAssessmentSubmit()">Send Me My Read</button>
+        <p class="aform-privacy">I read every submission personally and respond within 48 hours with specific observations, never a sales sequence. Your information stays with me.</p>
+      </div>
+      <div class="aform-thankyou" id="wform-thankyou">
+        <div class="gold-rule" style="margin:0 auto 1.5rem;"></div>
+        <h3>Your read is on its way.</h3>
+        <p>Thank you. I'll go through your answers myself and send you a short, specific read within 48 hours, with the two or three things I notice and where deeper work would matter most. It's yours to keep and share with your advisors. Check heidi@heidicuppari.com and add it to your safe senders.</p>
+        <p style="margin-top:1rem;font-size:0.82rem;color:rgba(92,90,84,0.5);">If you'd rather not wait, you're welcome to book a Wealth Clarity Session directly. The fee is credited in full toward any deeper engagement booked within 90 days.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
+          <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-gold">Book a Wealth Clarity Session</a>
+          <button class="btn-outline-gold" onclick="showPage('paper')">Read the Paper</button>
+        </div>
       </div>
     </div>
   </section>
@@ -362,6 +515,7 @@
       <h1>Apply the methodology.<br><em>Build what comes next.</em></h1>
       <p>For 25 years I built the infrastructure that makes systems change real — summits, institutions, capital networks. The Systems Change L.A.B. is how that body of work becomes available to organizations, companies, foundations, and cities ready to apply it.</p>
       <p>And for impact ventures and nonprofits navigating investor relations, capital readiness, and how to tell their story to the people who can fund it — this is also the right door.</p>
+      <div style="margin-top:2rem;"><button class="btn-gold" onclick="document.getElementById('assessment-anchor').scrollIntoView({behavior:'smooth'})">Take the Investor Readiness Assessment →</button></div>
     </div>
     <div class="orgs-hero-right fade-up-2">
       <h3>You might be in the right place if...</h3>
@@ -375,76 +529,9 @@
     </div>
   </section>
 
-  <section class="orgs-offers">
-    <div class="orgs-offers-header">
-      <span class="eyebrow">The Systems Change L.A.B. — For Organizations</span>
-      <h2>A proven methodology,<br><em>made replicable.</em></h2>
-      <p>The L.A.B. (Local Action Blueprint) is a structured civic innovation methodology that connects young leaders, intergenerational mentors, institutional partners, and city governments into design cycles that produce real, implementation-ready outcomes. Built over a decade through Dream Tank, deepened through partnership with PEAC Institute.</p>
-    </div>
-
-    <div class="orgs-offer-grid">
-      <div class="orgs-offer-tile">
-        <span class="offer-tag">For Companies &amp; Employers</span>
-        <h3>Intergenerational Leadership Design</h3>
-        <p>A structured process for aligning your workforce across generations — not through workshops, but through real co-design. Young employees and senior leaders working on actual company challenges together, producing implementation-ready recommendations. Grounded in Nobel Peace Prize-credentialed systems change methodology and award-winning healing science.</p>
-        <span class="service-link" style="display:inline-block;margin-top:0.5rem;cursor:pointer;" onclick="showPage('companies')">Learn more →</span>
-      </div>
-      <div class="orgs-offer-tile">
-        <span class="offer-tag">For Cities &amp; Foundations</span>
-        <h3>Systems Change L.A.B. Partnership</h3>
-        <p>License and implement the L.A.B. methodology in your city, region, or community. Includes full facilitation design, training for local teams, and a Local Action Blueprint process culminating in deliverables to city leadership or foundation partners. Active model: Golden and Boulder, CO.</p>
-        <span class="service-link" style="display:inline-block;margin-top:0.5rem;cursor:pointer;" onclick="showPage('cities')">Learn more →</span>
-      </div>
-      <div class="orgs-offer-tile">
-        <span class="offer-tag">For Impact Organizations</span>
-        <h3>IR Advisory &amp; Capital Architecture</h3>
-        <p>For impact ventures and mission-driven orgs — for-profit and nonprofit — building self-sustaining models. IR strategy, narrative, introductions, and ongoing advisory for organizations that need capital to move.</p>
-        <span class="service-link" style="display:inline-block;margin-top:0.5rem;cursor:pointer;" onclick="showPage('impact-orgs')">Learn more →</span>
-      </div>
-    </div>
-
-    <div style="background:var(--parchment);border:1px solid var(--rule);border-top:3px solid var(--gold);padding:3rem;margin-bottom:5rem;">
-      <div style="display:grid;grid-template-columand activate your mission across generations and sectors.</p>
-          <p style="font-size:0.92rem;color:var(--slate);line-height:1.85;">These are not panels or presentations. They are experiences engineered to produce real momentum: relationships formed, commitments made, and next steps that actually happen. The design draws on 25 years of convening architecture — from the White House and Davos to intimate founder gatherings that turned into Boulder community institutions.</p>
-        </div>
-        <div>
-          <p style="font-size:0.87rem;color:var(--slate);line-height:1.85;font-style:italic;padding:1.5rem;border-left:3px solid var(--gold);margin-bottom:1.5rem;">"Curated the original intimate gathering for the founders of what would become Junkyard Social Club — then called 'Science Galaxy.' That room evolved into a co-created intergenerational play space now a pillar of the Boulder community. The right room at the right moment changes everything."</p>
-          <p style="font-size:0.87rem;color:var(--slate);line-height:1.8;margin-bottom:0.5rem;"><strong>Example:</strong> <em>I Am Wealth in Flow</em> — a Private Invite Only Event at Riverside, Boulder, bringing wealth holders into direct relationship with RiverTree's regenerative ecosystem and capital stewardship model. Designed, curated, and facilitated by Heidi.</p>
-          <a href="mailto:heidi@heidicuppari.com?subject=Mission%20Activation%20Event%20Inquiry" class="btn-outline-gold" style="margin-top:1.5rem;display:inline-block;">Inquire About an Event →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="orgs-ir-section">
-    <div class="fade-up">
-      <span class="eyebrow eyebrow-light">Investor Relations Advisory</span>
-      <h2>Getting investor-ready<br>is a design problem,<br><em>not a pitch problem.</em></h2>
-      <p>Most impact ventures and nonprofits lose the capital conversation before it starts — not because the work isn't strong, but because the story, the structure, and the materials aren't built for the people they're talking to.</p>
-      <p>I've been on both sides of this table for 25 years. I raised early funds for Acumen Fund alongside Jacqueline Novogratz. I co-managed a $400M+ impact portfolio at UBS. I know what moves capital and what doesn't — and it's almost never about the deck.</p>
-      <ul class="orgs-ir-list">
-        <li>Investor narrative development — your story in the language of capital</li>
-        <li>Capital raise structure and sequencing strategy</li>
-        <li>Pitch materials review and strategic reframing</li>
-        <li>Investor introductions where aligned — curated, not broadcast</li>
-        <li>Ongoing IR advisory retainer for ventures in active raise</li>
-      </ul>
-      <div style="margin-top:2.5rem;">
-        <a href="mailto:heidi@heidicuppari.com" class="btn-outline-gold">Let's Talk →</a>
-      </div>
-    </div>
-    <div class="fade-up-2">
-      <span class="eyebrow eyebrow-light">Not Sure If You're Ready?</span>
-      <h2 style="font-size:1.6rem;">Take the Capital<br><em>Readiness Assessment.</em></h2>
-      <p style="margin-top:1rem;">A short diagnostic that surfaces exactly where you are — and where the gaps are — before you start any investor conversation. Free. Takes about 10 minutes. You'll get a response with specific observations within 48 hours.</p>
-      <button class="btn-outline-gold" style="margin-top:2rem;" onclick="document.getElementById('assessment-anchor').scrollIntoView({behavior:'smooth'})">Take the Assessment →</button>
-      <p style="font-size:0.8rem;color:rgba(249,246,240,0.35);margin-top:1.2rem;line-height:1.7;">If you're also a wealth holder or family office — the <span style="color:var(--gold);cursor:pointer;" onclick="showPage('paper')">Designing Capital paper</span> is written for you.</p>
-    </div>
-  </section>
-
   <section class="assessment-section" id="assessment-anchor">
     <div class="assessment-inner">
-      <span class="eyebrow">Capital Readiness Assessment</span>
+      <span class="eyebrow">Investor Readiness Assessment</span>
       <h2>Where are you in the<br><em>capital journey?</em></h2>
       <p>This is your entry point — no pitch required, no sales sequence on the other end. Answer a few questions about your organization, your stage, and your capital needs. I read every submission personally and respond with specific observations within 48 hours. The assessment itself is often useful, independent of anything else.</p>
 
@@ -516,11 +603,80 @@
         <div class="gold-rule" style="margin:0 auto 1.5rem;"></div>
         <h3>Your assessment is in.</h3>
         <p>I'll read it and respond with specific observations within 48 hours. Check heidi@heidicuppari.com and add it to your safe senders list.</p>
-        <p style="margin-top:1rem;font-size:0.82rem;color:rgba(92,90,84,0.5);">In the meantime, if you haven't read the Designing Capital paper — that's the best introduction to how I think about capital architecture.</p>
-        <button class="btn-gold" style="margin-top:1.5rem;" onclick="showPage('paper')">Read the Capital Paper</button>
+        <p style="margin-top:1rem;font-size:0.82rem;color:rgba(92,90,84,0.5);">In the meantime, if you haven't read the Designing Capital paper — that's the best introduction to how I think about wealth architecture.</p>
+        <button class="btn-gold" style="margin-top:1.5rem;" onclick="showPage('paper')">Read the Designing Capital Paper</button>
       </div>
     </div>
   </section>
+
+  <section class="orgs-offers">
+    <div class="orgs-offers-header">
+      <span class="eyebrow">The Systems Change L.A.B. — For Organizations</span>
+      <h2>A proven methodology,<br><em>made replicable.</em></h2>
+      <p>The L.A.B. (Local Action Blueprint) is a structured civic innovation methodology that connects young leaders, intergenerational mentors, institutional partners, and city governments into design cycles that produce real, implementation-ready outcomes. Built over a decade through Dream Tank, deepened through partnership with PEAC Institute.</p>
+    </div>
+
+    <div class="orgs-offer-grid">
+      <div class="orgs-offer-tile">
+        <span class="offer-tag">For Companies &amp; Employers</span>
+        <h3>Intergenerational Leadership Design</h3>
+        <p>A structured process for aligning your workforce across generations — not through workshops, but through real co-design. Young employees and senior leaders working on actual company challenges together, producing implementation-ready recommendations. Grounded in Nobel Peace Prize-credentialed systems change methodology and award-winning healing science.</p>
+        <span class="service-link" style="display:inline-block;margin-top:0.5rem;cursor:pointer;" onclick="showPage('companies')">Learn more →</span>
+      </div>
+      <div class="orgs-offer-tile">
+        <span class="offer-tag">For Cities &amp; Foundations</span>
+        <h3>Systems Change L.A.B. Partnership</h3>
+        <p>License and implement the L.A.B. methodology in your city, region, or community. Includes full facilitation design, training for local teams, and a Local Action Blueprint process culminating in deliverables to city leadership or foundation partners. Active model: Golden and Boulder, CO.</p>
+        <span class="service-link" style="display:inline-block;margin-top:0.5rem;cursor:pointer;" onclick="showPage('cities')">Learn more →</span>
+      </div>
+      <div class="orgs-offer-tile">
+        <span class="offer-tag">For Impact Organizations</span>
+        <h3>IR Advisory &amp; Capital Architecture</h3>
+        <p>For impact ventures and mission-driven orgs — for-profit and nonprofit — building self-sustaining models. IR strategy, narrative, introductions, and ongoing advisory for organizations that need capital to move.</p>
+        <span class="service-link" style="display:inline-block;margin-top:0.5rem;cursor:pointer;" onclick="showPage('impact-orgs')">Learn more →</span>
+      </div>
+    </div>
+
+    <div style="background:var(--parchment);border:1px solid var(--rule);border-top:3px solid var(--gold);padding:3rem;margin-bottom:5rem;">
+      <div style="display:grid;grid-template-columand activate your mission across generations and sectors.</p>
+          <p style="font-size:0.92rem;color:var(--slate);line-height:1.85;">These are not panels or presentations. They are experiences engineered to produce real momentum: relationships formed, commitments made, and next steps that actually happen. The design draws on 25 years of convening architecture — from the White House and Davos to intimate founder gatherings that turned into Boulder community institutions.</p>
+        </div>
+        <div>
+          <p style="font-size:0.87rem;color:var(--slate);line-height:1.85;font-style:italic;padding:1.5rem;border-left:3px solid var(--gold);margin-bottom:1.5rem;">"Curated the original intimate gathering for the founders of what would become Junkyard Social Club — then called 'Science Galaxy.' That room evolved into a co-created intergenerational play space now a pillar of the Boulder community. The right room at the right moment changes everything."</p>
+          <p style="font-size:0.87rem;color:var(--slate);line-height:1.8;margin-bottom:0.5rem;"><strong>Example:</strong> <em>I Am Wealth in Flow</em> — a Private Invite Only Event at Riverside, Boulder, bringing wealth holders into direct relationship with RiverTree's regenerative ecosystem and capital stewardship model. Designed, curated, and facilitated by Heidi.</p>
+          <a href="mailto:heidi@heidicuppari.com?subject=Mission%20Activation%20Event%20Inquiry" class="btn-outline-gold" style="margin-top:1.5rem;display:inline-block;">Inquire About an Event →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="orgs-ir-section">
+    <div class="fade-up">
+      <span class="eyebrow eyebrow-light">Investor Relations Advisory</span>
+      <h2>Getting investor-ready<br>is a design problem,<br><em>not a pitch problem.</em></h2>
+      <p>Most impact ventures and nonprofits lose the capital conversation before it starts — not because the work isn't strong, but because the story, the structure, and the materials aren't built for the people they're talking to.</p>
+      <p>I've been on both sides of this table for 25 years. I raised early funds for Acumen Fund alongside Jacqueline Novogratz. I co-managed a $400M+ impact portfolio at UBS. I know what moves capital and what doesn't — and it's almost never about the deck.</p>
+      <ul class="orgs-ir-list">
+        <li>Investor narrative development — your story in the language of capital</li>
+        <li>Capital raise structure and sequencing strategy</li>
+        <li>Pitch materials review and strategic reframing</li>
+        <li>Investor introductions where aligned — curated, not broadcast</li>
+        <li>Ongoing IR advisory retainer for ventures in active raise</li>
+      </ul>
+      <div style="margin-top:2.5rem;">
+        <a href="mailto:heidi@heidicuppari.com" class="btn-outline-gold">Let's Talk →</a>
+      </div>
+    </div>
+    <div class="fade-up-2">
+      <span class="eyebrow eyebrow-light">Not Sure If You're Ready?</span>
+      <h2 style="font-size:1.6rem;">Take the Investor<br><em>Readiness Assessment.</em></h2>
+      <p style="margin-top:1rem;">A short diagnostic that surfaces exactly where you are — and where the gaps are — before you start any investor conversation. Free. Takes about 10 minutes. You'll get a response with specific observations within 48 hours.</p>
+      <button class="btn-outline-gold" style="margin-top:2rem;" onclick="document.getElementById('assessment-anchor').scrollIntoView({behavior:'smooth'})">Take the Assessment →</button>
+      <p style="font-size:0.8rem;color:rgba(249,246,240,0.35);margin-top:1.2rem;line-height:1.7;">If you're also a wealth holder or family office — the <span style="color:var(--gold);cursor:pointer;" onclick="showPage('paper')">Designing Capital paper</span> is written for you.</p>
+    </div>
+  </section>
+
+
 
   <footer>
     <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
@@ -578,7 +734,7 @@
         <div style="margin-top:2rem;">
           <a href="mailto:heidi@heidicuppari.com?subject=Company%20L.A.B.%20Inquiry" class="btn-outline-gold">Start the Conversation →</a>
         </div>
-        <p style="font-size:0.8rem;color:var(--slate);margin-top:1.2rem;line-height:1.7;">Not sure if your company is ready? <span style="color:var(--gold);cursor:pointer;border-bottom:1px solid var(--gold-dim);" onclick="showPage('orgs');setTimeout(()=>document.getElementById('assessment-anchor').scrollIntoView({behavior:'smooth'}),200)">Take the Capital Readiness Assessment →</span></p>
+        <p style="font-size:0.8rem;color:var(--slate);margin-top:1.2rem;line-height:1.7;">Not sure if your company is ready? <span style="color:var(--gold);cursor:pointer;border-bottom:1px solid var(--gold-dim);" onclick="showPage('orgs');setTimeout(()=>document.getElementById('assessment-anchor').scrollIntoView({behavior:'smooth'}),200)">Take the Investor Readiness Assessment →</span></p>
       </div>
     </div>
   </section>
@@ -620,7 +776,7 @@
         <div class="gold-rule"></div>
         <p>Boston's Youth Lead the Change program gave young people decision-making authority over $1M in city budget allocations — projects designed, prioritized, and voted on entirely by youth. It worked so well the city expanded it citywide with $2M annually. Cambridge is in its 12th consecutive participatory budgeting cycle, with residents having directed over $10.5M to 79 community-designed projects since 2014.</p>
         <p>The Systems Change L.A.B. takes this model deeper — adding intergenerational mentorship, university partnerships, a Nobel Peace Prize-credentialed methodology, and a structured Local Action Blueprint process that produces real deliverables to city leadership or foundation partners with defined implementation pathways.</p>
-        <p>It's currently active in Golden and Boulder, CO, in partnership with the Mayor of Golden and Colorado School of Mines. Multi-city design includes Providence (Brown University partnership anchor) and Nairobi — fully funded launch pending.</p>
+        <p>It's currently active in Golden and Boulder, CO, in partnership with the Mayor of Golden and Colorado School of Mines. Providence, anchored at Brown University where much of the methodology was born, is the designed expansion, alongside a social enterprise pathway in Nairobi.</p>
         <div class="sub-proof-box">
           <p>"The pattern across every city that has tried participatory youth design is consistent: when young people are given genuine decision-making authority over real resources, civic participation surges and trust in local institutions rebuilds."</p>
           <cite>Documented across 12+ city implementations globally</cite>
@@ -702,7 +858,7 @@
           <a href="mailto:heidi@heidicuppari.com?subject=Impact%20Org%20Inquiry" class="btn-outline-gold">Start the Conversation →</a>
         </div>
         <p style="font-size:0.8rem;color:var(--slate);margin-top:1.2rem;line-height:1.7;">
-          <span style="color:var(--gold);cursor:pointer;border-bottom:1px solid var(--gold-dim);" onclick="showPage('orgs');setTimeout(()=>document.getElementById('assessment-anchor').scrollIntoView({behavior:'smooth'}),200)">Take the Capital Readiness Assessment →</span>
+          <span style="color:var(--gold);cursor:pointer;border-bottom:1px solid var(--gold-dim);" onclick="showPage('orgs');setTimeout(()=>document.getElementById('assessment-anchor').scrollIntoView({behavior:'smooth'}),200)">Take the Investor Readiness Assessment →</span>
         </p>
       </div>
     </div>
@@ -805,7 +961,7 @@
     </div>
 
     <h2>The Systems Change L.A.B. <em>— Live in the field.</em></h2>
-    <p>The L.A.B. is currently active in Golden and Boulder, CO — in partnership with the Mayor of Golden and Colorado School of Mines. Multi-city design includes Providence (Brown University partnership anchor) and Nairobi, Kenya — fully funded launch pending. The methodology is documented, replicable, and being deepened through partnership with PEAC Institute.</p>
+    <p>The L.A.B. is currently active in Golden and Boulder, CO — in partnership with the Mayor of Golden and Colorado School of Mines. Providence, anchored at Brown University where much of the methodology was born, is the designed expansion, alongside a social enterprise pathway in Nairobi, Kenya. The methodology is documented, replicable, and being deepened through partnership with PEAC Institute.</p>
   </section>
 
   <section class="proof-thought">
@@ -929,7 +1085,7 @@
       <p class="lead">"I work with wealth holders who sense their capital can do more — and are ready for a conversation that takes that instinct seriously."</p>
       <p>I've spent 25 years building at the intersection of capital, convening, and systems change — raising early funds for Acumen Fund alongside Jacqueline Novogratz, co-managing a $400M+ ESG and impact portfolio at UBS Wealth Management, producing summits at the White House and the World Economic Forum in Davos, and co-creating institutions including the Posner Center for International Development.</p>
       <p>That body of work — in capital markets, investor relations, and the architecture of rooms where decisions get made — is where the frameworks I use with clients were built and tested. It predates Dream Tank. It is 25 years of learning what moves capital, what moves people, and what it takes to build things that outlast their founders.</p>
-      <p>What I offer now is capital architecture — the diagnostic and design work that sits upstream of allocation decisions. I work with a small number of wealth holders and family offices who are asking the questions that matter for the next decade.</p>
+      <p>What I offer now is wealth architecture — the diagnostic and design work that sits upstream of allocation decisions. I work with a small number of wealth holders and family offices who are asking the questions that matter for the next decade.</p>
     </div>
   </section>
 
@@ -1038,7 +1194,7 @@
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + name).classList.add('active');
     window.scrollTo(0, 0);
-    if (push) history.pushState({ page: name }, '', name === 'home' ? '/' : '/' + name);
+    if (push) { try { history.pushState({ page: name }, '', name === 'home' ? '/' : '/' + name); } catch (e) {} }
   }
   window.addEventListener('popstate', function(e) {
     showPage(e.state && e.state.page ? e.state.page : 'home', false);
@@ -1046,12 +1202,9 @@
   (function() {
     var path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
     var valid = ['home','about','work','paper','orgs','proof','companies','cities','impact-orgs','thankyou'];
-    if (path && valid.indexOf(path) !== -1) {
-      showPage(path, false);
-      history.replaceState({ page: path }, '', window.location.pathname);
-    } else {
-      history.replaceState({ page: 'home' }, '', window.location.pathname);
-    }
+    var target = (path && valid.indexOf(path) !== -1) ? path : null;
+    if (target) showPage(target, false);
+    try { history.replaceState({ page: target || 'home' }, '', window.location.pathname); } catch (e) {}
   })();
   function handleFormSubmit() {
     var femail = document.getElementById('femail').value.trim();
@@ -1097,7 +1250,7 @@
     fd.append('amount', amount);
     fd.append('challenge', challenge);
     fd.append('outcome', outcome);
-    fd.append('_subject', 'Capital Readiness Assessment: ' + (org || email));
+    fd.append('_subject', 'Investor Readiness Assessment: ' + (org || email));
     /* Replace YOUR_FORMSPREE_ID below with your actual Formspree form ID */
     fetch('https://formspree.io/f/xjgpyvnj', { method:'POST', body:fd, headers:{'Accept':'application/json'} })
       .then(function(r){ return r.json(); })
@@ -1108,6 +1261,38 @@
         } else { alert('Something went wrong — please email heidi@heidicuppari.com directly.'); }
       })
       .catch(function(){ alert('Something went wrong — please email heidi@heidicuppari.com directly.'); });
+  }
+  function handleWealthAssessmentSubmit() {
+    var email = document.getElementById('wf-email').value.trim();
+    if (!email) { alert('Please enter your email address.'); return; }
+    var fname = document.getElementById('wf-fname').value.trim();
+    var lname = document.getElementById('wf-lname').value.trim();
+    var firm = document.getElementById('wf-firm').value.trim();
+    var fd = new FormData();
+    fd.append('name', fname + ' ' + lname);
+    fd.append('email', email);
+    fd.append('firm', firm);
+    fd.append('shape_of_wealth', document.getElementById('wf-shape').value);
+    fd.append('ai_exposure', document.getElementById('wf-ai').value);
+    fd.append('philanthropy_link', document.getElementById('wf-philanthropy').value);
+    fd.append('reflects_values', document.getElementById('wf-reflect').value);
+    fd.append('live_theme', document.getElementById('wf-themes').value);
+    fd.append('theme_engagement', document.getElementById('wf-engagement').value);
+    fd.append('next_gen', document.getElementById('wf-nextgen').value);
+    fd.append('transition_readiness', document.getElementById('wf-prepared').value);
+    fd.append('biggest_priority', document.getElementById('wf-priority').value);
+    fd.append('investable_range', document.getElementById('wf-range').value);
+    fd.append('_subject', 'Wealth Readiness Assessment: ' + (fname ? fname + ' ' + lname : email));
+    /* Wealth & Legacy Assessment form */
+    fetch('https://formspree.io/f/xlgklrar', { method:'POST', body:fd, headers:{'Accept':'application/json'} })
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (data.ok || data.next) {
+          document.getElementById('wform-wrap').style.display = 'none';
+          document.getElementById('wform-thankyou').classList.add('visible');
+        } else { alert('Something went wrong. Please email heidi@heidicuppari.com directly.'); }
+      })
+      .catch(function(){ alert('Something went wrong. Please email heidi@heidicuppari.com directly.'); });
   }
 </script>
 </body>
