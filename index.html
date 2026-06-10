@@ -16,6 +16,17 @@
   /* Critical SPA page visibility, inlined so navigation cannot break if the external stylesheet is stale, cached, or missing. Single-page sections show one at a time. */
   .page { display: none; }
   .page.active { display: block; }
+  /* Gem thread — Heidi Cuppari brand jewel accents */
+  :root { --garnet: #8b3a4a; --sapphire: #3a567d; --emerald: #2e5d4a; --amethyst: #5c4a72; }
+  .door-card { border-top: 3px solid var(--gold, #b8975a); }
+  .door-card.door-garnet { border-top-color: var(--garnet); }
+  .door-card.door-emerald { border-top-color: var(--emerald); }
+  .door-card.door-sapphire { border-top-color: var(--sapphire); }
+  footer { border-top: 3px solid; border-image: linear-gradient(90deg, var(--garnet), #b8975a, var(--emerald), var(--sapphire), var(--amethyst)) 1; }
+  .proof-stats > div:nth-child(1) .stat-number, .stat-grid > div:nth-child(1) .stat-number { color: var(--garnet); }
+  .proof-stats > div:nth-child(2) .stat-number, .stat-grid > div:nth-child(2) .stat-number { color: #b8975a; }
+  .proof-stats > div:nth-child(3) .stat-number, .stat-grid > div:nth-child(3) .stat-number { color: var(--emerald); }
+  .proof-stats > div:nth-child(4) .stat-number, .stat-grid > div:nth-child(4) .stat-number { color: var(--sapphire); }
 </style>
 
 </head>
@@ -27,11 +38,10 @@
   </span>
   <ul class="nav-links">
     <li><a onclick="showPage('home')" id="nav-home">Home</a></li>
-    <li><a onclick="showPage('about')" id="nav-about">About</a></li>
-    <li><a onclick="showPage('work')" id="nav-work">For Wealth Holders</a></li>
+    <li><a href="/ordination.html" id="nav-ordination">The Ordination</a></li>
     <li><a onclick="showPage('orgs')" id="nav-orgs">For Orgs &amp; Ventures</a></li>
-    <li><a onclick="showPage('proof')" id="nav-proof">Impact &amp; Proof</a></li>
-    <li><a onclick="showPage('paper')" id="nav-paper" class="nav-cta">Download the Paper</a></li>
+    <li><a onclick="showPage('proof')" id="nav-proof">Proof</a></li>
+    <li><a onclick="showPage('paper')" id="nav-paper" class="nav-cta">The Paper</a></li>
   </ul>
 </nav>
 
@@ -86,27 +96,27 @@
   <div class="home-doors">
     <div class="doors-intro">
       <span class="eyebrow" style="display:block;text-align:center;">Who This Work Is For</span>
-      <h2 class="section-title" style="text-align:center;">Three paths <em>into the work.</em></h2>
-      <p>The same body of 25 years — different entry points depending on who you are and what you need. Each path is complete on its own.</p>
+      <h2 class="section-title" style="text-align:center;">I find and fund the geniuses<br><em>we need to create a new earth.</em></h2>
+      <p>They're everywhere — diamonds in the rough, gems hiding in plain sight. My work is finding them, funding them, and ordaining the wealth that backs them. Three doors into that work; each is complete on its own.</p>
     </div>
     <div class="doors-grid">
-      <div class="door-card" onclick="showPage('work')">
-        <span class="door-label">Door 01 · Wealth Holders &amp; Family Offices</span>
-        <h3>Your wealth and legacy holds more <em>than money.</em></h3>
-        <p>For wealth holders navigating aging portfolios, a rising generation with different values, and a world shifting faster than their advisors are acknowledging. Wealth architecture that sits upstream of allocation.</p>
-        <span class="door-link">Wealth Clarity · Design Intensive · Strategic Advisory →</span>
+      <div class="door-card door-garnet" onclick="window.location.href='/ordination.html'">
+        <span class="door-label">Door 01 · The Signature Experience</span>
+        <h3>The Ordination. <em>Know what your wealth is for.</em></h3>
+        <p>A private two-day experience for wealth holders, founders, and leaders who hold something significant and sense it's meant for more. You arrive holding it. You leave knowing what it's for — ordained into deploying it.</p>
+        <span class="door-link">Two days · Four deliverables · Begin →</span>
       </div>
-      <div class="door-card" onclick="showPage('orgs')">
+      <div class="door-card door-emerald" onclick="showPage('orgs')">
         <span class="door-label">Door 02 · Organizations, Ventures &amp; Cities</span>
         <h3>Apply the methodology. <em>Build what comes next.</em></h3>
         <p>For organizations, companies, foundations, and cities ready to apply a proven systems change framework — and for impact ventures and nonprofits navigating capital readiness and investor relations.</p>
         <span class="door-link">L.A.B. Methodology · IR Advisory · Investor Readiness →</span>
       </div>
-      <div class="door-card" onclick="showPage('proof')">
+      <div class="door-card door-sapphire" onclick="showPage('proof')">
         <span class="door-label">Door 03 · The Proof</span>
         <h3>25 years of <em>doing the work.</em></h3>
         <p>Acumen Fund. UBS. White House. Davos. The United Nations. Posner Center. Dream Tank. If you want to understand where the frameworks come from before you engage — start here.</p>
-        <span class="door-link">About Heidi · Experience · The L.A.B. →</span>
+        <span class="door-link">Case Studies · Experience · About Heidi →</span>
       </div>
     </div>
   </div>
@@ -143,7 +153,7 @@
     <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
     <ul class="footer-links">
       <li><a onclick="showPage('paper')">Download the Paper</a></li>
-      <li><a onclick="showPage('work')">Work With Me</a></li>
+      <li><a onclick="window.location.href='/ordination.html'">The Ordination</a></li>
       <li><a href="https://www.linkedin.com/in/heidicuppari" target="_blank">LinkedIn</a></li>
     </ul>
     <div class="footer-contact"><a href="/cdn-cgi/l/email-protection#49212c202d2009212c202d202a3c3939283b20672a2624"><span class="__cf_email__" data-cfemail="5d35383439341d35383439343e282d2d3c2f34733e3230">[email&#160;protected]</span></a> · 917.699.8351</div>
@@ -228,286 +238,13 @@
     <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
     <ul class="footer-links">
       <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('work')">Work With Me</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="window.location.href='/ordination.html'">The Ordination</a></li>
+      <li><a onclick="showPage('proof')">Proof</a></li>
     </ul>
     <div class="footer-contact"><a href="/cdn-cgi/l/email-protection#503835393439103835393439332520203122397e333f3d"><span class="__cf_email__" data-cfemail="c3aba6aaa7aa83aba6aaa7aaa0b6b3b3a2b1aaeda0acae">[email&#160;protected]</span></a> · 917.699.8351</div>
   </footer>
 </div>
 
-<!-- WORK WITH ME -->
-<div class="page" id="page-work">
-  <section class="work-hero">
-    <span class="eyebrow eyebrow-light fade-up">How We Work Together</span>
-    <h1 class="fade-up-2">The right conversation<br>at the <em>right moment.</em></h1>
-    <p class="fade-up-3">Each engagement is designed to meet you where you are — from a first diagnostic conversation to ongoing wealth architecture partnership. No generic ESG products. No pressure. Just the thinking that sits upstream of every allocation decision that matters.</p>
-    <div style="margin-top:1.8rem;"><button class="btn-outline-gold" onclick="document.getElementById('wealth-assessment-anchor').scrollIntoView({behavior:'smooth'})">Take the Wealth Readiness Assessment →</button></div>
-  </section>
-
-  <section class="work-offers">
-    <div class="offer-card">
-      <div class="offer-left">
-        <div class="offer-num">01</div>
-        <div class="offer-tag">Entry Point</div>
-      </div>
-      <div class="offer-mid">
-        <h2>Wealth Clarity Session</h2>
-        <p>A focused 90-minute working session to map your wealth, run it through four transition themes, and identify where your money is — and isn't — doing what you want it to. You leave with specific observations and a clear picture of where deeper work would matter most.</p>
-        <p>Many people find the session itself changes how they think about their next conversations with their advisors.</p>
-        <ul class="offer-includes">
-          <li>90-minute 1:1 working session</li>
-          <li>Wealth mapping across four transition themes</li>
-          <li>Identification of 2–3 specific misalignments and opportunities</li>
-          <li>Short follow-up note with key observations and suggested next step</li>
-        </ul>
-      </div>
-      <div class="offer-right">
-        <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-outline-gold">Schedule a Conversation</a>
-        <span class="offer-for">For wealth holders and family offices at any stage of transition.</span>
-      </div>
-    </div>
-
-    <div class="offer-card">
-      <div class="offer-left">
-        <div class="offer-num">02</div>
-        <div class="offer-tag">Deeper Work</div>
-      </div>
-      <div class="offer-mid">
-        <h2>Wealth Design Intensive</h2>
-        <p>For wealth holders ready to go beyond a single working session — and for families who want to build something together that will actually last. We go deeper: full wealth review, values and legacy alignment, and a personalized wealth design framework you can bring to your advisors and hand to the next generation.</p>
-
-        <h3 class="offer-format-title">Choose your format:</h3>
-
-        <div class="offer-format">
-          <h4>Virtual — Five touchpoints over 30 days</h4>
-          <ul class="offer-includes">
-            <li><strong>Intake call:</strong> Orientation and preparation — so we arrive at Session 1 ready to go deep</li>
-            <li><strong>Session 1:</strong> Transition readiness review — full wealth review and assessment</li>
-            <li><strong>Session 2:</strong> Individual values and money mindset work</li>
-            <li><strong>Session 3:</strong> Collective vision session — weaving individual clarity into a shared legacy framework</li>
-            <li><strong>Integration call:</strong> Reflections, next steps, and how to bring this into your advisor conversations</li>
-            <li>Personalized Wealth Design Framework + Money Manifesto</li>
-          </ul>
-        </div>
-
-        <div class="offer-format">
-          <h4>In-Person — 1.5–2 days</h4>
-          <p>An immersive arc designed for the depth this work deserves. Timing and structure are calibrated to your family.</p>
-          <ul class="offer-includes">
-            <li><strong>Pre-work:</strong> One or two preparation calls to orient each participant</li>
-            <li><strong>Day 1:</strong> Transition readiness review, full wealth-mapping work, individual 1:1 sessions</li>
-            <li><strong>Day 2:</strong> Collective vision session — closing with your Money Manifesto and prioritized path forward</li>
-            <li>Personalized Wealth Design Framework + Money Manifesto</li>
-          </ul>
-        </div>
-
-        <div class="offer-format">
-          <h4>Next Generation Option <span style="opacity:0.7;">(recommended)</span></h4>
-          <p>Before the collective session, each family member — including teens and young adults — has their own private 1:1 working session. Not about money. About what they care about, what they want to build, and how they want to show up in the world right now. By the time the family comes together, everyone arrives with something real to contribute.</p>
-        </div>
-
-        <p class="offer-legacy-note">Built on 25 years of capital markets, convening, and systems change — and grounded in a Nobel Peace Prize-credentialed framework for intergenerational transformation.</p>
-      </div>
-      <div class="offer-right">
-        <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-outline-gold">Inquire</a>
-        <span class="offer-for">For individuals, couples, and families navigating meaningful wealth decisions.</span>
-      </div>
-    </div>
-
-    <div class="offer-card">
-      <div class="offer-left">
-        <div class="offer-num">03</div>
-        <div class="offer-tag">Ongoing Partnership</div>
-      </div>
-      <div class="offer-mid">
-        <h2>Strategic Advisory</h2>
-        <p>Ongoing wealth architecture support for wealth holders in active transition — navigating liquidity, next-gen engagement, a meaningful portfolio reorientation, or the architecture of a family office that doesn't yet exist but should.</p>
-        <p>Two calls per month, async access, and the kind of thinking that doesn't show up in a standard advisor relationship. By application.</p>
-        <ul class="offer-includes">
-          <li>Two 60-minute calls per month</li>
-          <li>Async access for questions, reviews, and decision support</li>
-          <li>Ongoing wealth monitoring and reorientation</li>
-          <li>Introductions to vetted fund managers and impact ventures where appropriate</li>
-          <li>Next-gen engagement design and facilitation</li>
-        </ul>
-      </div>
-      <div class="offer-right">
-        <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-outline-gold">Let's Talk</a>
-        <span class="offer-for">By application. Monthly retainer. For wealth holders in active, meaningful transition.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- WEALTH READINESS ASSESSMENT -->
-  <section class="assessment-section" id="wealth-assessment-anchor">
-    <div class="assessment-inner">
-      <span class="eyebrow">Wealth Readiness Assessment</span>
-      <h2>Where is your wealth positioned<br><em>for what's coming?</em></h2>
-      <p>A short read on how your wealth sits relative to the transition underway: in markets, in your family, and across generations. Most of what follows you won't have been asked by an advisor. About seven minutes. I read every submission personally and respond with specific observations within 48 hours. Your answers stay with me. No lists, no sequence.</p>
-
-      <div class="assessment-form" id="wform-wrap">
-        <div class="aform-row">
-          <div class="aform-field">
-            <label>First Name</label>
-            <input type="text" id="wf-fname" placeholder="First name">
-          </div>
-          <div class="aform-field">
-            <label>Last Name</label>
-            <input type="text" id="wf-lname" placeholder="Last name">
-          </div>
-        </div>
-        <div class="aform-field">
-          <label>Email Address</label>
-          <input type="email" id="wf-email" placeholder="Your email address">
-        </div>
-        <div class="aform-field">
-          <label>Firm or Family Office <span style="text-transform:none;letter-spacing:0;font-style:italic;color:rgba(92,90,84,0.5);">(optional)</span></label>
-          <input type="text" id="wf-firm" placeholder="If applicable">
-        </div>
-        <div class="aform-field">
-          <label>Which best describes the current shape of your wealth?</label>
-          <select id="wf-shape">
-            <option value="">Select one...</option>
-            <option>Mostly public markets (equities, fixed income)</option>
-            <option>Mostly private (PE, VC, private credit, real assets)</option>
-            <option>Concentrated in one or two positions</option>
-            <option>Spread across holdings I don't fully track</option>
-            <option>A recent liquidity event changed everything</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>How much of your public-markets exposure is effectively a bet on continued AI and big-tech dominance?</label>
-          <select id="wf-ai">
-            <option value="">Select one...</option>
-            <option>A large, conscious position</option>
-            <option>Large, though I hadn't framed it that way</option>
-            <option>Modest</option>
-            <option>Minimal</option>
-            <option>Not sure</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>Is your philanthropy or giving connected to your investment thinking?</label>
-          <select id="wf-philanthropy">
-            <option value="">Select one...</option>
-            <option>Fully integrated</option>
-            <option>Somewhat</option>
-            <option>They operate entirely separately</option>
-            <option>I don't have a giving strategy yet</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>When you look at your portfolio, how much does it reflect what you actually care about?</label>
-          <select id="wf-reflect">
-            <option value="">Select one...</option>
-            <option>Not at all</option>
-            <option>A little</option>
-            <option>Somewhat</option>
-            <option>Mostly</option>
-            <option>Almost entirely</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>Which of these forces feels most alive for you right now?</label>
-          <select id="wf-themes">
-            <option value="">Select one...</option>
-            <option>Climate &amp; Natural Capital</option>
-            <option>Inclusive Economies &amp; Human Capital</option>
-            <option>Responsible AI &amp; Digital Public Goods</option>
-            <option>Regenerative Communities &amp; Place-Based Systems</option>
-            <option>More than one / still exploring</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>On that theme, where are you?</label>
-          <select id="wf-engagement">
-            <option value="">Select one...</option>
-            <option>Curious, no exposure yet</option>
-            <option>Some exposure, but not intentional</option>
-            <option>Actively allocating</option>
-            <option>Want to, but don't know where to start</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>Is there a rising generation in your family with a point of view on your wealth?</label>
-          <select id="wf-nextgen">
-            <option value="">Select one...</option>
-            <option>Yes, and they're engaged</option>
-            <option>Yes, but we haven't had the conversation</option>
-            <option>Not yet, but it's coming</option>
-            <option>Not applicable</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>How prepared do you feel for the wealth transition ahead: next generation, legacy, and structure?</label>
-          <select id="wf-prepared">
-            <option value="">Select one...</option>
-            <option>Not at all</option>
-            <option>A little</option>
-            <option>Somewhat</option>
-            <option>Mostly</option>
-            <option>Very prepared</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>What would make the biggest difference for you right now?</label>
-          <select id="wf-priority">
-            <option value="">Select one...</option>
-            <option>A clear read on where I'm misaligned</option>
-            <option>Access to vetted, values-aligned deals</option>
-            <option>A plan I can bring to my advisors and family</option>
-            <option>An ongoing thinking partner</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>Approximate investable range <span style="text-transform:none;letter-spacing:0;font-style:italic;color:rgba(92,90,84,0.5);">(optional)</span></label>
-          <select id="wf-range">
-            <option value="">Prefer not to say</option>
-            <option>Under $1M</option>
-            <option>$1M – $10M</option>
-            <option>$10M – $50M</option>
-            <option>$50M+</option>
-          </select>
-        </div>
-        <button class="aform-submit" onclick="handleWealthAssessmentSubmit()">Send Me My Read</button>
-        <p class="aform-privacy">I read every submission personally and respond within 48 hours with specific observations, never a sales sequence. Your information stays with me.</p>
-      </div>
-      <div class="aform-thankyou" id="wform-thankyou">
-        <div class="gold-rule" style="margin:0 auto 1.5rem;"></div>
-        <h3>Your read is on its way.</h3>
-        <p>Thank you. I'll go through your answers myself and send you a short, specific read within 48 hours, with the two or three things I notice and where deeper work would matter most. It's yours to keep and share with your advisors. Check heidi@heidicuppari.com and add it to your safe senders.</p>
-        <p style="margin-top:1rem;font-size:0.82rem;color:rgba(92,90,84,0.5);">If you'd rather not wait, you're welcome to book a Wealth Clarity Session directly. The fee is credited in full toward any deeper engagement booked within 90 days.</p>
-        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
-          <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-gold">Book a Wealth Clarity Session</a>
-          <button class="btn-outline-gold" onclick="showPage('paper')">Read the Paper</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="work-bottom">
-    <span class="eyebrow" style="display:block;text-align:center;">Not Sure Where to Start?</span>
-    <h2>Start with the paper.<br>Then let's talk.</h2>
-    <p>The Designing Capital paper takes about 20 minutes to read. Most people who reach out for a session have read it first — and the conversation is better for it.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <button class="btn-outline-gold" onclick="showPage('paper')">Download the Paper</button>
-      <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-gold">Schedule a Call</a>
-    </div>
-  </section>
-
-  <footer>
-    <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
-    <ul class="footer-links">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('paper')">Download the Paper</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-    </ul>
-    <div class="footer-contact"><a href="/cdn-cgi/l/email-protection#7f171a161b163f171a161b161c0a0f0f1e0d16511c1012"><span class="__cf_email__" data-cfemail="e8808d818c81a8808d818c818b9d9898899a81c68b8785">[email&#160;protected]</span></a> · 917.699.8351</div>
-  </footer>
-</div>
-
-
-<!-- ORGS & VENTURES -->
 <div class="page" id="page-orgs">
   <section class="orgs-hero">
     <div class="orgs-hero-left fade-up">
@@ -682,8 +419,8 @@
     <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
     <ul class="footer-links">
       <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('work')">For Wealth Holders</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="window.location.href='/ordination.html'">For Wealth Holders</a></li>
+      <li><a onclick="showPage('proof')">Proof</a></li>
     </ul>
     <div class="footer-contact"><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351</div>
   </footer>
@@ -753,8 +490,8 @@
     <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
     <ul class="footer-links">
       <li><a onclick="showPage('orgs')">For Orgs &amp; Ventures</a></li>
-      <li><a onclick="showPage('work')">For Wealth Holders</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="window.location.href='/ordination.html'">For Wealth Holders</a></li>
+      <li><a onclick="showPage('proof')">Proof</a></li>
     </ul>
     <div class="footer-contact"><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351</div>
   </footer>
@@ -812,8 +549,8 @@
     <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
     <ul class="footer-links">
       <li><a onclick="showPage('orgs')">For Orgs &amp; Ventures</a></li>
-      <li><a onclick="showPage('work')">For Wealth Holders</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="window.location.href='/ordination.html'">For Wealth Holders</a></li>
+      <li><a onclick="showPage('proof')">Proof</a></li>
     </ul>
     <div class="footer-contact"><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351</div>
   </footer>
@@ -879,8 +616,8 @@
     <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
     <ul class="footer-links">
       <li><a onclick="showPage('orgs')">For Orgs &amp; Ventures</a></li>
-      <li><a onclick="showPage('work')">For Wealth Holders</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="window.location.href='/ordination.html'">For Wealth Holders</a></li>
+      <li><a onclick="showPage('proof')">Proof</a></li>
     </ul>
     <div class="footer-contact"><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351</div>
   </footer>
@@ -1042,30 +779,7 @@
     </div>
   </section>
 
-  <section class="sub-cta">
-    <span class="eyebrow" style="display:block;text-align:center;">Ready to engage?</span>
-    <h2>Start wherever<br>you are.</h2>
-    <p>The paper if you're a wealth holder. The assessment if you're a venture or org. A conversation if you already know what you need.</p>
-    <div class="sub-cta-row">
-      <button class="btn-outline-gold" onclick="showPage('paper')">Download the Paper</button>
-      <button class="btn-outline-gold" onclick="showPage('orgs');setTimeout(()=>document.getElementById('assessment-anchor').scrollIntoView({behavior:'smooth'}),200)">Take the Assessment</button>
-      <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-gold">Schedule a Call</a>
-    </div>
-  </section>
-
-  <footer>
-    <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
-    <ul class="footer-links">
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('work')">For Wealth Holders</a></li>
-      <li><a onclick="showPage('orgs')">For Orgs &amp; Ventures</a></li>
-    </ul>
-    <div class="footer-contact"><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351</div>
-  </footer>
-</div>
-
-<!-- ABOUT -->
-<div class="page" id="page-about">
+  <!-- ABOUT (merged into Proof — bio after the proof) -->
   <section class="about-hero">
     <div class="about-hero-left fade-up">
       <h1>Heidi<br>Cuppari</h1>
@@ -1163,12 +877,23 @@
     </div>
   </section>
 
+  <section class="sub-cta">
+    <span class="eyebrow" style="display:block;text-align:center;">Ready to engage?</span>
+    <h2>Start wherever<br>you are.</h2>
+    <p>The paper if you're a wealth holder. The assessment if you're a venture or org. A conversation if you already know what you need.</p>
+    <div class="sub-cta-row">
+      <button class="btn-outline-gold" onclick="showPage('paper')">Download the Paper</button>
+      <button class="btn-outline-gold" onclick="showPage('orgs');setTimeout(()=>document.getElementById('assessment-anchor').scrollIntoView({behavior:'smooth'}),200)">Take the Assessment</button>
+      <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-gold">Schedule a Call</a>
+    </div>
+  </section>
+
   <footer>
     <span class="footer-name" onclick="showPage('home')">Heidi Cuppari LLC</span>
     <ul class="footer-links">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('work')">Work With Me</a></li>
-      <li><a onclick="showPage('paper')">Download the Paper</a></li>
+      <li><a onclick="showPage('proof')">Proof</a></li>
+      <li><a onclick="window.location.href='/ordination.html'">For Wealth Holders</a></li>
+      <li><a onclick="showPage('orgs')">For Orgs &amp; Ventures</a></li>
     </ul>
     <div class="footer-contact"><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351</div>
   </footer>
@@ -1201,7 +926,9 @@
   });
   (function() {
     var path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
-    var valid = ['home','about','work','paper','orgs','proof','companies','cities','impact-orgs','thankyou'];
+    if (path === 'work') { window.location.replace('/ordination.html'); return; }
+    if (path === 'about') { path = 'proof'; }
+    var valid = ['home','paper','orgs','proof','companies','cities','impact-orgs','thankyou'];
     var target = (path && valid.indexOf(path) !== -1) ? path : null;
     if (target) showPage(target, false);
     try { history.replaceState({ page: target || 'home' }, '', window.location.pathname); } catch (e) {}
@@ -1261,38 +988,6 @@
         } else { alert('Something went wrong — please email heidi@heidicuppari.com directly.'); }
       })
       .catch(function(){ alert('Something went wrong — please email heidi@heidicuppari.com directly.'); });
-  }
-  function handleWealthAssessmentSubmit() {
-    var email = document.getElementById('wf-email').value.trim();
-    if (!email) { alert('Please enter your email address.'); return; }
-    var fname = document.getElementById('wf-fname').value.trim();
-    var lname = document.getElementById('wf-lname').value.trim();
-    var firm = document.getElementById('wf-firm').value.trim();
-    var fd = new FormData();
-    fd.append('name', fname + ' ' + lname);
-    fd.append('email', email);
-    fd.append('firm', firm);
-    fd.append('shape_of_wealth', document.getElementById('wf-shape').value);
-    fd.append('ai_exposure', document.getElementById('wf-ai').value);
-    fd.append('philanthropy_link', document.getElementById('wf-philanthropy').value);
-    fd.append('reflects_values', document.getElementById('wf-reflect').value);
-    fd.append('live_theme', document.getElementById('wf-themes').value);
-    fd.append('theme_engagement', document.getElementById('wf-engagement').value);
-    fd.append('next_gen', document.getElementById('wf-nextgen').value);
-    fd.append('transition_readiness', document.getElementById('wf-prepared').value);
-    fd.append('biggest_priority', document.getElementById('wf-priority').value);
-    fd.append('investable_range', document.getElementById('wf-range').value);
-    fd.append('_subject', 'Wealth Readiness Assessment: ' + (fname ? fname + ' ' + lname : email));
-    /* Wealth & Legacy Assessment form */
-    fetch('https://formspree.io/f/xlgklrar', { method:'POST', body:fd, headers:{'Accept':'application/json'} })
-      .then(function(r){ return r.json(); })
-      .then(function(data){
-        if (data.ok || data.next) {
-          document.getElementById('wform-wrap').style.display = 'none';
-          document.getElementById('wform-thankyou').classList.add('visible');
-        } else { alert('Something went wrong. Please email heidi@heidicuppari.com directly.'); }
-      })
-      .catch(function(){ alert('Something went wrong. Please email heidi@heidicuppari.com directly.'); });
   }
 </script>
 </body>
