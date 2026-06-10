@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!-- WEALTH & LEGACY ASSESSMENT — standalone page
+     Deploy to site root as wealth-assessment.html
+     Direct link: heidicuppari.com/wealth-assessment.html
+     noindex: not listed in search, share by direct link only
+     Formspree: xlgklrar (Wealth & Legacy Assessment) -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Wealth &amp; Legacy Assessment | Heidi Cuppari</title>
+<meta name="description" content="A short read on how your wealth is positioned for the transition underway. Seven minutes. Heidi responds personally within 48 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1814; --warm-white: #f9f6f0; --parchment: #f0ead8;
+    --gold: #b8975a; --gold-light: #d4b47a; --gold-dim: #8a6f3e;
+    --slate: #5c5a54; --rule: #d8d0bc;
+    --garnet: #8b3a4a; --sapphire: #3a567d; --emerald: #2e5d4a; --amethyst: #5c4a72;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--ink); font-size: 16px; line-height: 1.7; }
+  .gemstrip { height: 3px; background: linear-gradient(90deg, var(--garnet), var(--gold), var(--emerald), var(--sapphire), var(--amethyst)); }
+  .bar { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 4rem; background: var(--ink); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .bar a.name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--warm-white); text-decoration: none; }
+  .bar a.back { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(249,246,240,0.45); text-decoration: none; }
+  .bar a.back:hover { color: var(--gold); }
+
+  .hero { background: var(--ink); padding: 5rem 3rem 4.5rem; text-align: center; }
+  .eyebrow { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1.2rem; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 300; line-height: 1.15; color: var(--warm-white); max-width: 720px; margin: 0 auto 1.4rem; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero p { max-width: 580px; margin: 0 auto; color: rgba(249,246,240,0.65); font-size: 1rem; font-weight: 300; }
+
+  .assessment-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 5rem; }
+
+  /* form fields */
+  .aform-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .aform-field { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.4rem; }
+  .aform-field label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); }
+  .aform-field input, .aform-field select {
+    width: 100%; padding: 0.8rem 1rem; background: var(--warm-white);
+    border: 1px solid var(--rule); color: var(--ink);
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 300;
+    appearance: none; -webkit-appearance: none;
+  }
+  .aform-field input:focus, .aform-field select:focus { outline: none; border-color: var(--gold); }
+  .aform-field .opt { color: rgba(92,90,84,0.45); font-style: italic; text-transform: none; letter-spacing: 0; }
+
+  /* section divider */
+  .aform-section { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); padding: 0.4rem 0 1rem; border-top: 1px solid var(--rule); margin: 0.8rem 0 1.6rem; }
+
+  .aform-submit {
+    display: block; width: 100%; padding: 1.1rem 2rem;
+    background: linear-gradient(120deg, var(--garnet) 0%, var(--amethyst) 100%);
+    color: var(--warm-white); font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+    border: none; cursor: pointer; margin-top: 0.8rem;
+    box-shadow: 0 4px 18px rgba(139,58,74,0.2); transition: all 0.3s;
+  }
+  .aform-submit:hover { background: linear-gradient(120deg, var(--amethyst) 0%, var(--garnet) 100%); transform: translateY(-1px); }
+  .aform-privacy { font-size: 0.78rem; color: rgba(92,90,84,0.55); margin-top: 1rem; text-align: center; font-weight: 300; line-height: 1.6; }
+
+  /* thank you */
+  .aform-thankyou { display: none; text-align: center; padding: 3rem 2rem; }
+  .aform-thankyou.visible { display: block; }
+  .aform-thankyou h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; margin-bottom: 1rem; }
+  .aform-thankyou p { color: var(--slate); font-weight: 300; max-width: 520px; margin: 0 auto 1.2rem; }
+  .gold-rule { width: 40px; height: 1px; background: var(--gold); margin: 0 auto 1.5rem; }
+  .btn-gold { display: inline-block; padding: 1rem 2.4rem; background: var(--gold); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--gold); margin-top: 1rem; }
+  .btn-outline-gold { display: inline-block; padding: 1rem 2.4rem; border: 1px solid var(--gold); color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; background: transparent; margin-top: 1rem; margin-left: 0.8rem; }
+
+  footer { background: var(--ink); padding: 2.5rem 3rem; text-align: center; }
+  footer p { color: rgba(249,246,240,0.4); font-size: 0.82rem; font-weight: 300; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .bar, .assessment-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hero { padding: 4rem 1.5rem 3.5rem; }
+    .aform-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="gemstrip"></div>
+<div class="bar">
+  <a class="name" href="https://heidicuppari.com">Heidi Cuppari</a>
+  <a class="back" href="https://heidicuppari.com">heidicuppari.com →</a>
+</div>
+
+<div class="hero">
+  <span class="eyebrow">Wealth &amp; Legacy Assessment</span>
+  <h1>Where is your wealth positioned<br><em>for what's coming?</em></h1>
+  <p>A short read on how your wealth sits relative to the transition underway — in markets, in your family, and across generations. About seven minutes. I read every submission personally and respond within 48 hours.</p>
+</div>
+
+<div class="assessment-wrap">
+
+  <div id="aform-wrap">
+
+    <div class="aform-section">About you</div>
+    <div class="aform-row">
+      <div class="aform-field">
+        <label>First Name</label>
+        <input type="text" id="wf-fname" placeholder="First name">
+      </div>
+      <div class="aform-field">
+        <label>Last Name</label>
+        <input type="text" id="wf-lname" placeholder="Last name">
+      </div>
+    </div>
+    <div class="aform-field">
+      <label>Email Address</label>
+      <input type="email" id="wf-email" placeholder="Your email address">
+    </div>
+    <div class="aform-field">
+      <label>Firm or Family Office <span class="opt">(optional)</span></label>
+      <input type="text" id="wf-firm" placeholder="If applicable">
+    </div>
+
+    <div class="aform-section">How your wealth sits today</div>
+    <div class="aform-field">
+      <label>Which best describes the current shape of your wealth?</label>
+      <select id="wf-shape">
+        <option value="">Select one...</option>
+        <option>Mostly public markets (equities, fixed income)</option>
+        <option>Mostly private (PE, VC, private credit, real assets)</option>
+        <option>Concentrated in one or two positions</option>
+        <option>Spread across holdings I don't fully track</option>
+        <option>A recent liquidity event changed everything</option>
+      </select>
+    </div>
+    <div class="aform-field">
+      <label>How much of your public-markets exposure is effectively a bet on continued AI and big-tech dominance?</label>
+      <select id="wf-ai">
+        <option value="">Select one...</option>
+        <option>A large, conscious position</option>
+        <option>Large, though I hadn't framed it that way</option>
+        <option>Modest</option>
+        <option>Minimal</option>
+        <option>Not sure</option>
+      </select>
+    </div>
+    <div class="aform-field">
+      <label>Is your philanthropy or giving connected to your investment thinking?</label>
+      <select id="wf-philanthropy">
+        <option value="">Select one...</option>
+        <option>Fully integrated</option>
+        <option>Somewhat</option>
+        <option>They operate entirely separately</option>
+        <option>I don't have a giving strategy yet</option>
+      </select>
+    </div>
+
+    <div class="aform-section">Alignment with what you care about</div>
+    <div class="aform-field">
+      <label>When you look at your portfolio, how much does it reflect what you actually care about?</label>
+      <select id="wf-reflect">
+        <option value="">Select one...</option>
+        <option>Not at all</option>
+        <option>A little</option>
+        <option>Somewhat</option>
+        <option>Mostly</option>
+        <option>Almost entirely</option>
+      </select>
+    </div>
+    <div class="aform-field">
+      <label>Which of these forces feels most alive for you right now?</label>
+      <select id="wf-themes">
+        <option value="">Select one...</option>
+        <option>Climate &amp; Natural Capital</option>
+        <option>Inclusive Economies &amp; Human Capital</option>
+        <option>Responsible AI &amp; Digital Public Goods</option>
+        <option>Regenerative Communities &amp; Place-Based Systems</option>
+        <option>More than one / still exploring</option>
+      </select>
+    </div>
+    <div class="aform-field">
+      <label>On that theme, where are you?</label>
+      <select id="wf-engagement">
+        <option value="">Select one...</option>
+        <option>Curious, no exposure yet</option>
+        <option>Some exposure, but not intentional</option>
+        <option>Actively allocating</option>
+        <option>Want to, but don't know where to start</option>
+      </select>
+    </div>
+
+    <div class="aform-section">The generational dimension</div>
+    <div class="aform-field">
+      <label>Is there a rising generation in your family with a point of view on your wealth?</label>
+      <select id="wf-nextgen">
+        <option value="">Select one...</option>
+        <option>Yes, and they're engaged</option>
+        <option>Yes, but we haven't had the conversation</option>
+        <option>Not yet, but it's coming</option>
+        <option>Not applicable</option>
+      </select>
+    </div>
+    <div class="aform-field">
+      <label>How prepared do you feel for the wealth transition ahead: next generation, legacy, and structure?</label>
+      <select id="wf-prepared">
+        <option value="">Select one...</option>
+        <option>Not at all</option>
+        <option>A little</option>
+        <option>Somewhat</option>
+        <option>Mostly</option>
+        <option>Very prepared</option>
+      </select>
+    </div>
+
+    <div class="aform-section">What would move the needle</div>
+    <div class="aform-field">
+      <label>What would make the biggest difference for you right now?</label>
+      <select id="wf-priority">
+        <option value="">Select one...</option>
+        <option>A clear read on where I'm misaligned</option>
+        <option>Access to vetted, values-aligned deals</option>
+        <option>A plan I can bring to my advisors and family</option>
+        <option>An ongoing thinking partner</option>
+      </select>
+    </div>
+    <div class="aform-field">
+      <label>Approximate investable range <span class="opt">(optional)</span></label>
+      <select id="wf-range">
+        <option value="">Prefer not to say</option>
+        <option>Under $1M</option>
+        <option>$1M – $10M</option>
+        <option>$10M – $50M</option>
+        <option>$50M+</option>
+      </select>
+    </div>
+
+    <button class="aform-submit" onclick="handleWealthAssessmentSubmit()">Send Me My Read</button>
+    <p class="aform-privacy">I read every submission personally and respond within 48 hours with specific observations — never a sales sequence. Your information stays with me.</p>
+
+  </div>
+
+  <div class="aform-thankyou" id="aform-thankyou">
+    <div class="gold-rule"></div>
+    <h3>Your read is on its way.</h3>
+    <p>Thank you. I'll go through your answers and send you a short, specific read within 48 hours — the two or three things I notice and where deeper work would matter most. It's yours to keep and share with your advisors.</p>
+    <p style="font-size:0.82rem;color:rgba(92,90,84,0.45);margin-top:0.8rem;">If you'd rather not wait, you're welcome to book a Wealth Clarity Session directly. The fee is credited in full toward any deeper engagement booked within 90 days.</p>
+    <div style="display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
+      <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-gold">Book a Conversation</a>
+      <a href="/ordination.html" class="btn-outline-gold">The Ordination</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="gemstrip"></div>
+<footer>
+  <p>Heidi Cuppari LLC · Wealth &amp; Legacy Architect<br>
+  <a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351</p>
+</footer>
+
+<script>
+  function handleWealthAssessmentSubmit() {
+    var email = document.getElementById('wf-email').value.trim();
+    if (!email) { alert('Please enter your email address.'); return; }
+    var fd = new FormData();
+    fd.append('name', document.getElementById('wf-fname').value.trim() + ' ' + document.getElementById('wf-lname').value.trim());
+    fd.append('email', email);
+    fd.append('firm', document.getElementById('wf-firm').value.trim());
+    fd.append('shape_of_wealth', document.getElementById('wf-shape').value);
+    fd.append('ai_exposure', document.getElementById('wf-ai').value);
+    fd.append('philanthropy_link', document.getElementById('wf-philanthropy').value);
+    fd.append('reflects_values', document.getElementById('wf-reflect').value);
+    fd.append('live_theme', document.getElementById('wf-themes').value);
+    fd.append('theme_engagement', document.getElementById('wf-engagement').value);
+    fd.append('next_gen', document.getElementById('wf-nextgen').value);
+    fd.append('transition_readiness', document.getElementById('wf-prepared').value);
+    fd.append('biggest_priority', document.getElementById('wf-priority').value);
+    fd.append('investable_range', document.getElementById('wf-range').value);
+    fd.append('_subject', 'Wealth & Legacy Assessment: ' + (document.getElementById('wf-fname').value.trim() || email));
+    fetch('https://formspree.io/f/xlgklrar', {
+      method: 'POST', body: fd, headers: { 'Accept': 'application/json' }
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.ok || data.next) {
+        document.getElementById('aform-wrap').style.display = 'none';
+        document.getElementById('aform-thankyou').classList.add('visible');
+      } else {
+        alert('Something went wrong. Please email heidi@heidicuppari.com directly.');
+      }
+    })
+    .catch(function() {
+      alert('Something went wrong. Please email heidi@heidicuppari.com directly.');
+    });
+  }
+</script>
+
+</body>
+</html>
