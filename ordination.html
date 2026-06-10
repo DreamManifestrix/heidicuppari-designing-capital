@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!-- THE ORDINATION — standalone page for heidicuppari.com/ordination.html
+     Fully self-contained: all styles inline, no dependency on styles.css, nothing shared with the main site.
+     PHOTOS: upload six images to the site root (your HBK selects for the land; your Riverside shots):
+       /ordination-land-1.jpg  (wide/hero)   /ordination-land-2.jpg  /ordination-land-3.jpg
+       /ordination-riverside-1.jpg  (wide/hero)   /ordination-riverside-2.jpg  /ordination-riverside-3.jpg
+     Each appears automatically; until uploaded, an elegant jewel-toned placeholder shows in its spot. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ordination | Heidi Cuppari</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="A private two-day experience with Heidi Cuppari, Wealth &amp; Legacy Architect. You arrive holding something significant. You leave knowing what it's for.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1814; --warm-white: #f9f6f0; --parchment: #f0ead8;
+    --gold: #b8975a; --gold-light: #d4b47a; --gold-dim: #8a6f3e;
+    --slate: #5c5a54; --rule: #d8d0bc; --rule-dark: rgba(255,255,255,0.09);
+    --garnet: #8b3a4a; --sapphire: #3a567d; --emerald: #2e5d4a; --amethyst: #5c4a72;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--ink); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  .eyebrow { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; display: block; }
+  .gold-rule { width: 40px; height: 1px; background: var(--gold); margin: 1.5rem 0; }
+  .btn-gold { display: inline-block; padding: 1rem 2.4rem; background: var(--gold); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; cursor: pointer; border: 1px solid var(--gold); transition: all 0.25s; }
+  .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+  .btn-outline-gold { display: inline-block; padding: 1rem 2.4rem; border: 1px solid var(--gold); color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; cursor: pointer; background: transparent; transition: all 0.25s; }
+  .btn-outline-gold:hover { background: var(--gold); color: var(--ink); }
+  .btn-jewel { display: inline-block; padding: 1rem 2.6rem; background: linear-gradient(120deg, var(--garnet) 0%, var(--amethyst) 100%); color: var(--warm-white); font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; cursor: pointer; border: 1px solid rgba(212,180,122,0.5); transition: all 0.3s; box-shadow: 0 4px 18px rgba(139,58,74,0.25); }
+  .btn-jewel:hover { background: linear-gradient(120deg, var(--amethyst) 0%, var(--garnet) 100%); box-shadow: 0 6px 24px rgba(92,74,114,0.35); transform: translateY(-1px); }
+  .btn-outline-emerald { display: inline-block; padding: 1rem 2.4rem; border: 1px solid var(--emerald); color: var(--emerald); font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; cursor: pointer; background: transparent; transition: all 0.25s; }
+  .btn-outline-emerald:hover { background: var(--emerald); color: var(--warm-white); }
+
+  /* gem strip — the signature thread */
+  .gemstrip { height: 3px; background: linear-gradient(90deg, var(--garnet), var(--gold), var(--emerald), var(--sapphire), var(--amethyst)); }
+
+  /* jewel eyebrows per section */
+  .why .eyebrow { color: var(--garnet); }
+  .days .eyebrow { color: var(--emerald); }
+  .places .eyebrow { color: var(--amethyst); }
+  .cont .eyebrow { color: var(--sapphire); }
+  .why .gold-rule { background: linear-gradient(90deg, var(--garnet), var(--gold)); width: 56px; }
+
+  /* top bar */
+  .bar { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 4rem; background: var(--ink); border-bottom: 1px solid var(--rule-dark); }
+  .bar a.name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--warm-white); text-decoration: none; }
+  .bar a.back { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(249,246,240,0.55); text-decoration: none; }
+  .bar a.back:hover { color: var(--gold); }
+
+  /* hero */
+  .hero { background: var(--ink); padding: 7rem 3rem 6rem; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 640px; height: 640px; border-radius: 50%; border: 1px solid rgba(184,151,90,0.1); pointer-events: none; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem, 5vw, 4.4rem); font-weight: 300; line-height: 1.12; color: var(--warm-white); max-width: 820px; margin: 0 auto 1.6rem; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero p.sub { max-width: 620px; margin: 0 auto 2.4rem; color: rgba(249,246,240,0.72); font-size: 1.05rem; font-weight: 300; }
+
+  /* sections */
+  section { padding: 5.5rem 3rem; }
+  .inner { max-width: 760px; margin: 0 auto; }
+  .inner-wide { max-width: 1000px; margin: 0 auto; }
+  h2.title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem, 3vw, 2.6rem); font-weight: 300; line-height: 1.2; }
+  h2.title em { font-style: italic; color: var(--gold); }
+  .why { background: var(--parchment); }
+  .why p { margin-bottom: 1.3rem; color: var(--ink); font-weight: 300; font-size: 1.02rem; }
+  .why p em { color: var(--gold-dim); }
+  .why .sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; color: var(--gold-dim); }
+
+  /* days */
+  .days { background: var(--warm-white); }
+  .day-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+  .day { border-top: 1px solid var(--gold); padding-top: 1.6rem; }
+  .day .num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+  .day:nth-child(1) .num { color: var(--garnet); }
+  .day:nth-child(2) .num { color: var(--sapphire); }
+  .day:nth-child(1) { border-top-color: var(--garnet); }
+  .day:nth-child(2) { border-top-color: var(--sapphire); }
+  .day h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin: 0.8rem 0 0.8rem; }
+  .day p { color: var(--slate); font-size: 0.95rem; font-weight: 300; }
+
+  /* deliverables */
+  .leave { background: var(--ink); }
+  .leave h2.title { color: var(--warm-white); }
+  .d-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 3rem; }
+  .d-card { border: 1px solid rgba(184,151,90,0.28); border-top: 2px solid var(--gold); padding: 2rem; background: rgba(249,246,240,0.02); }
+  .d-card:nth-child(1) { border-top-color: var(--garnet); }
+  .d-card:nth-child(2) { border-top-color: var(--sapphire); }
+  .d-card:nth-child(3) { border-top-color: var(--emerald); }
+  .d-card:nth-child(4) { border-top-color: var(--amethyst); }
+  .d-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400; color: var(--gold); margin-bottom: 0.7rem; }
+  .d-card p { color: rgba(249,246,240,0.7); font-size: 0.92rem; font-weight: 300; }
+  .d-card p.enables { margin-top: 0.9rem; color: rgba(249,246,240,0.5); font-size: 0.85rem; }
+  .d-card p.enables strong { color: var(--gold-dim); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.68rem; display: block; margin-bottom: 0.2rem; }
+
+  /* places */
+  .places { background: var(--warm-white); text-align: center; }
+  .venue { margin-top: 3.5rem; text-align: left; }
+  .venue h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 0.3rem; }
+  .venue .v-fact { font-size: 0.82rem; color: var(--slate); font-weight: 300; margin-bottom: 1.2rem; }
+  .v-grid { display: grid; grid-template-columns: 1.6fr 1fr; grid-template-rows: 195px 195px; gap: 1rem; }
+  .v-grid .cell { position: relative; overflow: hidden; }
+  .v-grid .cell.big { grid-row: 1 / span 2; }
+  .v-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .v-grid .ph { position:absolute; inset:0; display:none; align-items:center; justify-content:center; text-align:center; color: rgba(249,246,240,0.85); font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; flex-direction:column; gap:0.3rem; padding:1rem; }
+  .v-grid .ph small { font-family:'DM Sans',sans-serif; font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; font-style:normal; color:rgba(249,246,240,0.5); }
+  .venue h3 span.gem-land { color: var(--emerald); }
+  .venue h3 span.gem-river { color: var(--sapphire); }
+
+  /* pricing */
+  .reserve { background: linear-gradient(to bottom, var(--parchment) 70%, rgba(139,58,74,0.07) 100%), var(--parchment); }
+  .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 3rem; }
+  .p-card { background: var(--warm-white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); padding: 2.6rem 2.4rem; display: flex; flex-direction: column; }
+  .p-grid .p-card:nth-child(1) { border-top-color: var(--garnet); }
+  .p-grid .p-card:nth-child(2) { border-top-color: var(--emerald); }
+  .p-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 0.3rem; }
+  .p-card .price { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 300; margin: 0.6rem 0 1.2rem; }
+  .p-grid .p-card:nth-child(1) .price { color: var(--garnet); }
+  .p-grid .p-card:nth-child(2) .price { color: var(--emerald); }
+  .p-card .price small { font-size: 1rem; color: var(--slate); }
+  .p-card ul { list-style: none; margin-bottom: 1.8rem; }
+  .p-card li { font-size: 0.9rem; color: var(--slate); font-weight: 300; padding: 0.45rem 0 0.45rem 1.4rem; position: relative; }
+  .p-card li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+  .p-card .btn-gold, .p-card .btn-outline-gold { margin-top: auto; text-align: center; }
+  .p-note { text-align: center; max-width: 620px; margin: 2.6rem auto 0; font-size: 0.85rem; color: var(--slate); font-weight: 300; }
+
+  /* continuation + footer */
+  .cont { background: radial-gradient(ellipse at 50% -10%, rgba(58,86,125,0.45), transparent 55%), radial-gradient(ellipse at 85% 110%, rgba(92,74,114,0.3), transparent 50%), radial-gradient(ellipse at 12% 105%, rgba(139,58,74,0.22), transparent 45%), var(--ink); text-align: center; }
+  .cont h2.title { color: var(--warm-white); }
+  .cont p { max-width: 640px; margin: 1.4rem auto 0; color: rgba(249,246,240,0.7); font-weight: 300; }
+  footer { background: var(--ink); padding: 3rem; text-align: center; }
+  footer p { color: rgba(249,246,240,0.5); font-size: 0.85rem; font-weight: 300; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 760px) {
+    .bar, section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .day-grid, .d-grid, .p-grid { grid-template-columns: 1fr; }
+    .v-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .v-grid .cell { height: 220px; }
+    .v-grid .cell.big { grid-row: auto; }
+    .hero { padding: 5rem 1.5rem 4.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="name" href="https://heidicuppari.com">Heidi Cuppari</a>
+  <a class="back" href="https://heidicuppari.com">heidicuppari.com →</a>
+</div>
+<div class="gemstrip"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="eyebrow">The Ordination · A Private Two-Day Experience</span>
+  <h1>You've built something significant.<br>It's asking <em>to mean more.</em></h1>
+  <p class="sub">Two private days with Heidi Cuppari, Wealth &amp; Legacy Architect. You arrive holding something significant — wealth, a company, a life's work. You leave knowing exactly what it's for.</p>
+  <a class="btn-jewel" href="#reserve">Reserve Your Ordination</a>
+</div>
+
+<!-- WHY THE WORD -->
+<section class="why">
+  <div class="inner">
+    <span class="eyebrow">The Word</span>
+    <h2 class="title">Why I call it <em>an Ordination.</em></h2>
+    <div class="gold-rule"></div>
+    <p><em>Ordination</em> comes from the Latin <em>ordinare</em>: to set in order, to appoint to a purpose. Long before it belonged to any church, it described the act of arranging something around what it is for.</p>
+    <p>I've spent 25 years designing capital — at Acumen, at UBS, in rooms from the White House to Davos. And I learned the thing the industry still hasn't admitted: you can order a portfolio perfectly and the wealth will still drift, because the person holding it was never asked the only question that matters. <em>What is this actually for?</em></p>
+    <p>This is not a religious act. In the old world, ordination was something an institution conferred on you. We are living through the end of that world — it's the subject of my paper — and in this one, no institution is coming to tell you what your wealth means. The ordination is the one you give yourself: the moment you bless your own life and your own money with a purpose, and become their whole owner. My role is to architect that moment, and to witness it.</p>
+    <p>Advisors order the money. No one ordains the holder. The Ordination is that missing act: two days in which you — not just your holdings — are set in order around your purpose. It is the most upstream move in capital design. Everything that matters — the allocation, the giving, the legacy, the impact — follows from it.</p>
+    <p class="sig">This is how wealth becomes systems change: not when capital moves, but when the person who holds it knows exactly why.</p>
+  </div>
+</section>
+
+<!-- THE TWO DAYS -->
+<section class="days">
+  <div class="inner-wide">
+    <span class="eyebrow">The Experience</span>
+    <h2 class="title">Two days. Three hours each.<br><em>Online, live, and private.</em></h2>
+    <div class="day-grid">
+      <div class="day">
+        <div class="num">I</div>
+        <h3>The day that looks inward</h3>
+        <p>What you hold, what you've built, what it has been for until now — and the restlessness that brought you here. We name the moment you're standing inside: the institutional transition, the generational handoff, the question underneath the money.</p>
+      </div>
+      <div class="day">
+        <div class="num">II</div>
+        <h3>The day that looks forward</h3>
+        <p>Your wealth and work mapped against the four forces reshaping the next decade. Then the ordination itself: the purpose of your resources named, spoken, witnessed, and made real — and your first move chosen before we close.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="leave">
+  <div class="inner-wide">
+    <span class="eyebrow">What You Leave With</span>
+    <h2 class="title">Four things. <em>All of them yours.</em></h2>
+    <div class="d-grid">
+      <div class="d-card">
+        <h3>Your Ordination</h3>
+        <p>A written declaration, in your own words and refined together in the room, of what your wealth and your work are for. One page. The thing you can read in five years and still recognize as true.</p>
+        <p class="enables"><strong>What it enables</strong>A single sentence to test every opportunity against. When something crosses your desk, you'll know within a minute whether it belongs in your life.</p>
+      </div>
+      <div class="d-card">
+        <h3>The Ordination Report</h3>
+        <p>Within a week of your second day: my written read on you. Your holdings mapped across four transition themes — where you're aligned, where you're exposed, and the two or three observations that matter most. Written to be handed directly to your financial advisor, your attorney, or your family.</p>
+        <p class="enables"><strong>What it enables</strong>Your advisors finally working from your design instead of their defaults.</p>
+      </div>
+      <div class="d-card">
+        <h3>Your Money Manifesto</h3>
+        <p>The fuller statement for the people your wealth touches: what this money believes, what it will and won't do, and what you want it to mean in the hands of the next generation. Built from your own language across both days.</p>
+        <p class="enables"><strong>What it enables</strong>The conversation most families never manage to have — the difference between heirs inheriting assets and heirs inheriting intention.</p>
+      </div>
+      <div class="d-card">
+        <h3>The First Move</h3>
+        <p>We close day two by choosing one concrete action — and the deliverable is a one-page directive: the move, why this one first, the exact steps, and the date it happens by. Not a plan. A move.</p>
+        <p class="enables"><strong>What it enables</strong>Momentum. The Ordination doesn't end as an experience you think about. It ends with something in motion within fourteen days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PLACES (photo slots; hide gracefully if images not yet uploaded) -->
+<section class="places">
+  <div class="inner-wide">
+    <span class="eyebrow">Where This Work Lives</span>
+    <h2 class="title">Begun online. <em>Held by real ground.</em></h2>
+    <p style="max-width:600px;margin:1.2rem auto 0;color:var(--slate);font-weight:300;">The Ordination begins online — and the work continues in person, at Riverside in Boulder and on 45 acres of land in the Colorado foothills. In-person and immersive Ordinations open by invitation.</p>
+    <div class="venue">
+      <h3><span class="gem-land">The Land</span> · Lyons, Colorado</h3>
+      <p class="v-fact">45 private acres in the foothills · seven bedrooms · where the immersive Ordination lives</p>
+      <div class="v-grid">
+        <div class="cell big">
+          <img src="/ordination-land-1.jpg" alt="The land — 45 acres in the Colorado foothills" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="background:linear-gradient(135deg, rgba(46,93,74,0.92), rgba(26,24,20,0.96));">The land, wide<br><small>upload /ordination-land-1.jpg</small></div>
+        </div>
+        <div class="cell">
+          <img src="/ordination-land-2.jpg" alt="On the land" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="background:linear-gradient(135deg, rgba(46,93,74,0.8), rgba(92,74,114,0.85));">Detail<br><small>upload /ordination-land-2.jpg</small></div>
+        </div>
+        <div class="cell">
+          <img src="/ordination-land-3.jpg" alt="The retreat house" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="background:linear-gradient(135deg, rgba(26,24,20,0.9), rgba(46,93,74,0.85));">The house<br><small>upload /ordination-land-3.jpg</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="venue">
+      <h3><span class="gem-river">Riverside</span> · Downtown Boulder</h3>
+      <p class="v-fact">A 110-year-old landmark on Boulder Creek — the only patio in Boulder built directly over the water</p>
+      <div class="v-grid">
+        <div class="cell big">
+          <img src="/ordination-riverside-1.jpg" alt="Riverside on Boulder Creek" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="background:linear-gradient(135deg, rgba(58,86,125,0.92), rgba(26,24,20,0.96));">Riverside, wide<br><small>upload /ordination-riverside-1.jpg</small></div>
+        </div>
+        <div class="cell">
+          <img src="/ordination-riverside-2.jpg" alt="The patio over Boulder Creek" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="background:linear-gradient(135deg, rgba(58,86,125,0.8), rgba(139,58,74,0.8));">The patio<br><small>upload /ordination-riverside-2.jpg</small></div>
+        </div>
+        <div class="cell">
+          <img src="/ordination-riverside-3.jpg" alt="Inside Riverside" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="background:linear-gradient(135deg, rgba(26,24,20,0.9), rgba(58,86,125,0.85));">The room<br><small>upload /ordination-riverside-3.jpg</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- RESERVE -->
+<section class="reserve" id="reserve">
+  <div class="inner-wide">
+    <span class="eyebrow">Reserve</span>
+    <h2 class="title">Begin <em>your Ordination.</em></h2>
+    <p style="max-width:620px;margin:1.2rem 0 0;color:var(--slate);font-weight:300;">Reserving secures your Ordination; we then find your two days together directly â typically within two to three weeks. If we can’t find dates that work, your reservation is refunded in full. I take a small number of these per season because of the depth the work requires.</p>
+    <div class="p-grid">
+      <div class="p-card">
+        <h3>The Ordination · Private</h3>
+        <div class="price">$5,000</div>
+        <ul>
+          <li>Two private days, three hours each, live online</li>
+          <li>Your Ordination — the written declaration</li>
+          <li>The Ordination Report — written for you and your advisors</li>
+          <li>Your Money Manifesto</li>
+          <li>The First Move — in motion within 14 days</li>
+          <li>Add a family member (+$1,800) — offered as an option at checkout: their own private day, plus a shared day where two threads become one direction</li>
+        </ul>
+        <a class="btn-jewel" href="https://buy.stripe.com/3cIfZi3DQ7BYelW1hB8k800">Reserve Your Ordination →</a>
+        <p style="font-size:0.78rem;color:var(--slate);margin-top:0.9rem;text-align:center;font-weight:300;">You may also reserve with a $2,500 deposit, with the balance due before your second day. <a href="mailto:heidi@heidicuppari.com?subject=The%20Ordination%20%E2%80%94%20Deposit%20Reservation" style="color:var(--gold-dim);">Email me</a> and I’ll send the deposit link directly.</p>
+      </div>
+      <div class="p-card">
+        <h3>The Ordination · Nonprofit Leaders</h3>
+        <div class="price">$3,500</div>
+        <ul>
+          <li>The same two private days and all four deliverables</li>
+          <li>For founders and executive leaders of nonprofits and social enterprises</li>
+          <li>The Ordination Report mapped to your organization's capital path as well as your own</li>
+          <li>Add a senior team member (+$500 each) — offered as an option at checkout — to join day two, so the direction lands in the organization, not just the leader</li>
+        </ul>
+        <a class="btn-outline-emerald" href="https://buy.stripe.com/6oUeVe4HUe0m6Tuf8r8k801">Reserve · Nonprofit →</a>
+      </div>
+    </div>
+    <p class="p-note">Questions first? Write me directly at <a href="mailto:heidi@heidicuppari.com?subject=The%20Ordination" style="color:var(--gold-dim);">heidi@heidicuppari.com</a> or <a href="https://calendly.com/heidi_cuppari/strategy-session" style="color:var(--gold-dim);">book a conversation</a>.</p>
+  </div>
+</section>
+
+<!-- CONTINUATION -->
+<section class="cont">
+  <div class="inner">
+    <span class="eyebrow">Where It Leads</span>
+    <h2 class="title">The wealth follows <em>the ordination.</em></h2>
+    <p>For those whose Ordination points toward their portfolio, the work can continue into Transition Offset design and ongoing strategic advisory. For those it points elsewhere — a venture, a family, a legacy structure — the door stays open. The Ordination is complete on its own.</p>
+    <p style="margin-top:1.6rem;"><a href="https://heidicuppari.com" class="btn-outline-gold">Explore the Full Body of Work</a></p>
+  </div>
+</section>
+
+<div class="gemstrip"></div>
+<footer>
+  <p>Heidi Cuppari LLC · Wealth &amp; Legacy Architect<br>
+  <a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351 · <a href="https://www.linkedin.com/in/heidicuppari">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
