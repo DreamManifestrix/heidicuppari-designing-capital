@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<title>Systems Impact Finance Roundtable</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --garnet:#8b3a4a;
+    --gold:#b8975a;
+    --gold-deep:#8b6914;
+    --emerald:#2e5d4a;
+    --emerald-deep:#244c3c;
+    --sapphire:#3a567d;
+    --amethyst:#5c4a72;
+    --ink:#2a2420;
+    --ink-soft:#6b6055;
+    --parchment:#f0ead8;
+    --warm-white:#fbf9f3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'DM Sans',system-ui,sans-serif;
+    background:var(--parchment);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px;}
+
+  /* HERO */
+  .hero{
+    background:radial-gradient(135% 95% at 50% -18%, #ffffff 0%, #f6f0e2 60%, var(--parchment) 100%);
+    color:var(--ink);
+    padding:60px 0 54px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .eyebrow{
+    font-size:.74rem;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    font-weight:600;
+    margin-bottom:26px;
+    line-height:1.7;
+  }
+  .table-mark{margin:0 auto 28px;display:block;width:132px;height:132px;}
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    font-size:clamp(2.5rem,7vw,3.7rem);
+    line-height:1.04;
+    letter-spacing:.005em;
+    color:var(--emerald);
+    margin-bottom:14px;
+  }
+  .subtitle{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:clamp(1.15rem,3.2vw,1.5rem);
+    color:var(--ink-soft);
+    margin-bottom:30px;
+  }
+  .meta{
+    display:inline-flex;flex-wrap:wrap;gap:10px 18px;
+    justify-content:center;align-items:center;
+    font-size:.92rem;letter-spacing:.04em;color:var(--ink);
+  }
+  .meta span{display:inline-flex;align-items:center;gap:18px;}
+  .meta .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;}
+
+  /* BODY CARD */
+  .panel{
+    background:var(--warm-white);
+    border:1px solid #ece3cf;
+    border-radius:4px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+    padding:48px 44px 44px;
+    box-shadow:0 24px 50px -26px rgba(60,40,30,.30);
+  }
+  .lead{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.42rem;line-height:1.45;color:var(--ink);margin-bottom:22px;
+  }
+  .body-copy{color:var(--ink-soft);font-size:1rem;margin-bottom:16px;}
+  .rule{
+    height:2px;border-radius:2px;margin:34px 0 30px;
+    background:linear-gradient(90deg,var(--garnet),var(--gold),var(--emerald),var(--sapphire),var(--amethyst));
+    opacity:.85;
+  }
+
+  .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px;margin-bottom:8px;}
+  .detail .label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:4px;}
+  .detail .val{font-size:1rem;color:var(--ink);font-weight:500;}
+  .host-line{font-size:.95rem;color:var(--ink-soft);margin-top:4px;}
+  .host-line strong{color:var(--ink);font-weight:600;}
+
+  /* FORM */
+  .form-head{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--emerald);margin:8px 0 4px;}
+  .form-sub{font-size:.95rem;color:var(--ink-soft);margin-bottom:26px;}
+  form{display:grid;gap:18px;}
+  .field label{display:block;font-size:.8rem;letter-spacing:.04em;color:var(--ink);font-weight:600;margin-bottom:7px;}
+  .field .opt{color:var(--ink-soft);font-weight:400;letter-spacing:0;}
+  input,textarea{
+    width:100%;font-family:inherit;font-size:1rem;color:var(--ink);
+    background:#fff;border:1px solid #ddd3bf;border-radius:2px;
+    padding:12px 14px;transition:border-color .15s,box-shadow .15s;
+  }
+  input:focus,textarea:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(46,93,74,.16);}
+  textarea{resize:vertical;min-height:84px;}
+  .btn{
+    appearance:none;cursor:pointer;border:none;
+    background:var(--emerald);color:#fff;
+    font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:600;
+    letter-spacing:.04em;padding:15px 20px;border-radius:2px;
+    transition:background .18s,transform .05s;
+  }
+  .btn:hover{background:var(--emerald-deep);}
+  .btn:active{transform:translateY(1px);}
+  .btn:disabled{opacity:.55;cursor:default;}
+  .fineprint{font-size:.82rem;color:var(--ink-soft);text-align:center;margin-top:4px;}
+
+  /* SUCCESS / ERROR */
+  .notice{display:none;text-align:center;padding:14px 0 4px;}
+  .notice.show{display:block;}
+  .notice.success .ico{color:var(--emerald);}
+  .notice .ico{font-size:2.2rem;line-height:1;margin-bottom:10px;}
+  .notice h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--emerald);margin-bottom:8px;}
+  .notice p{color:var(--ink-soft);font-size:1rem;}
+  .err-msg{color:var(--garnet);font-size:.9rem;text-align:center;display:none;margin-top:4px;}
+  .err-msg.show{display:block;}
+
+  /* FOOTER */
+  footer{text-align:center;color:var(--ink-soft);font-size:.8rem;letter-spacing:.06em;padding:30px 0 40px;line-height:1.7;}
+
+  @media (max-width:560px){
+    .panel{padding:36px 24px 32px;}
+    .detail-grid{grid-template-columns:1fr;gap:16px;}
+    .meta span{gap:14px;}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Heidi Cuppari &nbsp;·&nbsp; Wealth &amp; Legacy Advising<br>in partnership with RiverTree</p>
+
+      <!-- Signature: a round table with 15 seats, each a different gem = the curated mix -->
+      <svg class="table-mark" viewBox="0 0 132 132" fill="none" aria-hidden="true">
+        <circle cx="66" cy="66" r="33" stroke="#b8975a" stroke-width="1.4" opacity="0.85"/>
+        <circle cx="66" cy="66" r="48" stroke="#b8975a" stroke-width="0.7" opacity="0.32"/>
+        <g id="seats"></g>
+      </svg>
+
+      <h1>Systems Impact<br>Finance Roundtable</h1>
+      <p class="subtitle">A working lunch and salon</p>
+      <div class="meta">
+        <span>Friday, July 17</span><i class="dot"></i>
+        <span>11:30 to 1:30</span><i class="dot"></i>
+        <span>15 seats</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <p class="lead">A small table of investors, founders, operators, and stewards of capital, gathered over lunch to look at how finance can be designed to move real systems.</p>
+      <p class="body-copy">This is a table for the mountain movers. Over lunch we name the systems we came to shift, picture the future where they are already solved, and trace backward to who needs to be in the room to make it real. The conversation goes where the room takes it. What is certain is the moment: the big transition is here, and it begins with who takes a seat.</p>
+
+      <div class="rule"></div>
+
+      <div class="detail-grid">
+        <div class="detail">
+          <div class="label">Date</div>
+          <div class="val">Friday, July 17, 2026</div>
+        </div>
+        <div class="detail">
+          <div class="label">Time</div>
+          <div class="val">11:30 to 1:30, lunch served</div>
+        </div>
+        <div class="detail">
+          <div class="label">Location</div>
+          <div class="val">Riverside Event Center<br>1201 Arapahoe Ave, Boulder, CO 80302</div>
+        </div>
+        <div class="detail">
+          <div class="label">Seats</div>
+          <div class="val">15, by invitation</div>
+        </div>
+      </div>
+      <p class="host-line">Hosted by <strong>Heidi Cuppari</strong>, Wealth &amp; Legacy Advising, in partnership with RiverTree.</p>
+
+      <div class="rule"></div>
+
+      <!-- FORM -->
+      <div id="formZone">
+        <h2 class="form-head">Request an invite</h2>
+        <p class="form-sub">This table is curated to bring together different sectors and focuses. Tell us a little about you, and we will respond personally with your invitation.</p>
+
+        <form id="rsvpForm">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="org">Organization / role <span class="opt">(optional)</span></label>
+            <input type="text" id="org" name="organization" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="bring">The forms of capital you move <span class="opt">(optional)</span></label>
+            <textarea id="bring" name="forms_of_capital" placeholder="Financial, intellectual, relational, social. The venture you are building. The question you are sitting with."></textarea>
+          </div>
+          <div class="field">
+            <label for="diet">Dietary notes <span class="opt">(optional)</span></label>
+            <input type="text" id="diet" name="dietary_notes" />
+          </div>
+          <button class="btn" type="submit" id="submitBtn">Request an invite</button>
+          <p class="fineprint">We review every request personally and will respond with details.</p>
+          <p class="err-msg" id="errMsg">Something went wrong. Please email heidi@heidicuppari.com to request your invite.</p>
+        </form>
+      </div>
+
+      <div class="notice success" id="successNotice">
+        <div class="ico">&#10003;</div>
+        <h3>Your request is in</h3>
+        <p>Thank you. Because each table is curated, we will review and respond personally with your invitation. Keep an eye on your inbox.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Heidi Cuppari &nbsp;·&nbsp; Wealth &amp; Legacy Advising<br>in partnership with RiverTree</footer>
+
+<script>
+  /* ───────────────────────────────────────────────
+     SET THIS: paste your Formspree form ID below.
+     Create a form at formspree.io (30 seconds),
+     copy the ID from the endpoint they give you
+     (e.g. https://formspree.io/f/abcdwxyz  ->  "abcdwxyz")
+  ─────────────────────────────────────────────── */
+  const FORMSPREE_ID = "YOUR_FORM_ID";
+
+  // Draw 15 seats around the table, each cycling through the gem palette
+  (function drawSeats(){
+    const g = document.getElementById('seats');
+    const gems = ['#8b3a4a','#b8975a','#2e5d4a','#3a567d','#5c4a72'];
+    const n = 15, cx = 66, cy = 66, r = 40;
+    let svg = '';
+    for(let i=0;i<n;i++){
+      const a = (i/n)*2*Math.PI - Math.PI/2;
+      const x = cx + r*Math.cos(a), y = cy + r*Math.sin(a);
+      svg += '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="3" fill="'+gems[i%gems.length]+'"/>';
+    }
+    g.innerHTML = svg;
+  })();
+
+  const form = document.getElementById('rsvpForm');
+  const btn = document.getElementById('submitBtn');
+  const errMsg = document.getElementById('errMsg');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    errMsg.classList.remove('show');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+        method:'POST',
+        body:data,
+        headers:{ 'Accept':'application/json' }
+      });
+      if(res.ok){
+        document.getElementById('formZone').style.display = 'none';
+        document.getElementById('successNotice').classList.add('show');
+        document.getElementById('successNotice').scrollIntoView({behavior:'smooth', block:'center'});
+      } else {
+        throw new Error('bad response');
+      }
+    } catch(err){
+      errMsg.classList.add('show');
+      btn.disabled = false;
+      btn.textContent = 'Request an invite';
+    }
+  });
+</script>
+</body>
+</html>
