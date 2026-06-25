@@ -53,7 +53,7 @@
   <div class="event-banner-divider"></div>
   <a href="/roundtable.html" class="event-banner-cta">Request an Invite →</a>
 </div>
-  
+
 <div class="event-banner">
   <span class="event-banner-title">RiverTree</span>
   <div class="event-banner-divider"></div>
@@ -165,7 +165,7 @@
       <li><a onclick="window.location.href='/ordination.html'">The Ordination</a></li>
       <li><a href="https://www.linkedin.com/in/heidicuppari" target="_blank">LinkedIn</a></li>
     </ul>
-    <div class="footer-contact"><a href="/cdn-cgi/l/email-protection#49212c202d2009212c202d202a3c3939283b20672a2624"><span class="__cf_email__" data-cfemail="5d35383439341d35383439343e282d2d3c2f34733e3230">[email&#160;protected]</span></a> · 917.699.8351</div>
+    <div class="footer-contact"><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351</div>
   </footer>
 </div>
 
@@ -214,7 +214,7 @@
           <h2>Your copy is ready.</h2>
           <p>Click below to download <em>Designing Capital for an Era of Institutional Transition</em>. It opens as a PDF — save it to read at your pace.</p>
           <a href="/designing-capital-2026.pdf" target="_blank" class="btn-gold" style="margin-top:0.5rem;margin-bottom:1.5rem;display:inline-block;">Download the Paper →</a>
-          <p style="font-size:0.82rem;color:rgba(92,90,84,0.5);">Questions or want to talk through what you read? <a href="/cdn-cgi/l/email-protection#f8909d919c91b8909d919c919b8d8888998a91d69b9795" style="color:var(--gold);"><span class="__cf_email__" data-cfemail="89e1ece0ede0c9e1ece0ede0eafcf9f9e8fbe0a7eae6e4">[email&#160;protected]</span></a></p>
+          <p style="font-size:0.82rem;color:rgba(92,90,84,0.5);">Questions or want to talk through what you read? <a href="mailto:heidi@heidicuppari.com" style="color:var(--gold);">heidi@heidicuppari.com</a></p>
         </div>
       </div>
     </div>
@@ -250,7 +250,7 @@
       <li><a onclick="window.location.href='/ordination.html'">The Ordination</a></li>
       <li><a onclick="showPage('proof')">Proof</a></li>
     </ul>
-    <div class="footer-contact"><a href="/cdn-cgi/l/email-protection#503835393439103835393439332520203122397e333f3d"><span class="__cf_email__" data-cfemail="c3aba6aaa7aa83aba6aaa7aaa0b6b3b3a2b1aaeda0acae">[email&#160;protected]</span></a> · 917.699.8351</div>
+    <div class="footer-contact"><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> · 917.699.8351</div>
   </footer>
 </div>
 
@@ -384,7 +384,11 @@
     </div>
 
     <div style="background:var(--parchment);border:1px solid var(--rule);border-top:3px solid var(--gold);padding:3rem;margin-bottom:5rem;">
-      <div style="display:grid;grid-template-columand activate your mission across generations and sectors.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;">
+        <div>
+          <span class="eyebrow">Mission Activation Events</span>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.6rem,2.2vw,2.1rem);margin:0.5rem 0 1rem;">Convene the room<br><em>that moves things.</em></h2>
+          <p style="font-size:0.92rem;color:var(--slate);line-height:1.85;margin-bottom:1.5rem;">Private gatherings and salons designed to convene capital, build relationships, and activate your mission across generations and sectors.</p>
           <p style="font-size:0.92rem;color:var(--slate);line-height:1.85;">These are not panels or presentations. They are experiences engineered to produce real momentum: relationships formed, commitments made, and next steps that actually happen. The design draws on 25 years of convening architecture — from the White House and Davos to intimate founder gatherings that turned into Boulder community institutions.</p>
         </div>
         <div>
@@ -988,7 +992,6 @@
     fd.append('challenge', challenge);
     fd.append('outcome', outcome);
     fd.append('_subject', 'Investor Readiness Assessment: ' + (org || email));
-    /* Replace YOUR_FORMSPREE_ID below with your actual Formspree form ID */
     fetch('https://formspree.io/f/xjgpyvnj', { method:'POST', body:fd, headers:{'Accept':'application/json'} })
       .then(function(r){ return r.json(); })
       .then(function(data){
