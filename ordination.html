@@ -112,19 +112,17 @@
 
   /* pricing */
   .reserve { background: linear-gradient(to bottom, var(--parchment) 70%, rgba(139,58,74,0.07) 100%), var(--parchment); }
-  .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 3rem; }
-  .p-card { background: var(--warm-white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); padding: 2.6rem 2.4rem; display: flex; flex-direction: column; }
+  .p-grid { display: flex; justify-content: center; margin-top: 3rem; }
+  .p-card { background: var(--warm-white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); padding: 2.6rem 2.4rem; display: flex; flex-direction: column; max-width: 520px; width: 100%; }
   .p-grid .p-card:nth-child(1) { border-top-color: var(--garnet); }
-  .p-grid .p-card:nth-child(2) { border-top-color: var(--emerald); }
   .p-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 0.3rem; }
   .p-card .price { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 300; margin: 0.6rem 0 1.2rem; }
   .p-grid .p-card:nth-child(1) .price { color: var(--garnet); }
-  .p-grid .p-card:nth-child(2) .price { color: var(--emerald); }
   .p-card .price small { font-size: 1rem; color: var(--slate); }
   .p-card ul { list-style: none; margin-bottom: 1.8rem; }
   .p-card li { font-size: 0.9rem; color: var(--slate); font-weight: 300; padding: 0.45rem 0 0.45rem 1.4rem; position: relative; }
   .p-card li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
-  .p-card .btn-gold, .p-card .btn-outline-gold { margin-top: auto; text-align: center; }
+  .p-card .btn-gold, .p-card .btn-outline-gold, .p-card .btn-jewel { margin-top: auto; text-align: center; }
   .p-note { text-align: center; max-width: 620px; margin: 2.6rem auto 0; font-size: 0.85rem; color: var(--slate); font-weight: 300; }
 
   /* continuation + footer */
@@ -137,7 +135,7 @@
 
   @media (max-width: 760px) {
     .bar, section { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .day-grid, .d-grid, .p-grid { grid-template-columns: 1fr; }
+    .day-grid, .d-grid { grid-template-columns: 1fr; }
     .v-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
     .v-grid .cell { height: 220px; }
     .v-grid .cell.big { grid-row: auto; }
@@ -267,14 +265,15 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- RESERVE -->
 <section class="reserve" id="reserve">
   <div class="inner-wide">
     <span class="eyebrow">Reserve</span>
     <h2 class="title">Begin <em>your Ordination.</em></h2>
-    <p style="max-width:620px;margin:1.2rem 0 0;color:var(--slate);font-weight:300;">Reserving secures your Ordination; we then find your two days together directly â typically within two to three weeks. If we can’t find dates that work, your reservation is refunded in full. I take a small number of these per season because of the depth the work requires.</p>
+    <p style="max-width:620px;margin:1.2rem 0 0;color:var(--slate);font-weight:300;">Reserving secures your Ordination; we then find your two days together directly, typically within two to three weeks. If we can't find dates that work, your reservation is refunded in full. I take a small number of these per season because of the depth the work requires.</p>
     <div class="p-grid">
       <div class="p-card">
         <h3>The Ordination · Private</h3>
@@ -288,18 +287,7 @@
           <li>Add a family member (+$1,800) — offered as an option at checkout: their own private day, plus a shared day where two threads become one direction</li>
         </ul>
         <a class="btn-jewel" href="https://buy.stripe.com/3cIfZi3DQ7BYelW1hB8k800">Reserve Your Ordination →</a>
-        <p style="font-size:0.78rem;color:var(--slate);margin-top:0.9rem;text-align:center;font-weight:300;">You may also reserve with a $2,500 deposit, with the balance due before your second day. <a href="mailto:heidi@heidicuppari.com?subject=The%20Ordination%20%E2%80%94%20Deposit%20Reservation" style="color:var(--gold-dim);">Email me</a> and I’ll send the deposit link directly.</p>
-      </div>
-      <div class="p-card">
-        <h3>The Ordination · Nonprofit Leaders</h3>
-        <div class="price">$3,500</div>
-        <ul>
-          <li>The same two private days and all four deliverables</li>
-          <li>For founders and executive leaders of nonprofits and social enterprises</li>
-          <li>The Ordination Report mapped to your organization's capital path as well as your own</li>
-          <li>Add a senior team member (+$500 each) — offered as an option at checkout — to join day two, so the direction lands in the organization, not just the leader</li>
-        </ul>
-        <a class="btn-outline-emerald" href="https://buy.stripe.com/6oUeVe4HUe0m6Tuf8r8k801">Reserve · Nonprofit →</a>
+        <p style="font-size:0.78rem;color:var(--slate);margin-top:0.9rem;text-align:center;font-weight:300;">You may also reserve with a $2,500 deposit, with the balance due before your second day. <a href="mailto:heidi@heidicuppari.com?subject=The%20Ordination%20%E2%80%94%20Deposit%20Reservation" style="color:var(--gold-dim);">Email me</a> and I'll send the deposit link directly.</p>
       </div>
     </div>
     <p class="p-note">Questions first? Write me directly at <a href="mailto:heidi@heidicuppari.com?subject=The%20Ordination" style="color:var(--gold-dim);">heidi@heidicuppari.com</a> or <a href="https://calendly.com/heidi_cuppari/strategy-session" style="color:var(--gold-dim);">book a conversation</a>.</p>
