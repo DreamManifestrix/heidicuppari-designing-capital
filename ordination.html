@@ -5,6 +5,9 @@
        /ordination-land-1.jpg  (wide/hero)   /ordination-land-2.jpg  /ordination-land-3.jpg
        /ordination-riverside-1.jpg  (wide/hero)   /ordination-riverside-2.jpg  /ordination-riverside-3.jpg
      Each appears automatically; until uploaded, an elegant jewel-toned placeholder shows in its spot. -->
+<!-- [CONFIRM] PLACEHOLDERS IN THIS FILE (search "[CONFIRM]" to find each one):
+     1. Threshold photos: /threshold-1.jpg, /threshold-2.jpg, /threshold-3.jpg (land and solar villa) for The Threshold card
+     Upload /claudia-photo.png (included with these files) to the site root alongside /heidi-photo.jpg. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -44,6 +47,7 @@
   .days .eyebrow { color: var(--emerald); }
   .places .eyebrow { color: var(--amethyst); }
   .cont .eyebrow { color: var(--sapphire); }
+  .guides .eyebrow { color: var(--gold-dim); }
   .why .gold-rule { background: linear-gradient(90deg, var(--garnet), var(--gold)); width: 56px; }
 
   /* top bar */
@@ -70,17 +74,33 @@
   .why p em { color: var(--gold-dim); }
   .why .sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; color: var(--gold-dim); }
 
-  /* days */
+  /* formats: one experience, three ways to enter */
   .days { background: var(--warm-white); }
-  .day-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
-  .day { border-top: 1px solid var(--gold); padding-top: 1.6rem; }
-  .day .num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
-  .day:nth-child(1) .num { color: var(--garnet); }
-  .day:nth-child(2) .num { color: var(--sapphire); }
-  .day:nth-child(1) { border-top-color: var(--garnet); }
-  .day:nth-child(2) { border-top-color: var(--sapphire); }
-  .day h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin: 0.8rem 0 0.8rem; }
-  .day p { color: var(--slate); font-size: 0.95rem; font-weight: 300; }
+  .days .intro { max-width: 640px; margin-top: 1.2rem; color: var(--slate); font-weight: 300; font-size: 1.02rem; }
+  .f-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .f-card { background: #fff; border: 1px solid var(--rule); border-top: 3px solid var(--gold); padding: 2.4rem 2.2rem; display: flex; flex-direction: column; }
+  .f-card.online { border-top-color: var(--garnet); }
+  .f-card.inperson { border-top-color: var(--sapphire); }
+  .f-card.threshold { border-top-color: var(--emerald); grid-column: 1 / -1; }
+  .f-card .f-label { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate); }
+  .f-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; line-height: 1.2; margin: 0.4rem 0 0.2rem; }
+  .f-card .f-price { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 300; margin-bottom: 1.2rem; }
+  .f-card.online .f-price { color: var(--garnet); }
+  .f-card.inperson .f-price { color: var(--sapphire); }
+  .f-card.threshold .f-price { color: var(--emerald); }
+  .f-card p { color: var(--slate); font-size: 0.95rem; font-weight: 300; margin-bottom: 1rem; }
+  .f-card ul { list-style: none; margin: 0.4rem 0 1.8rem; }
+  .f-card li { font-size: 0.9rem; color: var(--slate); font-weight: 300; padding: 0.4rem 0 0.4rem 1.4rem; position: relative; }
+  .f-card li::before { content: ''; position: absolute; left: 0; top: 1.05rem; width: 0.7rem; height: 1px; background: var(--gold); }
+  .f-card .f-btn { margin-top: auto; align-self: flex-start; text-align: center; }
+  .t-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin: 0.6rem 0 1.4rem; }
+  .t-col h4 { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--emerald); font-weight: 500; padding-bottom: 0.6rem; border-bottom: 1px solid var(--rule); }
+  .t-col ul { margin-bottom: 0; }
+  .t-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-bottom: 1.8rem; }
+  .t-photos .cell { position: relative; overflow: hidden; height: 170px; }
+  .t-photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .t-photos .ph { position:absolute; inset:0; display:none; align-items:center; justify-content:center; text-align:center; color: rgba(249,246,240,0.85); font-family:'Cormorant Garamond',serif; font-size:1rem; font-style:italic; flex-direction:column; gap:0.3rem; padding:1rem; }
+  .t-photos .ph small { font-family:'DM Sans',sans-serif; font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; font-style:normal; color:rgba(249,246,240,0.5); }
 
   /* deliverables */
   .leave { background: var(--ink); }
@@ -91,10 +111,29 @@
   .d-card:nth-child(2) { border-top-color: var(--sapphire); }
   .d-card:nth-child(3) { border-top-color: var(--emerald); }
   .d-card:nth-child(4) { border-top-color: var(--amethyst); }
+  .d-card:nth-child(5) { border-top-color: var(--gold); grid-column: 1 / -1; }
   .d-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400; color: var(--gold); margin-bottom: 0.7rem; }
+  .d-card h3 small { font-family: 'DM Sans', sans-serif; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(249,246,240,0.5); margin-left: 0.6rem; }
   .d-card p { color: rgba(249,246,240,0.7); font-size: 0.92rem; font-weight: 300; }
   .d-card p.enables { margin-top: 0.9rem; color: rgba(249,246,240,0.5); font-size: 0.85rem; }
   .d-card p.enables strong { color: var(--gold-dim); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.68rem; display: block; margin-bottom: 0.2rem; }
+
+  /* guides */
+  .guides { background: var(--parchment); }
+  .g-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .g-card { background: var(--warm-white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); padding: 2.2rem; display: flex; gap: 1.6rem; align-items: flex-start; }
+  .g-card.claudia { border-top-color: var(--amethyst); }
+  .g-photo { flex: 0 0 140px; width: 140px; height: 140px; position: relative; overflow: hidden; border-radius: 50%; border: 3px solid #a39a4a; }
+  .g-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .g-photo.ringed { border: 0; }
+  .g-photo.ringed img { object-fit: contain; }
+  .g-photo .ph { position:absolute; inset:0; display:none; align-items:center; justify-content:center; text-align:center; color: rgba(249,246,240,0.85); font-family:'Cormorant Garamond',serif; font-size:0.9rem; font-style:italic; flex-direction:column; gap:0.2rem; padding:0.5rem; }
+  .g-photo .ph small { font-family:'DM Sans',sans-serif; font-size:0.52rem; letter-spacing:0.12em; text-transform:uppercase; font-style:normal; color:rgba(249,246,240,0.5); }
+  .g-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; line-height: 1.2; }
+  .g-card .g-role { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-dim); margin: 0.3rem 0 0.9rem; display: block; }
+  .g-card.claudia .g-role { color: var(--amethyst); }
+  .g-card p { color: var(--slate); font-size: 0.92rem; font-weight: 300; }
+  .g-card a.g-link { display: inline-block; margin-top: 0.9rem; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amethyst); text-decoration: none; border-bottom: 1px solid rgba(92,74,114,0.4); }
 
   /* places */
   .places { background: var(--warm-white); text-align: center; }
@@ -124,18 +163,27 @@
   .p-card li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
   .p-card .btn-gold, .p-card .btn-outline-gold, .p-card .btn-jewel { margin-top: auto; text-align: center; }
   .p-note { text-align: center; max-width: 620px; margin: 2.6rem auto 0; font-size: 0.85rem; color: var(--slate); font-weight: 300; }
+  .p-conv { text-align: center; max-width: 620px; margin: 2rem auto 0; font-size: 0.95rem; color: var(--ink); font-weight: 300; }
+  .p-conv a { color: var(--sapphire); text-decoration: none; border-bottom: 1px solid rgba(58,86,125,0.4); white-space: nowrap; }
+  .p-wait { text-align: center; max-width: 560px; margin: 1.4rem auto 0; padding-top: 1.4rem; border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--slate); font-weight: 300; }
+  .p-wait strong { font-weight: 500; color: var(--amethyst); }
+  .p-wait a { color: var(--gold-dim); }
 
   /* continuation + footer */
   .cont { background: radial-gradient(ellipse at 50% -10%, rgba(58,86,125,0.45), transparent 55%), radial-gradient(ellipse at 85% 110%, rgba(92,74,114,0.3), transparent 50%), radial-gradient(ellipse at 12% 105%, rgba(139,58,74,0.22), transparent 45%), var(--ink); text-align: center; }
   .cont h2.title { color: var(--warm-white); }
   .cont p { max-width: 640px; margin: 1.4rem auto 0; color: rgba(249,246,240,0.7); font-weight: 300; }
+  .cont p strong { color: var(--gold-light); font-weight: 400; }
   footer { background: var(--ink); padding: 3rem; text-align: center; }
   footer p { color: rgba(249,246,240,0.5); font-size: 0.85rem; font-weight: 300; }
   footer a { color: var(--gold); text-decoration: none; }
 
   @media (max-width: 760px) {
     .bar, section { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .day-grid, .d-grid { grid-template-columns: 1fr; }
+    .d-grid, .f-grid, .t-cols, .t-photos, .g-grid { grid-template-columns: 1fr; }
+    .f-card { padding: 2rem 1.5rem; }
+    .f-card .f-btn { align-self: stretch; }
+    .g-card { flex-direction: column; padding: 1.8rem 1.5rem; }
     .v-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
     .v-grid .cell { height: 220px; }
     .v-grid .cell.big { grid-row: auto; }
@@ -173,21 +221,81 @@
   </div>
 </section>
 
-<!-- THE TWO DAYS -->
+<!-- THE EXPERIENCE: THREE FORMATS -->
 <section class="days">
   <div class="inner-wide">
     <span class="eyebrow">The Experience</span>
-    <h2 class="title">Two days. Three hours each.<br><em>Online, live, and private.</em></h2>
-    <div class="day-grid">
-      <div class="day">
-        <div class="num">I</div>
-        <h3>The day that looks inward</h3>
-        <p>What you hold, what you've built, what it has been for until now — and the restlessness that brought you here. We name the moment you're standing inside: the institutional transition, the generational handoff, the question underneath the money.</p>
+    <h2 class="title">One experience.<br><em>Three ways to enter.</em></h2>
+    <p class="intro">The arc is the same in every format. Day one looks inward. Day two looks forward and turns clarity into something you can act on. Choose how you want to hold it.</p>
+    <div class="f-grid">
+      <div class="f-card online">
+        <span class="f-label">Format I</span>
+        <h3>Online</h3>
+        <div class="f-price">$5,000</div>
+        <p>Two private days, one-to-one, three hours each day. The full arc, held virtually, wherever you are.</p>
+        <a class="btn-jewel f-btn" href="https://buy.stripe.com/3cIfZi3DQ7BYelW1hB8k800">Reserve Your Ordination →</a>
       </div>
-      <div class="day">
-        <div class="num">II</div>
-        <h3>The day that looks forward</h3>
-        <p>Your wealth and work mapped against the four forces reshaping the next decade. Then the ordination itself: the purpose of your resources named, spoken, witnessed, and made real — and your first move chosen before we close.</p>
+      <div class="f-card inperson">
+        <span class="f-label">Format II</span>
+        <h3>In Person</h3>
+        <div class="f-price">from $6,500 · by conversation</div>
+        <p>Two days on the land outside Boulder, four hours each day, with a second guide. Dr. Claudia Skye Zimmermann joins for the subconscious, somatic and energy work: deep clearing of the root material that words alone cannot reach. Much of what holds us around money lives below language. When that moves first, the forward work lands on open ground.</p>
+        <ul>
+          <li>Day one: your money story and the blocks beneath it, named and worked</li>
+          <li>Tea and a light snack, then somatic and energetic clearing with Dr. Claudia</li>
+          <li>Day two: what you want to create, your Declaration, your Money Manifesto, your First Move</li>
+          <li>Closing ceremony on the land: your declaration, spoken and anchored</li>
+        </ul>
+        <a class="btn-outline-gold f-btn" href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank">Begin with a conversation →</a>
+      </div>
+      <div class="f-card threshold">
+        <span class="f-label">Format III</span>
+        <h3>The Threshold</h3>
+        <div class="f-price">24 hours on the land · from $6,500 · by conversation</div>
+        <p>Arrive 1:00pm, depart 1:00pm the next day. A full turn of the day on forty-five acres of off-grid land, with Heidi and Dr. Claudia, woven through rest, nature, fire, and nourishment. You stay in a private room in the solar villa.</p>
+        <div class="t-cols">
+          <div class="t-col">
+            <h4>Afternoon</h4>
+            <ul>
+              <li>Arrival and grounding on the land</li>
+              <li>The inward work: your money story and the blocks beneath it</li>
+              <li>Tea and a light snack, then somatic and energetic clearing with Dr. Claudia</li>
+            </ul>
+          </div>
+          <div class="t-col">
+            <h4>Evening</h4>
+            <ul>
+              <li>Time alone in the grove, with journaling</li>
+              <li>Fire ceremony: what you are retiring, named and released</li>
+              <li>A healthy dinner, prepared for you, and space to process and journal</li>
+            </ul>
+          </div>
+          <div class="t-col">
+            <h4>Morning</h4>
+            <ul>
+              <li>Breakfast, then the forward work</li>
+              <li>Your Money Manifesto and First Move</li>
+              <li>Declaration ceremony: your sacred intent, spoken before witnesses and grounded in a ceremony of Thanksgiving on the land</li>
+              <li>You step across the threshold, ordained</li>
+            </ul>
+          </div>
+        </div>
+        <!-- [CONFIRM] Threshold photos: upload /threshold-1.jpg, /threshold-2.jpg, /threshold-3.jpg (land and solar villa) -->
+        <div class="t-photos">
+          <div class="cell">
+            <img src="/threshold-1.jpg" alt="The land at dusk" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ph" style="background:linear-gradient(135deg, rgba(46,93,74,0.92), rgba(26,24,20,0.96));">The land<br><small>upload /threshold-1.jpg</small></div>
+          </div>
+          <div class="cell">
+            <img src="/threshold-2.jpg" alt="The solar villa" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ph" style="background:linear-gradient(135deg, rgba(46,93,74,0.8), rgba(92,74,114,0.85));">The solar villa<br><small>upload /threshold-2.jpg</small></div>
+          </div>
+          <div class="cell">
+            <img src="/threshold-3.jpg" alt="The fire circle" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ph" style="background:linear-gradient(135deg, rgba(26,24,20,0.9), rgba(139,58,74,0.8));">Fire and grove<br><small>upload /threshold-3.jpg</small></div>
+          </div>
+        </div>
+        <a class="btn-outline-emerald f-btn" href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank">Begin with a conversation →</a>
       </div>
     </div>
   </div>
@@ -197,7 +305,7 @@
 <section class="leave">
   <div class="inner-wide">
     <span class="eyebrow">What You Leave With</span>
-    <h2 class="title">Four things. <em>All of them yours.</em></h2>
+    <h2 class="title">Five things. <em>All of them yours.</em></h2>
     <div class="d-grid">
       <div class="d-card">
         <h3>Your Ordination</h3>
@@ -206,7 +314,7 @@
       </div>
       <div class="d-card">
         <h3>The Ordination Report</h3>
-        <p>Within a week of your second day: my written read on you. Your holdings mapped across four transition themes — where you're aligned, where you're exposed, and the two or three observations that matter most. Written to be handed directly to your financial advisor, your attorney, or your family.</p>
+        <p>Delivered within five days of your final day: my written read on you. Your holdings mapped across four transition themes, where you're aligned, where you're exposed, and the two or three observations that matter most. Written to be handed directly to your financial advisor, your attorney, or your family.</p>
         <p class="enables"><strong>What it enables</strong>Your advisors finally working from your design instead of their defaults.</p>
       </div>
       <div class="d-card">
@@ -219,6 +327,44 @@
         <p>We close day two by choosing one concrete action — and the deliverable is a one-page directive: the move, why this one first, the exact steps, and the date it happens by. Not a plan. A move.</p>
         <p class="enables"><strong>What it enables</strong>Momentum. The Ordination doesn't end as an experience you think about. It ends with something in motion within fourteen days.</p>
       </div>
+      <div class="d-card">
+        <h3>Inner Clearing <small>In Person and The Threshold</small></h3>
+        <p>A transformational healing process for releasing limiting mental-emotional blocks out of your system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR GUIDES -->
+<section class="guides">
+  <div class="inner-wide">
+    <span class="eyebrow">Your Guides</span>
+    <h2 class="title">Held by <em>two guides.</em></h2>
+    <div class="g-grid">
+      <div class="g-card">
+        <div class="g-photo">
+          <img src="/heidi-photo.jpg" alt="Heidi Cuppari" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="background:linear-gradient(135deg, rgba(184,151,90,0.85), rgba(26,24,20,0.95));">Heidi<br><small>/heidi-photo.jpg</small></div>
+        </div>
+        <div>
+          <h3>Heidi Cuppari</h3>
+          <span class="g-role">Wealth &amp; Legacy Architect</span>
+          <p>Twenty-five years at the intersection of capital, convening, and systems change: early funds for Acumen, a $400M+ impact portfolio at UBS, and work with wealth holders and families on what their wealth is for.</p>
+        </div>
+      </div>
+      <div class="g-card claudia">
+        <div class="g-photo ringed">
+          <img src="/claudia-photo.png" alt="Dr. Claudia Skye Zimmermann" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="background:linear-gradient(135deg, rgba(92,74,114,0.9), rgba(26,24,20,0.95));">Dr. Claudia<br><small>/claudia-photo.png</small></div>
+        </div>
+        <div>
+          <h3>Dr. Claudia Skye Zimmermann</h3>
+          <span class="g-role">Somatic &amp; Energy Work</span>
+          <p>A Western and Chinese physician, shamanic and energy practitioner, and transformational coach, with more than thirty years in Western and holistic medicine. Her work is shaped as much by her own journey through profound life challenges as by her training.</p>
+          <p style="margin-top:0.8rem;">In the In Person and Threshold formats she guides the subconscious, somatic and energetic clearing and the ceremonies: transforming limiting mental-emotional conditioning and the personal and ancestral wounds that so often sit beneath our relationship with money. Also available for private Inner Alchemy sessions: a sacred space for transforming hidden blocks into greater awareness, aliveness and freedom.</p>
+          <a class="g-link" href="https://soulremembrance.com" target="_blank">Visit Soul Remembrance →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -228,7 +374,7 @@
   <div class="inner-wide">
     <span class="eyebrow">Where This Work Lives</span>
     <h2 class="title">Begun online. <em>Held by real ground.</em></h2>
-    <p style="max-width:600px;margin:1.2rem auto 0;color:var(--slate);font-weight:300;">The Ordination begins online — and the work continues in person, at Riverside in Boulder and on 45 acres of land in the Colorado foothills. In-person and immersive Ordinations open by invitation.</p>
+    <p style="max-width:600px;margin:1.2rem auto 0;color:var(--slate);font-weight:300;">The Ordination begins online — and the work continues in person, at Riverside in Boulder and on 45 acres of land in the Colorado foothills. In-person and Threshold Ordinations are held on the land outside Boulder, a small number each season. They begin with a conversation.</p>
     <div class="venue">
       <h3><span class="gem-land">The Land</span> · Lyons, Colorado</h3>
       <p class="v-fact">45 private acres in the foothills · seven bedrooms · where the immersive Ordination lives</p>
@@ -276,7 +422,7 @@
     <p style="max-width:620px;margin:1.2rem 0 0;color:var(--slate);font-weight:300;">Reserving secures your Ordination; we then find your two days together directly, typically within two to three weeks. If we can't find dates that work, your reservation is refunded in full. I take a small number of these per season because of the depth the work requires.</p>
     <div class="p-grid">
       <div class="p-card">
-        <h3>The Ordination · Private</h3>
+        <h3>The Ordination · Online</h3>
         <div class="price">$5,000</div>
         <ul>
           <li>Two private days, three hours each, live online</li>
@@ -290,7 +436,9 @@
         <p style="font-size:0.78rem;color:var(--slate);margin-top:0.9rem;text-align:center;font-weight:300;">You may also reserve with a $2,500 deposit, with the balance due before your second day. <a href="mailto:heidi@heidicuppari.com?subject=The%20Ordination%20%E2%80%94%20Deposit%20Reservation" style="color:var(--gold-dim);">Email me</a> and I'll send the deposit link directly.</p>
       </div>
     </div>
+    <p class="p-conv">In Person and The Threshold begin with a conversation. <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank">Book a call →</a></p>
     <p class="p-note">Questions first? Write me directly at <a href="mailto:heidi@heidicuppari.com?subject=The%20Ordination" style="color:var(--gold-dim);">heidi@heidicuppari.com</a> or <a href="https://calendly.com/heidi_cuppari/strategy-session" style="color:var(--gold-dim);">book a conversation</a>.</p>
+    <p class="p-wait"><strong>The Empress Threshold</strong>, a small-group retreat for women, is in development. To hear first, email <a href="mailto:heidi@heidicuppari.com?subject=Empress%20Threshold">heidi@heidicuppari.com</a> with "Empress Threshold" in the subject.</p>
   </div>
 </section>
 
@@ -299,8 +447,8 @@
   <div class="inner">
     <span class="eyebrow">Where It Leads</span>
     <h2 class="title">The wealth follows <em>the ordination.</em></h2>
-    <p>For those whose Ordination points toward their portfolio, the work can continue into Transition Offset design and ongoing strategic advisory. For those it points elsewhere — a venture, a family, a legacy structure — the door stays open. The Ordination is complete on its own.</p>
-    <p style="margin-top:1.6rem;"><a href="https://heidicuppari.com" class="btn-outline-gold">Explore the Full Body of Work</a></p>
+    <p>The Ordination is complete on its own. If it points toward next steps, the work can continue in the way that fits: <strong>Manifesto in Motion</strong>, 90 days of putting your Money Manifesto into practice; <strong>Strategy Hours</strong> in flexible blocks; <strong>Opportunity Review</strong> before you commit to a deal or fund; or <strong>Strategic Advisory</strong> and Transition Offset design for the portfolio itself.</p>
+    <p style="margin-top:1.6rem;"><a href="https://heidicuppari.com/wealth" class="btn-outline-gold">See all services →</a></p>
   </div>
 </section>
 
