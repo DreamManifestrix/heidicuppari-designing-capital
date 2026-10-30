@@ -217,69 +217,25 @@
       <p>A short read on how your wealth sits relative to the transition underway, in markets, in your family, and across generations. Most of what follows you won't have been asked by an advisor. About five minutes. I read every submission personally and respond with specific observations within 48 hours. Your answers stay with me. No lists, no sequence.</p>
 
       <div class="assessment-form" id="wform-wrap">
-        <div class="aform-row">
-          <div class="aform-field">
-            <label>First Name</label>
-            <input type="text" id="wf-fname" placeholder="First name">
-          </div>
-          <div class="aform-field">
-            <label>Last Name</label>
-            <input type="text" id="wf-lname" placeholder="Last name">
-          </div>
-        </div>
-        <div class="aform-field">
-          <label>Email Address</label>
-          <input type="email" id="wf-email" placeholder="Your email address">
-        </div>
-        <div class="aform-field">
-          <label>Which best describes the current shape of your wealth?</label>
-          <select id="wf-shape">
-            <option value="">Select one...</option>
-            <option>Mostly public markets (equities, fixed income)</option>
-            <option>Mostly private (PE, VC, private credit, real assets)</option>
-            <option>Concentrated in one or two positions</option>
-            <option>Spread across holdings I don't fully track</option>
-            <option>A recent liquidity event changed everything</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>How much of your exposure is effectively a bet on continued AI and big-tech dominance?</label>
-          <select id="wf-tech">
-            <option value="">Select one...</option>
-            <option>A large, conscious position</option>
-            <option>Large, though I hadn't framed it that way</option>
-            <option>Modest</option>
-            <option>Minimal</option>
-            <option>Not sure</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>Where does the next generation sit in your wealth picture today?</label>
-          <select id="wf-nextgen">
-            <option value="">Select one...</option>
-            <option>Actively involved and aligned</option>
-            <option>Involved, but we see things differently</option>
-            <option>Not yet involved, and I want them to be</option>
-            <option>Not applicable to my situation</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>What's the question underneath the money for you right now?</label>
-          <textarea id="wf-question" placeholder="The restlessness, the decision you keep circling, the conversation you haven't had yet. The honest version."></textarea>
-        </div>
-        <div class="aform-field">
-          <label>What would a good outcome look like?</label>
-          <textarea id="wf-outcome" placeholder="What would feel like clarity, six months from now?"></textarea>
-        </div>
-        <button class="aform-submit" onclick="handleWealthSubmit()">Submit the Assessment</button>
-        <p class="aform-privacy">I read every submission personally and respond within 48 hours with specific observations. Your information stays with me.</p>
-      </div>
-      <div class="aform-thankyou" id="wform-thankyou">
-        <div class="gold-rule" style="margin:0 auto 1.5rem;"></div>
-        <h3>Your assessment is in.</h3>
-        <p>I'll read it personally and respond with specific observations within 48 hours. Watch for a note from heidi@heidicuppari.com.</p>
-        <p style="margin-top:1rem;font-size:0.82rem;color:rgba(92,90,84,0.5);">If you'd rather talk sooner, you can book a conversation now and we'll work from your answers together.</p>
-        <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" class="btn-gold" style="margin-top:1.5rem;display:inline-block;">Book a Wealth &amp; Legacy Conversation</a>
+        <iframe
+      src="https://links.tfesystems.com/widget/form/CBQIkbd9tb7xXKwrY1CB"
+      style="width:100%;height:100%;border:none;border-radius:8px"
+      id="inline-CBQIkbd9tb7xXKwrY1CB"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="Wealth &amp; Legacy Assessment"
+      data-height="1000"
+      data-layout-iframe-id="inline-CBQIkbd9tb7xXKwrY1CB"
+      data-form-id="CBQIkbd9tb7xXKwrY1CB"
+      data-cookie-consent="true"
+      data-cookie-consent-provider="auto"
+      title="Wealth &amp; Legacy Assessment">
+    </iframe>
       </div>
     </div>
   </section>
@@ -325,34 +281,26 @@
         <h2>Get the Paper</h2>
         <p class="form-sub">This paper is shared by invitation and request — typically reserved for advisory clients and select wealth holders.</p>
         <div id="paper-form">
-          <div class="form-field" style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
-            <div>
-              <label style="display:block;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(92,90,84,0.6);margin-bottom:0.4rem;">First Name</label>
-              <input type="text" placeholder="First name" id="fname" style="width:100%;padding:0.75rem 1rem;border:1px solid rgba(92,90,84,0.2);background:rgba(255,255,255,0.6);font-size:0.9rem;">
-            </div>
-            <div>
-              <label style="display:block;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(92,90,84,0.6);margin-bottom:0.4rem;">Last Name</label>
-              <input type="text" placeholder="Last name" id="flname" style="width:100%;padding:0.75rem 1rem;border:1px solid rgba(92,90,84,0.2);background:rgba(255,255,255,0.6);font-size:0.9rem;">
-            </div>
-          </div>
-          <div class="form-field">
-            <label>Email Address</label>
-            <input type="email" placeholder="Your email address" id="femail">
-          </div>
-          <div class="form-field">
-            <label>Firm or Family Office <span style="color:rgba(92,90,84,0.4);font-style:italic;text-transform:none;letter-spacing:0;">(optional)</span></label>
-            <input type="text" placeholder="Your firm or family office" id="ffirm">
-          </div>
-          <button class="form-submit-btn" onclick="handleFormSubmit()">Send Me the Paper</button>
-          <p class="form-privacy">I share this work privately. Your information stays with me — no lists, no spam.</p>
-        </div>
-        <div class="thankyou-state" id="form-thankyou">
-          <div class="gold-rule" style="margin-bottom:1.5rem;"></div>
-          <h2>Your copy is ready.</h2>
-          <p>Click below to download <em>Designing Capital for an Era of Institutional Transition</em>. It opens as a PDF — save it to read at your pace.</p>
-          <a href="/designing-capital-2026.pdf" target="_blank" class="btn-gold" style="margin-top:0.5rem;margin-bottom:1.5rem;display:inline-block;">Download the Paper →</a>
-          <p style="font-size:0.82rem;color:rgba(92,90,84,0.5);">When you're ready to talk about what you read, that conversation is complimentary. <a href="https://calendly.com/heidi_cuppari/strategy-session" target="_blank" style="color:var(--gold);">Book it here</a> or write me at <a href="mailto:heidi@heidicuppari.com" style="color:var(--gold);">heidi@heidicuppari.com</a></p>
-        </div>
+        <iframe
+      src="https://links.tfesystems.com/widget/form/HrTt6kbN6urclJ7CYHs4"
+      style="width:100%;height:100%;border:none;border-radius:8px"
+      id="inline-HrTt6kbN6urclJ7CYHs4"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="Get the Paper"
+      data-height="520"
+      data-layout-iframe-id="inline-HrTt6kbN6urclJ7CYHs4"
+      data-form-id="HrTt6kbN6urclJ7CYHs4"
+      data-cookie-consent="true"
+      data-cookie-consent-provider="auto"
+      title="Get the Paper">
+    </iframe>
+      </div>
       </div>
     </div>
   </section>
@@ -419,75 +367,25 @@
       <p>This is your entry point — no pitch required, no sales sequence on the other end. Answer a few questions about your organization, your stage, and your capital needs. I read every submission personally and respond with specific observations within 48 hours. The assessment itself is often useful, independent of anything else.</p>
 
       <div class="assessment-form" id="aform-wrap">
-        <div class="aform-row">
-          <div class="aform-field">
-            <label>First Name</label>
-            <input type="text" id="af-fname" placeholder="First name">
-          </div>
-          <div class="aform-field">
-            <label>Last Name</label>
-            <input type="text" id="af-lname" placeholder="Last name">
-          </div>
-        </div>
-        <div class="aform-field">
-          <label>Email Address</label>
-          <input type="email" id="af-email" placeholder="Your email address">
-        </div>
-        <div class="aform-field">
-          <label>Organization Name</label>
-          <input type="text" id="af-org" placeholder="Your organization or venture">
-        </div>
-        <div class="aform-field">
-          <label>What best describes you?</label>
-          <select id="af-type">
-            <option value="">Select one...</option>
-            <option>Impact venture (for-profit)</option>
-            <option>Nonprofit or social enterprise</option>
-            <option>City, municipality, or government agency</option>
-            <option>Foundation or philanthropic organization</option>
-            <option>Company seeking L.A.B. partnership</option>
-            <option>Other mission-driven organization</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>What stage is your capital raise?</label>
-          <select id="af-stage">
-            <option value="">Select one...</option>
-            <option>Pre-raise — exploring if/how to raise capital</option>
-            <option>Getting ready — 6–12 months from active raise</option>
-            <option>Active raise — currently in investor conversations</option>
-            <option>Not raising capital — seeking L.A.B. or IR advisory only</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>What is your target raise amount? <span style="text-transform:none;letter-spacing:0;font-style:italic;color:rgba(92,90,84,0.5);">(optional)</span></label>
-          <select id="af-amount">
-            <option value="">Select one...</option>
-            <option>Under $250K</option>
-            <option>$250K – $1M</option>
-            <option>$1M – $5M</option>
-            <option>$5M – $25M</option>
-            <option>$25M+</option>
-            <option>Not applicable</option>
-          </select>
-        </div>
-        <div class="aform-field">
-          <label>What is your biggest capital challenge right now?</label>
-          <textarea id="af-challenge" placeholder="Tell me what's hard — the story, the structure, the right investors, something else. No pitch needed. Just the honest version."></textarea>
-        </div>
-        <div class="aform-field">
-          <label>What would a good outcome from this assessment look like for you?</label>
-          <textarea id="af-outcome" placeholder="What would feel like a win in this conversation?"></textarea>
-        </div>
-        <button class="aform-submit" onclick="handleAssessmentSubmit()">Submit the Assessment</button>
-        <p class="aform-privacy">I read every submission personally and respond within 48 hours with specific observations — not a sales sequence. Your information stays with me.</p>
-      </div>
-      <div class="aform-thankyou" id="aform-thankyou">
-        <div class="gold-rule" style="margin:0 auto 1.5rem;"></div>
-        <h3>Your assessment is in.</h3>
-        <p>I'll read it and respond with specific observations within 48 hours. Check heidi@heidicuppari.com and add it to your safe senders list.</p>
-        <p style="margin-top:1rem;font-size:0.82rem;color:rgba(92,90,84,0.5);">In the meantime, if you haven't read the Designing Capital paper — that's the best introduction to how I think about wealth architecture.</p>
-        <button class="btn-gold" style="margin-top:1.5rem;" onclick="showPage('paper')">Read the Designing Capital Paper</button>
+        <iframe
+      src="https://links.tfesystems.com/widget/form/6mgFmOO4IFySseZTIByC"
+      style="width:100%;height:100%;border:none;border-radius:8px"
+      id="inline-6mgFmOO4IFySseZTIByC"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="Investor Readiness Assessment"
+      data-height="1044"
+      data-layout-iframe-id="inline-6mgFmOO4IFySseZTIByC"
+      data-form-id="6mgFmOO4IFySseZTIByC"
+      data-cookie-consent="true"
+      data-cookie-consent-provider="auto"
+      title="Investor Readiness Assessment">
+    </iframe>
       </div>
     </div>
   </section>
@@ -1090,85 +988,7 @@
     if (target) showPage(target, false);
     try { history.replaceState({ page: target || 'home' }, '', window.location.pathname); } catch (e) {}
   })();
-  function handleFormSubmit() {
-    var femail = document.getElementById('femail').value.trim();
-    if (!femail) { alert('Please enter your email address.'); return; }
-    var fname = document.getElementById('fname').value.trim();
-    var flname = document.getElementById('flname') ? document.getElementById('flname').value.trim() : '';
-    var ffirm = document.getElementById('ffirm') ? document.getElementById('ffirm').value.trim() : '';
-    var fd = new FormData();
-    fd.append('name', fname + ' ' + flname);
-    fd.append('email', femail);
-    fd.append('firm', ffirm);
-    fd.append('_subject', 'Paper Download: ' + (fname ? fname + ' ' + flname : femail));
-    fetch('https://formspree.io/f/xlgojeqy', {
-      method: 'POST', body: fd, headers: { 'Accept': 'application/json' }
-    })
-    .then(function(r) { return r.json(); })
-    .then(function() {
-      document.getElementById('paper-form').style.display = 'none';
-      document.getElementById('form-thankyou').classList.add('visible');
-    })
-    .catch(function() {
-      document.getElementById('paper-form').style.display = 'none';
-      document.getElementById('form-thankyou').classList.add('visible');
-    });
-  }
-  function handleWealthSubmit() {
-    var email = document.getElementById('wf-email').value.trim();
-    if (!email) { alert('Please enter your email address.'); return; }
-    var fname = document.getElementById('wf-fname').value.trim();
-    var lname = document.getElementById('wf-lname').value.trim();
-    var fd = new FormData();
-    fd.append('name', fname + ' ' + lname);
-    fd.append('email', email);
-    fd.append('wealth_shape', document.getElementById('wf-shape').value);
-    fd.append('tech_exposure', document.getElementById('wf-tech').value);
-    fd.append('next_generation', document.getElementById('wf-nextgen').value);
-    fd.append('question_underneath', document.getElementById('wf-question').value.trim());
-    fd.append('good_outcome', document.getElementById('wf-outcome').value.trim());
-    fd.append('_subject', 'Wealth Readiness Assessment: ' + (fname ? fname + ' ' + lname : email));
-    fetch('https://formspree.io/f/xlgklrar', { method:'POST', body:fd, headers:{'Accept':'application/json'} })
-      .then(function(r){ return r.json(); })
-      .then(function(data){
-        if (data.ok || data.next) {
-          document.getElementById('wform-wrap').style.display = 'none';
-          document.getElementById('wform-thankyou').classList.add('visible');
-        } else { alert('Something went wrong. Please email heidi@heidicuppari.com directly.'); }
-      })
-      .catch(function(){ alert('Something went wrong. Please email heidi@heidicuppari.com directly.'); });
-  }
-  function handleAssessmentSubmit() {
-    var email = document.getElementById('af-email').value.trim();
-    if (!email) { alert('Please enter your email address.'); return; }
-    var fname = document.getElementById('af-fname').value.trim();
-    var lname = document.getElementById('af-lname').value.trim();
-    var org = document.getElementById('af-org').value.trim();
-    var type = document.getElementById('af-type').value;
-    var stage = document.getElementById('af-stage').value;
-    var amount = document.getElementById('af-amount').value;
-    var challenge = document.getElementById('af-challenge').value.trim();
-    var outcome = document.getElementById('af-outcome').value.trim();
-    var fd = new FormData();
-    fd.append('name', fname + ' ' + lname);
-    fd.append('email', email);
-    fd.append('organization', org);
-    fd.append('type', type);
-    fd.append('stage', stage);
-    fd.append('amount', amount);
-    fd.append('challenge', challenge);
-    fd.append('outcome', outcome);
-    fd.append('_subject', 'Investor Readiness Assessment: ' + (org || email));
-    fetch('https://formspree.io/f/xjgpyvnj', { method:'POST', body:fd, headers:{'Accept':'application/json'} })
-      .then(function(r){ return r.json(); })
-      .then(function(data){
-        if (data.ok || data.next) {
-          document.getElementById('aform-wrap').style.display = 'none';
-          document.getElementById('aform-thankyou').classList.add('visible');
-        } else { alert('Something went wrong — please email heidi@heidicuppari.com directly.'); }
-      })
-      .catch(function(){ alert('Something went wrong — please email heidi@heidicuppari.com directly.'); });
-  }
 </script>
+<script src="https://links.tfesystems.com/js/form_embed.js"></script>
 </body>
 </html>
