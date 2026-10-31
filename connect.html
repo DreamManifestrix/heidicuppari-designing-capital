@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Table · Private Gatherings in Boulder · Heidi Cuppari</title>
-<meta name="description" content="Curated private dinners and small gatherings in Boulder for wealth holders, founders and builders shaping what capital does next. Request a seat at The Table.">
+<meta name="description" content="Candlelit dinners and immersive salons in Boulder for wealth holders, founders and builders shaping what capital does next. Request a seat at The Table.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -64,6 +64,15 @@ h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2.6r
 .intro { padding: 5.5rem 0 4rem; text-align: center; }
 .intro p.lead { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; line-height: 1.4; max-width: 50rem; margin: 0 auto; color: var(--ink); }
 
+.proofs { padding: 1rem 0 5rem; }
+.proofs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2.5rem; }
+.proof { border-top: 2px solid var(--gold); padding: 1.4rem 0.2rem 0; }
+.proof-where { font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.5rem; }
+.proof h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 0.6rem; }
+.proof p { font-size: 0.92rem; color: var(--ink-soft); }
+.proof strong { color: var(--ink); font-weight: 500; }
+.proofs-note { text-align: center; margin-top: 2.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; }
+.proofs-note a { font-family: 'DM Sans', sans-serif; font-style: normal; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; margin-left: 0.4rem; }
 /* formats */
 .formats { padding: 1rem 0 5.5rem; }
 .formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
@@ -114,12 +123,13 @@ input:focus, textarea:focus { outline: none; border-color: var(--gold); }
   .hero h1 { font-size: 2.6rem; }
   .ticket { margin: 0 auto; transform: rotate(-3deg); }
   .formats-grid, .steps { grid-template-columns: 1fr; }
+  .proofs-grid { grid-template-columns: 1fr 1fr; }
   h2 { font-size: 2.1rem; }
   .intro p.lead { font-size: 1.4rem; }
 }
 @media (max-width: 560px) {
   .wrap, .form-inner { padding: 0 1rem; }
-  .form-row, .checks { grid-template-columns: 1fr; }
+  .form-row, .checks, .proofs-grid { grid-template-columns: 1fr; }
   .ticket { padding: 1.6rem; }
   .ticket-title { font-size: 2.1rem; }
   .topbar { padding: 1rem; }
@@ -139,7 +149,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--gold); }
     <div>
       <span class="eyebrow">Boulder · Private Gatherings · Season One</span>
       <h1>A seat at <em>the table.</em></h1>
-      <p class="hero-sub">Curated dinners and small gatherings in Boulder for the wealth holders, founders and builders shaping what capital does next. Small rooms, good food, and conversations that actually go somewhere.</p>
+      <p class="hero-sub">Candlelit dinners and immersive salons in Boulder for the wealth holders, founders, artists and builders shaping what comes next. Beautiful food, storytelling, and conversations worth staying up late for.</p>
       <a class="btn-gold" href="#request">Request a seat</a>
     </div>
     <div>
@@ -162,7 +172,24 @@ input:focus, textarea:focus { outline: none; border-color: var(--gold); }
 <section class="intro">
   <div class="wrap">
     <span class="eyebrow">Why gather</span>
-    <p class="lead">The best partnerships I've seen in 25 years didn't start in a pitch meeting. They started at a table, with the right people in the room and enough time to <em>actually talk.</em></p>
+    <p class="lead">Some of the most meaningful things I've helped create didn't start in a pitch meeting. They started at a table, with the right people in the room and enough time to <em>actually talk.</em></p>
+  </div>
+</section>
+
+<!-- TABLES SET -->
+<section class="proofs">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Tables I've set</span>
+      <h2>Rooms that became <em>something.</em></h2>
+    </div>
+    <div class="proofs-grid">
+      <div class="proof"><div class="proof-where">Boulder</div><h3>Science Galaxy</h3><p>An intimate dinner I curated that connected some of the early investors who went on to fund the <strong>Impact Hub</strong>, and grew into the <strong>Junkyard Social Club</strong>, now a pillar of the Boulder community.</p></div>
+      <div class="proof"><div class="proof-where">Denver</div><h3>The Posner Center</h3><p>Gatherings for IDE brought Andrew Romanoff into the work. Together we co-created the <strong>Posner Center for International Development</strong>, secured its founding naming gift and launched it with President Bill Clinton.</p></div>
+      <div class="proof"><div class="proof-where">Washington, D.C.</div><h3>The White House</h3><p>A cross-sector summit for the <strong>Success 2020 Coalition</strong>, bringing capital, technology and government into one room around connecting 1.5 billion more people online.</p></div>
+      <div class="proof"><div class="proof-where">Davos</div><h3>The Digital Economist</h3><p>An invitation-only evening of 250 guests at the <strong>50th World Economic Forum</strong>, co-creating the launch of The Digital Economist. People couldn't get in.</p></div>
+    </div>
+    <p class="proofs-note">Every time, the right people in the right room built something none of us could have planned. <a href="/proof">See the full story →</a></p>
   </div>
 </section>
 
@@ -177,14 +204,14 @@ input:focus, textarea:focus { outline: none; border-color: var(--gold); }
       <div class="format">
         <div class="format-num">01</div>
         <h3>Private Dinners</h3>
-        <div class="size">8 to 12 guests · hosted by Heidi</div>
-        <p>A curated table with one real question at the center. Wealth holders, founders and builders who should know each other, seated together on purpose.</p>
+        <div class="size">Candlelit · hosted by Heidi</div>
+        <p>A long table, beautiful food and one question worth staying up late for. Wealth holders, founders and builders who should know each other, seated together on purpose.</p>
       </div>
       <div class="format">
         <div class="format-num">02</div>
         <h3>Salons</h3>
-        <div class="size">20 to 40 guests · an evening, one theme</div>
-        <p>A short provocation, then open conversation. Themes like capital in transition, land and place, and the next generation of stewardship.</p>
+        <div class="size">An immersive evening · one theme</div>
+        <p>Storytelling, music, art and creative provocations woven through the night around themes like capital in transition, land and place, and the next generation. You leave with new ideas, new people and a little more fire.</p>
       </div>
       <div class="format">
         <div class="format-num">03</div>
