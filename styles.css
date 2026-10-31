@@ -172,6 +172,7 @@
   .footer-contact { font-size: 0.8rem; color: rgba(249,246,240,0.3); }
   .footer-contact a { color: var(--gold-dim); text-decoration: none; transition: color 0.2s; }
   .footer-contact a:hover { color: var(--gold); }
+  .footer-table { display: block; margin-top: 0.5rem; font-size: 0.72rem; letter-spacing: 0.08em; }
 
   .event-banner { background: linear-gradient(90deg, #111009 0%, #1a160a 50%, #111009 100%); border-bottom: 1px solid rgba(184,151,90,0.25); padding: 0.7rem 4rem; display: flex; align-items: center; justify-content: center; gap: 1.5rem; position: sticky; top: 72px; z-index: 150; }
   .event-banner-text { font-size: 0.72rem; letter-spacing: 0.14em; color: rgba(249,246,240,0.55); text-transform: uppercase; }
