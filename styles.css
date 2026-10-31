@@ -258,7 +258,7 @@
   .assessment-inner h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 2.5vw, 2.6rem); font-weight: 300; line-height: 1.25; margin-bottom: 1rem; color: var(--ink); }
   .assessment-inner h2 em { font-style: italic; color: var(--gold); }
   .assessment-inner > p { font-size: 0.97rem; color: var(--slate); line-height: 1.85; margin-bottom: 3rem; }
-  .assessment-form { background: white; padding: 3rem; border: 1px solid var(--rule); }
+  .assessment-form { background: transparent; padding: 0; border: none; }
   .aform-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
   .aform-field { margin-bottom: 1.2rem; }
   .aform-field label { display: block; font-size: 0.7rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.4rem; }
@@ -285,7 +285,7 @@
     .orgs-ir-section { grid-template-columns: 1fr; padding: 4rem 2rem; gap: 3rem; }
     .assessment-section { padding: 4rem 2rem; }
     .aform-row { grid-template-columns: 1fr; }
-    .assessment-form { padding: 2rem 1.5rem; }
+    .assessment-form { padding: 0; }
   }
 
   /* SUBPAGE SHARED */
