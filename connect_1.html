@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Table · Private Gatherings in Boulder · Heidi Cuppari</title>
+<meta name="description" content="Candlelit dinners and immersive salons in Boulder for wealth holders, founders and builders shaping what capital does next. Request a seat at The Table.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1814;
+  --ink-soft: #5c5a54;
+  --gold: #b8975a;
+  --gold-deep: #8a6a30;
+  --gold-soft: #d4b87a;
+  --gold-pale: #e8d8ad;
+  --forest: #073e17;
+  --forest-deep: #042a0f;
+  --parchment: #f0ead8;
+  --warm-white: #f9f6f0;
+  --cream: #faf5e6;
+  --rule: rgba(184, 151, 90, 0.3);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--warm-white); line-height: 1.6; font-size: 16px; }
+a { color: var(--gold-deep); }
+em { font-style: italic; color: var(--gold); }
+.serif { font-family: 'Cormorant Garamond', serif; }
+.eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold-deep); display: block; margin-bottom: 1rem; }
+h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 2.6rem; line-height: 1.15; margin-bottom: 1rem; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+
+/* top bar */
+.topbar { background: var(--forest-deep); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+.topbar a { color: var(--gold-soft); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; }
+.topbar .brand { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; letter-spacing: 0.05em; text-transform: none; color: var(--parchment); }
+
+/* hero */
+.hero { background: radial-gradient(circle at 75% 35%, rgba(184,151,90,0.18) 0%, transparent 45%), linear-gradient(160deg, var(--forest) 0%, var(--forest-deep) 100%); color: var(--parchment); padding: 5.5rem 0 6rem; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+.hero .eyebrow { color: var(--gold-soft); }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 3.6rem; line-height: 1.08; margin-bottom: 1.5rem; }
+.hero h1 em { color: var(--gold-soft); }
+.hero-sub { font-size: 1.1rem; font-weight: 300; color: rgba(240,234,216,0.85); max-width: 34rem; margin-bottom: 2.2rem; }
+.btn-gold { display: inline-block; background: var(--gold); color: var(--forest-deep); padding: 0.95rem 2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; }
+.btn-gold:hover { background: var(--gold-soft); }
+
+/* golden ticket */
+.ticket { position: relative; background: linear-gradient(135deg, #e8d29a 0%, #c9a35c 35%, #f1dfac 55%, #b8975a 80%, #d9bd7c 100%); color: var(--forest-deep); border-radius: 6px; padding: 2.2rem 2.4rem 2rem 2.4rem; box-shadow: 0 30px 60px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.35); transform: rotate(-4deg); max-width: 400px; margin-left: auto; }
+.ticket::before, .ticket::after { content: ''; position: absolute; top: 50%; width: 28px; height: 28px; margin-top: -14px; border-radius: 50%; background: var(--forest-deep); }
+.ticket::before { left: -14px; }
+.ticket::after { right: -14px; }
+.ticket-border { border: 1px solid rgba(4,42,15,0.45); padding: 1.6rem 1.4rem; text-align: center; }
+.ticket-top { font-size: 0.65rem; letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 0.6rem; }
+.ticket-title { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 600; line-height: 1; margin-bottom: 0.4rem; }
+.ticket-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; margin-bottom: 1.2rem; }
+.ticket-rule { border-top: 1px dashed rgba(4,42,15,0.5); margin: 1rem 0; }
+.ticket-meta { display: flex; justify-content: space-between; font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; }
+.ticket-admit { font-size: 0.7rem; letter-spacing: 0.5em; text-transform: uppercase; font-weight: 600; margin-top: 0.4rem; }
+
+/* intro */
+.intro { padding: 5.5rem 0 4rem; text-align: center; }
+.intro p.lead { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; line-height: 1.4; max-width: 50rem; margin: 0 auto; color: var(--ink); }
+
+.proofs { padding: 1rem 0 5rem; }
+.proofs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2.5rem; }
+.proof { border-top: 2px solid var(--gold); padding: 1.4rem 0.2rem 0; }
+.proof-where { font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.5rem; }
+.proof h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 0.6rem; }
+.proof p { font-size: 0.92rem; color: var(--ink-soft); }
+.proof strong { color: var(--ink); font-weight: 500; }
+.proofs-note { text-align: center; margin-top: 2.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; }
+.proofs-note a { font-family: 'DM Sans', sans-serif; font-style: normal; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; margin-left: 0.4rem; }
+/* formats */
+.formats { padding: 1rem 0 5.5rem; }
+.formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.format { background: #fff; border: 1px solid var(--rule); padding: 2.2rem 2rem; }
+.format-num { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.8rem; }
+.format h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 500; margin-bottom: 0.3rem; }
+.format .size { font-size: 0.8rem; color: var(--ink-soft); letter-spacing: 0.05em; margin-bottom: 1rem; }
+.format p { font-size: 0.95rem; color: var(--ink-soft); }
+.center { text-align: center; }
+
+/* how */
+.how { background: var(--parchment); padding: 5.5rem 0; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 2.5rem; }
+.step-n { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--gold); line-height: 1; margin-bottom: 0.6rem; }
+.step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+.step p { font-size: 0.95rem; color: var(--ink-soft); }
+.how-note { margin-top: 2.5rem; font-size: 0.9rem; color: var(--ink-soft); font-style: italic; text-align: center; }
+
+/* form */
+.form-section { padding: 5.5rem 0; background: var(--warm-white); }
+.form-inner { max-width: 640px; margin: 0 auto; padding: 0 2rem; }
+.form-sub { color: var(--ink-soft); margin-bottom: 2.2rem; }
+form > div { margin-bottom: 1.2rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+label { display: block; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.4rem; }
+.optional { text-transform: none; letter-spacing: 0; color: rgba(92,90,84,0.6); }
+input[type=text], input[type=email], input[type=tel], textarea { width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--rule); background: #fff; font-family: inherit; font-size: 1rem; color: var(--ink); }
+input:focus, textarea:focus { outline: none; border-color: var(--gold); }
+.checks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1rem; }
+.checks label { display: flex; gap: 0.6rem; align-items: center; text-transform: none; letter-spacing: 0; font-size: 0.95rem; color: var(--ink); margin: 0; cursor: pointer; }
+.checks input { accent-color: var(--forest); width: 16px; height: 16px; }
+.form-section button { width: 100%; margin-top: 0.6rem; }
+.ghl-form { min-height: 820px; }
+.privacy { font-size: 0.8rem; color: var(--ink-soft); text-align: center; margin-top: 1rem; }
+
+/* closing */
+.closing { background: var(--forest-deep); color: var(--parchment); padding: 4.5rem 0; text-align: center; }
+.closing h2 { color: var(--parchment); font-size: 2.2rem; }
+.closing p { color: rgba(240,234,216,0.8); max-width: 36rem; margin: 0 auto 1.8rem; }
+.closing .links a { color: var(--gold-soft); margin: 0 0.8rem; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; }
+.sig { padding: 2.5rem 2rem; text-align: center; background: var(--forest-deep); border-top: 1px solid rgba(184,151,90,0.2); }
+.sig .name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--parchment); }
+.sig .title { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-soft); margin: 0.3rem 0 0.8rem; }
+.sig .contact, .sig .contact a { color: rgba(240,234,216,0.7); font-size: 0.85rem; text-decoration: none; }
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+  .hero h1 { font-size: 2.6rem; }
+  .ticket { margin: 0 auto; transform: rotate(-3deg); }
+  .formats-grid, .steps { grid-template-columns: 1fr; }
+  .proofs-grid { grid-template-columns: 1fr 1fr; }
+  h2 { font-size: 2.1rem; }
+  .intro p.lead { font-size: 1.4rem; }
+}
+@media (max-width: 560px) {
+  .wrap, .form-inner { padding: 0 1rem; }
+  .form-row, .checks, .proofs-grid { grid-template-columns: 1fr; }
+  .ticket { padding: 1.6rem; }
+  .ticket-title { font-size: 2.1rem; }
+  .topbar { padding: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="brand" href="/">Heidi Cuppari</a>
+  <a href="#request">Request a seat</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Boulder · Private Gatherings · Season One</span>
+      <h1>A seat at <em>the table.</em></h1>
+      <p class="hero-sub">Candlelit dinners and immersive salons in Boulder for the wealth holders, founders, artists and builders shaping what comes next. Beautiful food, storytelling, and conversations worth staying up late for.</p>
+      <a class="btn-gold" href="#request">Request a seat</a>
+    </div>
+    <div>
+      <div class="ticket" aria-label="The Golden Ticket">
+        <div class="ticket-border">
+          <div class="ticket-top">Heidi Cuppari presents</div>
+          <div class="ticket-title">The Table</div>
+          <div class="ticket-sub">a Golden Ticket</div>
+          <div class="ticket-rule"></div>
+          <div class="ticket-meta"><span>Boulder</span><span>Season One</span><span>By invitation</span></div>
+          <div class="ticket-rule"></div>
+          <div class="ticket-admit">Admit one</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap">
+    <span class="eyebrow">Why gather</span>
+    <p class="lead">Some of the most meaningful things I've helped create didn't start in a pitch meeting. They started at a table, with the right people in the room and enough time to <em>actually talk.</em></p>
+  </div>
+</section>
+
+<!-- TABLES SET -->
+<section class="proofs">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Tables I've set</span>
+      <h2>Rooms that became <em>something.</em></h2>
+    </div>
+    <div class="proofs-grid">
+      <div class="proof"><div class="proof-where">Boulder</div><h3>Science Galaxy</h3><p>An intimate dinner I curated that connected some of the early investors who went on to fund the <strong>Impact Hub</strong>, and grew into the <strong>Junkyard Social Club</strong>, now a pillar of the Boulder community.</p></div>
+      <div class="proof"><div class="proof-where">Denver</div><h3>The Posner Center</h3><p>Gatherings for IDE brought Andrew Romanoff into the work. Together we co-created the <strong>Posner Center for International Development</strong>, secured its founding naming gift and launched it with President Bill Clinton.</p></div>
+      <div class="proof"><div class="proof-where">Washington, D.C.</div><h3>The White House</h3><p>A cross-sector summit for the <strong>Success 2020 Coalition</strong>, bringing capital, technology and government into one room around connecting 1.5 billion more people online.</p></div>
+      <div class="proof"><div class="proof-where">Davos</div><h3>The Digital Economist</h3><p>An invitation-only evening of 250 guests at the <strong>50th World Economic Forum</strong>, co-creating the launch of The Digital Economist. People couldn't get in.</p></div>
+    </div>
+    <p class="proofs-note">Every time, the right people in the right room built something none of us could have planned. <a href="/proof">See the full story →</a></p>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="formats">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Three ways in</span>
+      <h2>Ways to <em>gather.</em></h2>
+    </div>
+    <div class="formats-grid">
+      <div class="format">
+        <div class="format-num">01</div>
+        <h3>Private Dinners</h3>
+        <div class="size">Candlelit · hosted by Heidi</div>
+        <p>A long table, beautiful food and one question worth staying up late for. Wealth holders, founders and builders who should know each other, seated together on purpose.</p>
+      </div>
+      <div class="format">
+        <div class="format-num">02</div>
+        <h3>Salons</h3>
+        <div class="size">An immersive evening · one theme</div>
+        <p>Storytelling, music, art and creative provocations woven through the night around themes like capital in transition, land and place, and the next generation. You leave with new ideas, new people and a little more fire.</p>
+      </div>
+      <div class="format">
+        <div class="format-num">03</div>
+        <h3>Community Gatherings</h3>
+        <div class="size">Seasonal · open to the wider circle</div>
+        <p>Larger, looser and celebratory. The easiest way to meet the people behind the dinners and bring someone new into the circle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="how">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">How it works</span>
+      <h2>A request, then <em>a conversation.</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <h3>Request a seat</h3>
+        <p>Tell me who you are, what you're working on and which gatherings interest you. Two minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <h3>We connect</h3>
+        <p>I'll reach out personally to get to know you and explore where you'd fit best. No automated sequence, no sales call.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <h3>Your Golden Ticket</h3>
+        <p>When the fit is right, you'll receive an invitation to an upcoming dinner, salon or gathering curated around it.</p>
+      </div>
+    </div>
+    <p class="how-note">A request isn't a reservation. Dinners are kept small on purpose and each table is curated for the mix of people in the room.</p>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="request">
+  <div class="form-inner">
+    <span class="eyebrow">Request a seat</span>
+    <h2>Request a seat at <em>The Table.</em></h2>
+    <p class="form-sub">Share a little about yourself. I'll be in touch personally to connect and explore which gathering is the right fit.</p>
+    <div class="ghl-form">
+      <iframe
+        src="https://links.tfesystems.com/widget/form/74KTcHe3L2rWKNPzLpFH"
+        style="width:100%;height:100%;border:none;border-radius:8px"
+        id="inline-74KTcHe3L2rWKNPzLpFH"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="The Table - Golden Ticket"
+        data-height="820"
+        data-layout-iframe-id="inline-74KTcHe3L2rWKNPzLpFH"
+        data-form-id="74KTcHe3L2rWKNPzLpFH"
+        data-cookie-consent="true"
+        data-cookie-consent-provider="auto"
+        title="The Table - Golden Ticket">
+      </iframe>
+    </div>
+    <p class="privacy">Your information stays with me. No lists sold, no spam.</p>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="wrap">
+    <h2>Not local, or ready to go deeper?</h2>
+    <p>The dinners are Boulder-based. My advisory work isn't. Start with the paper or book a conversation.</p>
+    <div class="links">
+      <a href="/paper">Read the paper</a>
+      <a href="https://begin.heidicuppari.com/wealth-legacy-conversation" target="_blank">Book a conversation</a>
+      <a href="/">heidicuppari.com</a>
+    </div>
+  </div>
+</section>
+<section class="sig">
+  <div class="name">Heidi Cuppari</div>
+  <div class="title">Wealth &amp; Legacy Architect · Boulder, Colorado</div>
+  <div class="contact"><a href="mailto:heidi@heidicuppari.com">heidi@heidicuppari.com</a> &nbsp;·&nbsp; 917.699.8351</div>
+</section>
+
+<script src="https://links.tfesystems.com/js/form_embed.js"></script>
+</body>
+</html>
